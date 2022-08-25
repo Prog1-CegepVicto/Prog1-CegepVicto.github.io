@@ -444,6 +444,12 @@ Console.WriteLine(&quot;Je crois que ma variable contient : &quot; + maVariable 
 <p>La méthode <code>Console.ReadLine()</code> lit une entrée de l'utilisateur à la console mais il faut assigner le résultat à une variable pour l'utiliser.</p>
 <p>Cette méthode nous donne <strong>toujours un string</strong></p>
 <p>Si on veut lire autre chose, il faudra le convertir dans le bon type par la suite!</p>
+<pre><code>string valeurSaisie = &quot;&quot;;
+int valeur = 0;
+
+valeurSaisie = Console.ReadLine();
+int.TryParse(valeurSaisie, out valeur);
+</code></pre>
 
 
 

@@ -518,15 +518,15 @@
 </ul>
 <h2 id="types">Types</h2>
 <ul>
-<li>Le type d'une variable définit ce qu'elle contient : 
--- Un nombre entier : <em>1</em>
+<li>Le type d'une variable définit ce qu'elle contient :</li>
+</ul>
+<p>-- Un nombre entier : <em>1</em>
 -- Un nombre réel : <em>2.5</em>
 -- Un caractère : a
 -- Une phrase (chaîne de caractère) : <em>Reste calme et appelle Fred</em>
--- Une valeur vrai ou faux : <em>true</em></li>
-<li>Il existe beacuoup d'autres types pour les variables!</li>
-<li>Le type d'une variable détermine la grosseure de l'espace utilisé dans la mémoire vive</li>
-</ul>
+-- Une valeur vrai ou faux : <em>true</em>
+- Il existe beacuoup d'autres types pour les variables!
+- Le type d'une variable détermine la grosseure de l'espace utilisé dans la mémoire vive</p>
 <h3 id="types-de-base-en-c">Types de base en C</h3>
 <ul>
 <li><code>int</code> : un entier</li>
@@ -535,9 +535,11 @@
 <li><code>string</code>: une phrase</li>
 <li><code>bool</code>: vrai ou faux</li>
 </ul>
-<p>Il y a des types plus spécifiques. Il nous permettent d'utiliser plus ou moins de mémoire selon ce que l'on a l'intention de faire avec la variable. Par exemple :
-- <code>int</code>: un entier entre -2147483648 et 2147483647 prend 32 bit 
-- <code>short</code>: un entier entre -32768 et 32767 prend 16 bit</p>
+<p>Il y a des types plus spécifiques. Il nous permettent d'utiliser plus ou moins de mémoire selon ce que l'on a l'intention de faire avec la variable. Par exemple :</p>
+<ul>
+<li><code>int</code>: un entier entre -2147483648 et 2147483647 prend 32 bit </li>
+<li><code>short</code>: un entier entre -32768 et 32767 prend 16 bit</li>
+</ul>
 <h2 id="utiliser-une-variable">Utiliser une variable</h2>
 <ol>
 <li>La déclarer : La <strong>déclaration</strong> dit à notre processeur de lui réserver un espace dans la mémoire vive</li>
@@ -551,10 +553,12 @@
 <li>Le <strong>nom</strong> d'une variable commence par une lettre <strong>minuscule</strong></li>
 <li>Si le nom d'une variable a plus qu'un mot, tous les mots <strong>après le premier mot</strong> commencent par une <strong>majuscule</strong></li>
 </ul>
-<p>Quelques exemples de déclaration :
-- <code>int total;</code>
-- <code>double moyenne;</code>
-- <code>string prenom;</code></p>
+<p>Quelques exemples de déclaration :</p>
+<ul>
+<li><code>int total;</code></li>
+<li><code>double moyenne;</code></li>
+<li><code>string prenom;</code></li>
+</ul>
 <h2 id="assignation">Assignation</h2>
 <ul>
 <li>L'assignation se fait avec l'opérateur <strong>=</strong></li>
@@ -572,13 +576,13 @@ moyenne = 78.23;
 <ul>
 <li>L'initialisation combine la déclaration et l'assignation en une seule instruction</li>
 <li>Il est important d'initialiser les variables pour éviter la possibilité d'erreur</li>
-<li>Quand on ne sait pas d'avance quelle valeur assigner, on met une valeur par défaut
--- int : 0
+<li>Quand on ne sait pas d'avance quelle valeur assigner, on met une valeur par défaut</li>
+</ul>
+<p>-- int : 0
 -- double : 0.0
 -- char : ''
 -- string : ""
--- bool : true</li>
-</ul>
+-- bool : true</p>
 <p>Quelques exemple d'initialisation :</p>
 <pre><code>int total = 0;
 double moyenne = 0.0;
