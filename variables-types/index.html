@@ -272,7 +272,7 @@
         
           <li class="md-nav__item">
   <a href="#types-de-base-en-c" class="md-nav__link">
-    Types de base en C
+    Types de base en C#
   </a>
   
 </li>
@@ -458,7 +458,7 @@
         
           <li class="md-nav__item">
   <a href="#types-de-base-en-c" class="md-nav__link">
-    Types de base en C
+    Types de base en C#
   </a>
   
 </li>
@@ -517,17 +517,16 @@
 <li>Elles sont utilisées pour stocker les données necessaires à la programmation</li>
 </ul>
 <h2 id="types">Types</h2>
+<p>Le type d'une variable définit ce qu'elle contient et l'espace qu'elle utilise dans la mémoire :</p>
 <ul>
-<li>Le type d'une variable définit ce qu'elle contient :</li>
+<li>Un nombre entier : <em>1</em></li>
+<li>Un nombre réel : <em>2.5</em></li>
+<li>Un caractère : a</li>
+<li>Une phrase (chaîne de caractère) : <em>Reste calme et appelle Fred</em></li>
+<li>Une valeur vrai ou faux : <em>true</em></li>
 </ul>
-<p>-- Un nombre entier : <em>1</em>
--- Un nombre réel : <em>2.5</em>
--- Un caractère : a
--- Une phrase (chaîne de caractère) : <em>Reste calme et appelle Fred</em>
--- Une valeur vrai ou faux : <em>true</em>
-- Il existe beacuoup d'autres types pour les variables!
-- Le type d'une variable détermine la grosseure de l'espace utilisé dans la mémoire vive</p>
-<h3 id="types-de-base-en-c">Types de base en C</h3>
+<p>Il existe beacuoup d'autres types pour les variables!</p>
+<h3 id="types-de-base-en-c">Types de base en C#</h3>
 <ul>
 <li><code>int</code> : un entier</li>
 <li><code>double</code> : un nombre réel</li>
@@ -571,18 +570,18 @@ prenom = &quot;Jean&quot;
 <pre><code>double moyenne;
 moyenne = 78.23;
 </code></pre>
-<p>== On ne répète pas le type lors de l'assignation == </p>
+<p><em>On ne répète pas le type lors de l'assignation</em> </p>
 <h2 id="initialisation">Initialisation</h2>
+<p>L'initialisation combine la déclaration et l'assignation en une seule instruction</p>
+<p>Il est important d'initialiser les variables pour éviter la possibilité d'erreur</p>
+<p>Quand on ne sait pas d'avance quelle valeur assigner, on met une valeur par défaut :</p>
 <ul>
-<li>L'initialisation combine la déclaration et l'assignation en une seule instruction</li>
-<li>Il est important d'initialiser les variables pour éviter la possibilité d'erreur</li>
-<li>Quand on ne sait pas d'avance quelle valeur assigner, on met une valeur par défaut</li>
+<li>int : 0</li>
+<li>double : 0.0</li>
+<li>char : ''</li>
+<li>string : ""</li>
+<li>bool : true</li>
 </ul>
-<p>-- int : 0
--- double : 0.0
--- char : ''
--- string : ""
--- bool : true</p>
 <p>Quelques exemple d'initialisation :</p>
 <pre><code>int total = 0;
 double moyenne = 0.0;
