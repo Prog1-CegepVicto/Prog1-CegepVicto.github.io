@@ -13,7 +13,7 @@
     
     
       
-        <title>Lecture et écriture - Programmation 1 - Automne 2022</title>
+        <title>Méthodes - Programmation 1 - Automne 2022</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-et-ecriture" class="md-skip">
+        <a href="#methodes" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture et écriture
+              Méthodes
             
           </span>
         </div>
@@ -248,59 +248,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Lecture et écriture
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lecture-ecriture/" class="md-nav__link">
         Lecture et écriture
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#affichage-a-la-console" class="md-nav__link">
-    Affichage à la console
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-a-la-console" class="md-nav__link">
-    Lecture à la console
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -324,11 +276,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../methode/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Méthodes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Méthodes
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-methode-main" class="md-nav__link">
+    La méthode Main
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" class="md-nav__link">
+    Déclaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-methode-qui-effectue-un-travail-mais-ne-retourne-pas-de-resultat" class="md-nav__link">
+    Procédure : méthode qui effectue un travail mais ne retourne pas de résultat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-methode-qui-retourne-une-resultat" class="md-nav__link">
+    Fonction : méthode qui retourne une résultat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-de-fonctions" class="md-nav__link">
+    Paramètres de fonctions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -476,15 +497,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#affichage-a-la-console" class="md-nav__link">
-    Affichage à la console
+  <a href="#la-methode-main" class="md-nav__link">
+    La méthode Main
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lecture-a-la-console" class="md-nav__link">
-    Lecture à la console
+  <a href="#declaration" class="md-nav__link">
+    Déclaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-methode-qui-effectue-un-travail-mais-ne-retourne-pas-de-resultat" class="md-nav__link">
+    Procédure : méthode qui effectue un travail mais ne retourne pas de résultat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-methode-qui-retourne-une-resultat" class="md-nav__link">
+    Fonction : méthode qui retourne une résultat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-de-fonctions" class="md-nav__link">
+    Paramètres de fonctions
   </a>
   
 </li>
@@ -503,28 +545,111 @@
                 
 
 
-<h1 id="lecture-et-ecriture">Lecture et écriture</h1>
-<h2 id="affichage-a-la-console">Affichage à la console</h2>
-<p><code>Console.WriteLine()</code></p>
-<pre><code>// Afficher une phrase directement
-Console.WriteLine(&quot;Voici ma phrase&quot;);
+<h1 id="methodes">Méthodes</h1>
+<p>Un méthode est une série d'instructions qui effectue une une tâche spécifique.</p>
+<p>Elle peut simplement exécuter les instructions mais elle peut aussi nous envoyer une résultat.</p>
+<p>La méthode avec une valeur qui nous revient est une fonction. Par exemple :
+<code>Console.Readline()</code> nous renvoie un string</p>
+<p>La méthode sans valeur de retour est une procédure :
+<code>Console.WriteLine(monTexte)</code> affiche mais nous n'avons pas de valeur à assigner</p>
+<h2 id="la-methode-main">La méthode Main</h2>
+<p>Lorsque l'on crée un nouveau projet avec Visual Studio, il ajoute automatiquement un méthode Main.</p>
+<p>Cette méthode est exécutée au démarrage du programme. Elle contient toutes les instructions et les méthodes personnalisées du programmeur.</p>
+<pre><code>using System;
 
-// Afficher le contenu d'une variable, même si c'est autre chose qu'une phrase
-Console.WriteLine(maVariable);
+namespace ExercicesSemaine1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
 
-// Afficher une combinaison de variables et de phrases
-Console.WriteLine(&quot;Je crois que ma variable contient : &quot; + maVariable + &quot; un entier positif&quot; );
+        }
+    }
+}
 </code></pre>
-<h2 id="lecture-a-la-console">Lecture à la console</h2>
-<p>La méthode <code>Console.ReadLine()</code> lit une entrée de l'utilisateur à la console mais il faut assigner le résultat à une variable pour l'utiliser.</p>
-<p>Cette méthode nous donne <strong>toujours un string</strong></p>
-<p>Si on veut lire autre chose, il faudra le convertir dans le bon type par la suite!</p>
-<pre><code>string valeurSaisie = &quot;&quot;;
-int valeur = 0;
+<h2 id="declaration">Déclaration</h2>
+<p>Une méthode est déclarée à l'intérieur d'une classe.</p>
+<p>Une méthode est à l'extérieur des autres méthodes.</p>
+<p>Dans le programme principal, il faut toujours ajouter le mot clé <code>static</code> avant le type de la méthode.</p>
+<p>Une méthode commence par le type de retour, suivi de son nom et de parenthèses.</p>
+<p>Quand une méthode n'a pas de retour (de résultat) son type est <code>void</code>.</p>
+<p>Une méthode a ses propres variables, elle ne peut pas utiliser les variables d'une autre méthode directement.</p>
+<p><strong>Une méthode est une action, son nom est un verbe et commence par une minuscule</strong></p>
+<h2 id="procedure-methode-qui-effectue-un-travail-mais-ne-retourne-pas-de-resultat">Procédure : méthode qui effectue un travail mais ne retourne pas de résultat</h2>
+<pre><code>using System;
 
-valeurSaisie = Console.ReadLine();
-int.TryParse(valeurSaisie, out valeur);
+namespace ExercicesSemaine1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+
+        // nouvelles méthodes 
+
+        // méthode qui effectue une tâche mais ne donne pas de résultat
+        // static est avant le type puisqu'il s'agit du programme principal
+        // la méthode ne retourne pas de résultat donc son type est void
+
+        static void afficherMessage()
+        {
+            string message = &quot;Bonjour&quot;;
+            Console.WriteLine(message);
+        }
+    }
+}
+
 </code></pre>
+<h2 id="fonction-methode-qui-retourne-une-resultat">Fonction : méthode qui retourne une résultat</h2>
+<p>L'instruction pour renvoyer un résultat est : <code>return</code>.</p>
+<p>Pour utiliser le résultat d'une fonction on peut:</p>
+<ul>
+<li>Assigner le résultat à une variable</li>
+<li>Utiliser la fonction à la place d'une variable dans une instruction</li>
+</ul>
+<p><strong>Quand une méthode retourne un résultat il faut désigner le type de retour dans sa déclaration</strong></p>
+<pre><code>using System;
+
+namespace ExercicesSemaine1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double moyenne = 0;
+
+            // Assignation du résultat à une variable
+            moyenne = calculerMoyenne();
+
+            // Utilisation directe dans une instruction
+            Console.WriteLine(calculerMoyenne());
+        }
+
+        // nouvelles méthodes 
+
+        // méthode qui retourne un résultat
+        // static est avant le type puisqu'il s'agit du programme principal
+        // la méthode retourne un résultat donc son type est le même que le type de la valeur retournée
+
+        static double calculerMoyenne()
+        {
+            double note1 = 66;
+            double note2 = 95;
+            double note3 = 78;
+            double moyenne = 0;
+
+            moyenne = (note1 + note2 + note3) / 3;
+
+            return moyenne;
+        }
+    }
+}
+</code></pre>
+<h2 id="parametres-de-fonctions">Paramètres de fonctions</h2>
+<p>À venir</p>
 
 
 
@@ -543,7 +668,7 @@ int.TryParse(valeurSaisie, out valeur);
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../operateurs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Opérateurs" rel="prev">
+        <a href="../si/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Condition" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -552,20 +677,20 @@ int.TryParse(valeurSaisie, out valeur);
               <span class="md-footer__direction">
                 Previous
               </span>
-              Opérateurs
+              Condition
             </div>
           </div>
         </a>
       
       
         
-        <a href="../si/" class="md-footer__link md-footer__link--next" aria-label="Next: Condition" rel="next">
+        <a href="../while/" class="md-footer__link md-footer__link--next" aria-label="Next: While" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Condition
+              While
             </div>
           </div>
           <div class="md-footer__button md-icon">
