@@ -318,6 +318,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sinon-si" class="md-nav__link">
+    SINON SI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-en-c_1" class="md-nav__link">
+    Syntaxe en C#
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-en-c" class="md-nav__link">
+    Exemple en C#
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -456,6 +477,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solSem1/" class="md-nav__link">
+        Semaine 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -499,6 +568,27 @@
         <li class="md-nav__item">
   <a href="#exemples-en-c" class="md-nav__link">
     Exemples en C#
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sinon-si" class="md-nav__link">
+    SINON SI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-en-c_1" class="md-nav__link">
+    Syntaxe en C#
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-en-c" class="md-nav__link">
+    Exemple en C#
   </a>
   
 </li>
@@ -578,6 +668,60 @@ if(age &gt; 18)
 else
 {
     Console.WriteLine(&quot;Vous ne pouvez pas voter&quot;);
+}
+</code></pre>
+<h2 id="sinon-si">SINON SI</h2>
+<p>Il est possible de prendre une décision plus complexe en comparant <strong>une variable</strong> avec <strong>plusieurs possibilités</strong></p>
+<p>SI ma première comparaison est vraie ALORS</p>
+<pre><code>faire les instructions du bloc 1
+</code></pre>
+<p>SINON SI ma deuxième compraison est vraie ALORS</p>
+<pre><code>faire les instructions du bloc 2
+</code></pre>
+<p>... On peut en faire autant que l'on veut et finalement</p>
+<p>SINON</p>
+<pre><code>faire les instruction quand je n'ai rien eu de vrai
+</code></pre>
+<h2 id="syntaxe-en-c_1">Syntaxe en C#</h2>
+<pre><code>// Instructions avant la prise de décision
+
+if(condition)
+{
+    // Instructions si la condition 1 est vraie
+}
+else if(autre condition)
+{
+    // Instruction si la condition  2 est vraie
+}
+...
+else
+{
+    // Instruction quand je n'ai trouvé aucune conditioin vraie
+}
+
+// Instructions après la décision
+</code></pre>
+<h2 id="exemple-en-c">Exemple en C#</h2>
+<pre><code>int nombre = 0;
+
+Console.WriteLine(&quot;Entrer le choix de menu : &quot;);
+int.TryParse(Console.ReadLine(), out nombre);
+
+if(nombre == 1)
+{
+    Console.WriteLine(&quot;Vos Sushis seront livrés bientôt&quot;);
+}
+else if(nombre == 2)
+{
+    Console.WriteLine(&quot;Votre tartare sera livré bientôt&quot;);
+}
+else if(nombre == 3)
+{
+    Console.WriteLine(&quot;Vos rouleaux de printemps seront livrés bientôt&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Choix non valide.&quot;);
 }
 </code></pre>
 
