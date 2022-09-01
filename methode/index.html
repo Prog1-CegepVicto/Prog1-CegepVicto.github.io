@@ -344,6 +344,26 @@
     Paramètres de fonctions
   </a>
   
+    <nav class="md-nav" aria-label="Paramètres de fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-dune-methode-avec-des-parametres" class="md-nav__link">
+    Déclaration d'une méthode avec des paramètres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-dune-methode-avec-parametres" class="md-nav__link">
+    Utilisation d'une méthode avec paramètres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -577,6 +597,26 @@
     Paramètres de fonctions
   </a>
   
+    <nav class="md-nav" aria-label="Paramètres de fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-dune-methode-avec-des-parametres" class="md-nav__link">
+    Déclaration d'une méthode avec des paramètres
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-dune-methode-avec-parametres" class="md-nav__link">
+    Utilisation d'une méthode avec paramètres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -697,7 +737,29 @@ namespace ExercicesSemaine1
 }
 </code></pre>
 <h2 id="parametres-de-fonctions">Paramètres de fonctions</h2>
-<p>À venir</p>
+<p>Les méthodes sont toujours suivient de parenthèses. </p>
+<p>Elles servent à transmettre de l'information pour qu'elle puisse faire son travail.</p>
+<p>Par exemple, le contenu des prenthèses dans <code>Console.WriteLine("Mon message")</code> dit à la méthode quel message afficher.</p>
+<p>Ce qui est envoyé à la méthode doit être défini lors de la déclaration de la méthode.</p>
+<h3 id="declaration-dune-methode-avec-des-parametres">Déclaration d'une méthode avec des paramètres</h3>
+<pre><code>static void calculerExposant(int nombre, int exposant)
+{
+    int resultat = 0;
+
+    resultat = Math.Pow(nombre, exposant);
+
+    Console.WriteLine(&quot;Résultat : &quot; + resultat);
+}
+</code></pre>
+<p>Ici, les paramètres sont nombre et exposant, de type int</p>
+<p>Chacune des variables déclarée de cette façon sera utilisable uniquement dans la méthode.</p>
+<h3 id="utilisation-dune-methode-avec-parametres">Utilisation d'une méthode avec paramètres</h3>
+<p>On utilise une méthode avec paramètres de la même façon que les autre.</p>
+<p>Les paramètres sont séparés par des virgules.</p>
+<p>Il faut lui <strong>donner les paramètres dans l'ordre</strong> où ils ont été déclarés.</p>
+<p>Si on utilise la méthode précédente :</p>
+<p><code>calculerExposant(2, 5)</code> Le résultat à la console sera 32</p>
+<p><code>calculerExposant(5, 2)</code> Le résultat à la console sera 25</p>
 
 
 
