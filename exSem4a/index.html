@@ -13,7 +13,7 @@
     
     
       
-        <title>Semaine 2 - Programmation 1 - Automne 2022</title>
+        <title>Semaine 4 - Programmation 1 - Automne 2022</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solutions-possibles-aux-exercices-de-la-semaine-2" class="md-skip">
+        <a href="#exercices-de-la-semaine-4-boucles-et-methodes" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semaine 2
+              Semaine 4
             
           </span>
         </div>
@@ -385,12 +385,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -439,11 +441,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../exSem4a/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Semaine 4
       </a>
+      
     </li>
   
 
@@ -461,14 +473,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -503,21 +513,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../solSem2/" class="md-nav__link">
         Semaine 2
       </a>
-      
     </li>
   
 
@@ -561,79 +561,52 @@
                 
 
 
-<h1 id="solutions-possibles-aux-exercices-de-la-semaine-2">Solutions possibles aux exercices de la semaine 2</h1>
-<pre><code>static void ex1()
-{
-    int nombre = 0;
-
-    // Saisir un nombre à la console et le convertir en entier
-    Console.WriteLine(&quot;Entrer un nombre pour le compte à rebours : &quot;);
-    int.TryParse(Console.ReadLine(), out nombre);
-
-    // descendre le nombre jusqu'à 0
-    // pour arrêter à 1 on utilise la condition : nombre &gt; 0
-    while (nombre &gt;= 0)
-    { 
-        Console.WriteLine(nombre);
-        nombre--;
-    }
-}
+<h1 id="exercices-de-la-semaine-4-boucles-et-methodes">Exercices de la semaine 4 : boucles et méthodes</h1>
+<h1 id="partie-1">Partie 1</h1>
+<p>Réaliser les exercies en utilisant la boucle for</p>
+<h2 id="1-faire-afficher-15-fois-le-mot-attention">1. Faire afficher 15 fois le mot "ATTENTION".​</h2>
+<h2 id="2-afficher-les-nombres-de-1-a-10-avec-le-carre-et-le-cube-de-chacun-de-ces-nombres">2. Afficher les nombres de 1 à 10 avec le carré et le cube de chacun de ces nombres.​</h2>
+<h2 id="3-convertir-les-valeurs-fahrenheit-de-40-a-40-en-celsius-par-tranche-de-5-celsius-59fahrenheit-32">3. Convertir les valeurs Fahrenheit de -40 à 40 en Celsius par tranche de 5. (Celsius = 5/9(fahrenheit-32))​</h2>
+<h2 id="4-afficher-le-montant-et-la-taxe-de-15-pour-les-montants-de-500-a-10000-par-tranche-de-500">4. Afficher le montant et la taxe de 15% pour les montants de $5.00 à $100.00 par tranche de $5.00. ​</h2>
+<h2 id="5-prouver-quil-est-preferable-de-prendre-un-montant-de-001-dollars-qui-double-a-chaque-jours-pendant-1-mois-30-jours-que-de-prendre-1-million-de-dollars-maintenant">5. Prouver qu'il est préférable de prendre un montant de 0.01 dollars qui double à chaque jours pendant 1 mois (30 jours) que de prendre 1 million de dollars maintenant</h2>
+<h2 id="6-afficher-les-nombres-impairs-de-1-a-49">6. Afficher les nombres impairs de 1 à 49​</h2>
+<h2 id="7-afficher-les-nombres-impairs-de-1-a-49-et-mettre-5-valeurs-par-ligne">7. Afficher les nombres impairs de 1 à 49, et mettre 5 valeurs par ligne</h2>
+<h2 id="8-afficher-les-motifs-suivants-a-la-console">8. Afficher les motifs suivants à la console</h2>
+<p>Indices : </p>
+<ul>
+<li>une boucle peut être à l'intérieur d'une boucle</li>
+<li><code>Console.Write("...")</code> affiche à la console sans finir la ligne</li>
+<li>Soyez créatifs avec la variable de la boucle (i,j,k, etc...)</li>
+</ul>
+<h3 id="a">a</h3>
+<pre><code>#
+##
+###
+####
 </code></pre>
-<pre><code>static void ex2()
-{
-    int nombre = 1; // le nombre que l'utilisateur entre à chaque tour de boucle, on le met à 1 pour que la boucle commence
-    int positif = 0; // le compteur de nombres positifs
-    int negatif = 0; // le compteur de nombres négatifs
-
-    // À chaque tour de boucle on saisit un nombre
-    // Si il est positif on augmente le compteur positif de 1
-    // Sinon si il est négatif on augmente le compteur négatif de 1
-    // La boucle arrête quand l'utilisateur entre 0 parce que 0 != 0 est FAUX
-    while (nombre != 0)
-    {
-        Console.WriteLine(&quot;Entrer une nombre entier (0 pour arrêter) : &quot;);
-        int.TryParse(Console.ReadLine(), out nombre);
-
-        if (nombre &gt; 0)
-        {
-            positif++;
-        }
-        else if (nombre &lt; 0)
-        {
-            negatif++;
-        }
-    }
-
-    Console.WriteLine(&quot;Nombres positifs : &quot; + positif);
-    Console.WriteLine(&quot;Nombres négatifs : &quot; + negatif);
-}
+<h3 id="b">b</h3>
+<pre><code>1
+12
+123
+1234
 </code></pre>
-<pre><code>static void ex3()
-{
-    double note = 0;
-    double total = 0;
-    int nbNotes = 0;
-    double moyenne = 0;
+<h3 id="c">c</h3>
+<pre><code>####
+###
+##
+#
+</code></pre>
+<h3 id="d">d</h3>
+<pre><code>1
+23
+456
+78910
+</code></pre>
+<h3 id="e">e</h3>
+<pre><code>123
+456
+789
 
-    while (note &gt;= 0)
-    {
-        Console.WriteLine(&quot;Entre une note (note négative pour arrêter) &quot;);
-        double.TryParse(Console.ReadLine(), out note);
-
-        // Seulement si on a une note positive
-        // Ajuster le total
-        // Ajuster le nombre de notes entrées
-        if (note &gt;= 0)
-        {
-            total = total + note;
-            nbNotes++;
-        }
-    }
-
-    moyenne = total / nbNotes;
-
-    Console.WriteLine(&quot;Nombre de notes : &quot; + nbNotes + &quot;, Moyenne : &quot; + moyenne);
-}
 </code></pre>
 
 
@@ -653,7 +626,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../solSem1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semaine 1" rel="prev">
+        <a href="../exSem2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semaine 2" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -662,11 +635,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Semaine 1
+              Semaine 2
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../solSem1/" class="md-footer__link md-footer__link--next" aria-label="Next: Semaine 1" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Semaine 1
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
