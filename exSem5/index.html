@@ -13,7 +13,7 @@
     
     
       
-        <title>Tableaux - Programmation 1 - Automne 2022</title>
+        <title>Semaine 5 - Programmation 1 - Automne 2022</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structure-de-donnees-tableau" class="md-skip">
+        <a href="#exercices-de-la-semaine-5-revision-des-calculs-lectureecriture-if" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tableaux
+              Semaine 5
             
           </span>
         </div>
@@ -192,14 +192,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -351,72 +349,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tableaux
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tableau/" class="md-nav__link">
         Tableaux
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#declaration" class="md-nav__link">
-    Déclaration
-  </a>
-  
-    <nav class="md-nav" aria-label="Déclaration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#declaration-alternative" class="md-nav__link">
-    Déclaration alternative
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiliser-un-tableau" class="md-nav__link">
-    Utiliser un tableau
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -462,12 +399,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -530,11 +469,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../exSem5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Semaine 5
       </a>
+      
     </li>
   
 
@@ -628,41 +577,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#declaration" class="md-nav__link">
-    Déclaration
-  </a>
-  
-    <nav class="md-nav" aria-label="Déclaration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#declaration-alternative" class="md-nav__link">
-    Déclaration alternative
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiliser-un-tableau" class="md-nav__link">
-    Utiliser un tableau
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -675,57 +589,8 @@
                 
 
 
-<h1 id="structure-de-donnees-tableau">Structure de données : tableau</h1>
-<p>Le tableau permet d'avoir <strong>plusieurs valeurs</strong> stockées en mémoire pour <strong>une seule variable</strong>.</p>
-<p>Les données stockées dans le tableau doivent être de la même nature comme :</p>
-<ul>
-<li>Une série de noms</li>
-<li>Une série de notes</li>
-<li>Les prix des items dans un panier</li>
-</ul>
-<p>Le tableau permet entre autre :</p>
-<ul>
-<li>Faciliter le traitement de variables multiples (ex.: note1, note2, note3, ...)</li>
-<li>Utiliser une boucle pour traiter plusieurs données</li>
-<li>Améliorer le temps d'accès au données (Les données d'un tableau sont placée une à côté de l'autre en mémoire)</li>
-</ul>
-<h2 id="declaration">Déclaration</h2>
-<p><code>type[] nom = new type[nombre d'élément]</code></p>
-<p>Le nombre de données dans un tableau doit être fixée lors de la déclaration</p>
-<p>Exemple en C#</p>
-<p><code>int[] notes = new int[30];</code></p>
-<h3 id="declaration-alternative">Déclaration alternative</h3>
-<p>Quand on sait déjà ce qu'il y a dans le tableau, on peut déclarer le tableau différement.
-<code>int[] notes = new int[]{98, 76, 42, 73, 89};</code>
-ou
-<code>int[] notes = {98, 76, 42, 73, 89};</code></p>
-<h2 id="utiliser-un-tableau">Utiliser un tableau</h2>
-<ul>
-<li>Comme les variables, les valeurs des tableaux peuvent être utilisées pour des calculs ou modifiées.</li>
-<li>Pour accéder à une donnée du tableau, il faut indiquer sa position.</li>
-<li>La position d'une donnée dans le tableau s'appelle <strong>index</strong></li>
-<li>La numérotation des <strong>index</strong> du tableau <strong>commence toujours à 0</strong></li>
-<li>On peut obtenir la longueur d'un tableau en utilisant <code>nomDuTableau.Length</code></li>
-</ul>
-<p>Quelques exemples d'utilisation</p>
-<pre><code>int[] notes = {98, 76, 42, 73, 89};
-double moyenne = 0;
-
-// Modifier la première note du tableau
-notes[0] = 97;
-
-// Afficher la 3ème notes du tableau
-Console.WriteLine(notes[2]);
-
-// Faire la moyenne avec une boucle
-for(int i = 0; i &lt; notes.Length; i++)
-{
-    moyenne = moyenne + notes[i];
-    i++;
-}
-moyenne = moyenne / notes.Length;
-</code></pre>
-<p><strong>On utilise souvent une boucle pour accéder à chacune des valeurs du tableau!</strong></p>
+<h1 id="exercices-de-la-semaine-5-revision-des-calculs-lectureecriture-if">Exercices de la semaine 5 : révision des calculs, lecture/écriture, if</h1>
+<p><a href="https://github.com/Prog1-A22/exSem5.git">Lien vers le dépôt Github</a></p>
 
 
 
@@ -744,7 +609,7 @@ moyenne = moyenne / notes.Length;
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../for/" class="md-footer__link md-footer__link--prev" aria-label="Previous: For" rel="prev">
+        <a href="../exSem4a/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semaine 4" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -753,20 +618,20 @@ moyenne = moyenne / notes.Length;
               <span class="md-footer__direction">
                 Previous
               </span>
-              For
+              Semaine 4
             </div>
           </div>
         </a>
       
       
         
-        <a href="../utils/" class="md-footer__link md-footer__link--next" aria-label="Next: Méthodes utiles" rel="next">
+        <a href="../solSem1/" class="md-footer__link md-footer__link--next" aria-label="Next: Semaine 1" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Méthodes utiles
+              Semaine 1
             </div>
           </div>
           <div class="md-footer__button md-icon">
