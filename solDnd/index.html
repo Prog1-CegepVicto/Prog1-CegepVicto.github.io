@@ -13,7 +13,7 @@
     
     
       
-        <title>solDnd - Programmation 1 - Automne 2022</title>
+        <title>Labo DnD - Programmation 1 - Automne 2022</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#solution-possible-au-laboratoire-dnd" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              solDnd
+              Labo DnD
             
           </span>
         </div>
@@ -382,20 +387,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../github/" class="md-nav__link">
-        GIthub
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -512,12 +503,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -594,10 +587,34 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Labo DnD
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="../solPendu/" class="md-nav__link">
-        Pendu
+        Labo Pendu
       </a>
     </li>
   
@@ -627,6 +644,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -640,9 +659,171 @@
                 
 
 
-  <h1>solDnd</h1>
+<h1 id="solution-possible-au-laboratoire-dnd">Solution possible au laboratoire : DnD</h1>
+<pre><code>static void Main(string[] args)
+{
+    Random rng = new Random();
+    int optionMenu = 0;
+    string menu = &quot;DnD Lite\n 1. Afficher les stats des adversaires\n 2. Simuler le combat\n 3. Historique du dernier combat\n 4. Quitter&quot;;
+    string historique = &quot;&quot;;
 
+    int[] statsGuerrier = new int[5];
+    int[] statsOrc = new int[5];
 
+    statsGuerrier[0] = 30;
+    statsGuerrier[1] = rng.Next(14, 19);
+    statsGuerrier[2] = 18;
+    statsGuerrier[3] = 8;
+    statsGuerrier[4] = 2 + calculerBonusDmg(statsGuerrier[1]);
+
+    statsOrc[0] = 30;
+    statsOrc[1] = rng.Next(10, 19);
+    statsOrc[2] = 14;
+    statsOrc[3] = 10;
+    statsOrc[4] = 2 + calculerBonusDmg(statsOrc[1]);
+
+    while (optionMenu != 4)
+    {
+        optionMenu = choisirOptionMenu(menu, 4);
+
+        Console.Clear();
+
+        if (optionMenu == 1)
+        {
+            afficherStats(statsGuerrier, &quot;Guerrier&quot;);
+            afficherStats(statsOrc, &quot;Orc&quot;);
+
+        }
+        else if (optionMenu == 2)
+        {
+            historique = simulerCombat(statsGuerrier, statsOrc);
+        }
+        else if (optionMenu == 3)
+        {
+            Console.WriteLine(historique);
+        }
+
+        if (optionMenu != 4)
+        {
+            Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
+            Console.ReadKey();
+        }
+    }
+}
+
+static int calculerBonusDmg(int statAtt)
+{
+    return (statAtt - 9)/2;
+}
+static int choisirOptionMenu(string menu, int nbOptions)
+{
+    int choix = 0;
+
+    while (choix &lt; 1 || choix &gt; nbOptions)
+    {
+        Console.Clear();
+        Console.WriteLine(menu);
+        int.TryParse(Console.ReadLine(), out choix);
+    }
+
+    return choix;
+}
+
+static void afficherStats(int[] stats, string nom)
+{
+    Console.WriteLine(nom);
+    Console.WriteLine(&quot;Hp : &quot; + stats[0]);
+    Console.WriteLine(&quot;Att : &quot; + stats[1]);
+    Console.WriteLine(&quot;Def : &quot; + stats[2]);
+}
+
+static string simulerCombat(int[] statsJoueur, int[] statsEnnemi)
+{
+    Random rng = new Random();
+    int initiativeJoueur = 0;
+    int initiativeEnnemi = 0;
+    int dommage = 0;
+    int round = 0;
+    string historique = &quot;&quot;;
+
+    while (statsJoueur[0] &gt; 0 &amp;&amp; statsEnnemi[0] &gt; 0)
+    {
+        round++;
+        historique += $&quot;\n#############\nRound {round}\n&quot;;
+        initiativeJoueur = rng.Next(1, 21);
+        initiativeEnnemi = rng.Next(1, 21);
+
+        if (initiativeJoueur &gt;= initiativeEnnemi)
+        {
+            historique += &quot;Guerrier en premier \n\n&quot;;
+            dommage = attaquer(statsJoueur, statsEnnemi);
+            if (dommage &gt; 0)
+            {
+                historique += &quot;Le guerrier frappe pour &quot; + dommage + &quot; points de dommage \n&quot;;
+                statsEnnemi[0] -= dommage;
+            }
+            else
+            {
+                historique += &quot;Le guerrier rate!\n&quot;;
+            }
+            dommage = attaquer(statsEnnemi, statsJoueur);
+            if (dommage &gt; 0)
+            {
+                historique += &quot;L'orc frappe pour &quot; + dommage + &quot; points de dommage \n&quot;;
+                statsJoueur[0] -= dommage;
+            }
+            else
+            {
+                historique += &quot;L'orc rate!\n&quot;;
+            }
+        }
+        else 
+        {
+            historique += &quot;Orc en premier \n\n&quot;;
+            dommage = attaquer(statsEnnemi, statsJoueur);
+            if (dommage &gt; 0)
+            {
+                historique += &quot;L'orc frappe pour &quot; + dommage + &quot; points de dommage\n&quot;;
+                statsJoueur[0] -= dommage;
+            }
+            else
+            {
+                historique += &quot;L'orc rate!\n&quot;;
+            }
+            dommage = attaquer(statsJoueur, statsEnnemi);
+            if (dommage &gt; 0)
+            {
+                historique += &quot;Le guerrier frappe pour &quot; + dommage + &quot; points de dommage \n&quot;;
+                statsEnnemi[0] -= dommage;
+            }
+            else
+            {
+                historique += &quot;Le guerrier rate!\n&quot;;
+            }
+        }
+        historique += &quot;Hp guerrier : &quot; + statsJoueur[0] + &quot; // Hp orc : &quot; + statsEnnemi[0] + &quot;\n&quot;;
+    }
+
+    Console.WriteLine(&quot;Hp guerrier : &quot; + statsJoueur[0] + &quot; // Hp orc : &quot; + statsEnnemi[0]);
+
+    return historique;
+}
+
+static int attaquer(int[] statsJoueur, int[] statsEnnemi)
+{
+    Random rng = new Random();
+    int d20 = 0;
+    int dommage = 0;
+
+    d20 = rng.Next(1, 21);
+    if (d20 &gt; statsEnnemi[2])
+    {
+        dommage = rng.Next(1, statsJoueur[3] + 1) + statsJoueur[4];
+    }
+
+    return dommage;
+}
+</code></pre>
 
 
 
@@ -656,6 +837,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../solSem5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semaine 5" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Semaine 5
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../solPendu/" class="md-footer__link md-footer__link--next" aria-label="Next: Labo Pendu" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Labo Pendu
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
