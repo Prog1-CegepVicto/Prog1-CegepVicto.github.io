@@ -395,6 +395,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#repeter-des-instructions" class="md-nav__link">
+    Répéter des instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilisation-avec-les-tableaux" class="md-nav__link">
     Utilisation avec les tableaux
   </a>
@@ -645,6 +652,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../solSem4a/" class="md-nav__link">
+        Semaine 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../solSem5/" class="md-nav__link">
         Semaine 5
       </a>
@@ -727,6 +748,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#repeter-des-instructions" class="md-nav__link">
+    Répéter des instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utilisation-avec-les-tableaux" class="md-nav__link">
     Utilisation avec les tableaux
   </a>
@@ -769,15 +797,36 @@ for(int i = 0; i &lt; 10; i++)
 <h2 id="condition-de-fin">Condition de fin</h2>
 <p>La boucle arrête quand la condition de fin a une valeur logique : FAUX</p>
 <p>Il n'est pas obligatoire de toujours utiliser une incrémentation de 1</p>
+<h2 id="repeter-des-instructions">Répéter des instructions</h2>
+<p>For sert souvent à répéter des instructions un nombre de fois déterminé.</p>
+<p>La variable qui sert de compteur joue aussi fréquement un rôle dans les instructions.</p>
+<p>Par exemple cette boucle effectue 8 fois les instructions entre les accolades</p>
+<pre><code>string motDePasse = &quot;&quot;;
+for(int i = 0; i &lt; 8; i++)
+{
+    motDePasse = motDePasse + i;
+}
+</code></pre>
+<ul>
+<li>Ici le mot de passe commence vide. </li>
+<li>i est la variable qui sert de compteur, elle commence à 0 et augmente de 1 à chaque fois que les instructions de la boucle sont exécutées.</li>
+<li>Les instructions de la boulces sont exécutées autant de fois que i est plus petit que 8.</li>
+<li>À chaque fois que les instructions de la boucle sont exécutées on ajoute i au string.</li>
+<li>À la fin de la boucle le mot de passe contient "01234567".</li>
+</ul>
 <h2 id="utilisation-avec-les-tableaux">Utilisation avec les tableaux</h2>
 <p>Dans la grande majorité des cas, la boucle for est utilisée pour parcourir un tableau de la permière à la dernière case.</p>
 <p>La variable compteur (i, j, k, etc..) est utilisée pour désigner la case (l'index) du tableau à traiter.</p>
-<pre><code>// Boucle générale pour parcourir les cases d'un tableau
+<p>Un tableau commence toujours à l'index (numéro de la case) 0, donc on donne au compteur (ex: i, j, k) la valeur de 0 pour commencer.</p>
+<p>Un tableau fini toujours à la case dont l'index est : le nombre d'éléments (cases) du tableau - 1. Donc on met la condition de fin de la boucle à : compteur &lt; nombre d'élements.</p>
+<pre><code>// Boucle générale pour parcourir un tableau
+// Ici on assigne un nombre aléatoire de 0 à 100 pour chaque élément du tableau
+Random rng = new Random();
 int[] tab = new int[30];
 
 for(int i = 0; i &lt; tab.Length; i++)
 {
-    tab[i] = 0;
+    tab[i] = rng.Next(0,101);
 }
 </code></pre>
 

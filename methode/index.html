@@ -664,6 +664,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../solSem4a/" class="md-nav__link">
+        Semaine 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../solSem5/" class="md-nav__link">
         Semaine 5
       </a>
@@ -895,6 +909,21 @@ namespace ExercicesSemaine1
 <p>Elles servent à transmettre de l'information pour qu'elle puisse faire son travail.</p>
 <p>Par exemple, le contenu des prenthèses dans <code>Console.WriteLine("Mon message")</code> dit à la méthode quel message afficher.</p>
 <p>Ce qui est envoyé à la méthode doit être défini lors de la déclaration de la méthode.</p>
+<p>Par exemple si une méthode a besoin d'un nombre entier pour faire son travail la déclaration serait :</p>
+<pre><code>static void maMethode(int nombreEntier)
+{
+    // instructions
+}
+</code></pre>
+<p>Quand on utilise la méthode dans notre Main, on sera obligé de donner un nombre entier (ou une variable contenant un nombre enteir) à la méthode :</p>
+<pre><code>// Exemple 1 
+maMethode(7);
+
+// Exemple 2 avec une variable
+int variable = 5;
+maMethode(variable);
+</code></pre>
+<p>La valeur donnée dans le main est <strong>copiée</strong> dans la variable paramètre de la méthode.</p>
 <h3 id="declaration-dune-methode-avec-des-parametres">Déclaration d'une méthode avec des paramètres</h3>
 <pre><code>static void calculerExposant(int nombre, int exposant)
 {
