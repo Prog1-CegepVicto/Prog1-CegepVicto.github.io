@@ -13,7 +13,7 @@
     
     
       
-        <title>Opérations avec les string - Programmation 1 - Automne 2022</title>
+        <title>Classe - Programmation 1 - Automne 2022</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operations-avec-les-chaines-de-caracteres-string" class="md-skip">
+        <a href="#creer-une-classe" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Opérations avec les string
+              Classe
             
           </span>
         </div>
@@ -365,93 +365,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Opérations avec les string
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../string/" class="md-nav__link">
         Opérations avec les string
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#concatenation-combiner-plusieurs-chaines-avec-loperateur" class="md-nav__link">
-    Concaténation : Combiner plusieurs chaînes avec l'opérateur +
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#construire-une-phrase-selon-des-conditions" class="md-nav__link">
-    Construire une phrase selon des conditions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mettre-des-variables-dans-une-chaine-de-caracteres" class="md-nav__link">
-    Mettre des variables dans une chaîne de caractères
-  </a>
-  
-    <nav class="md-nav" aria-label="Mettre des variables dans une chaîne de caractères">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#formattage-avec" class="md-nav__link">
-    Formattage avec $
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringformat" class="md-nav__link">
-    string.Format()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-string-sont-des-tableaux" class="md-nav__link">
-    Les string sont des tableaux
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -461,12 +379,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" checked>
       
       
       
@@ -501,11 +421,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../POO_creation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Classe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Classe
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ajouter-une-fichier-cs-dans-le-projet" class="md-nav__link">
+    1. Ajouter une fichier .cs dans le projet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definir-la-classe" class="md-nav__link">
+    2. Définir la classe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-niveau-dacces" class="md-nav__link">
+    3. Niveau d'accès
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -815,49 +790,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#concatenation-combiner-plusieurs-chaines-avec-loperateur" class="md-nav__link">
-    Concaténation : Combiner plusieurs chaînes avec l'opérateur +
+  <a href="#1-ajouter-une-fichier-cs-dans-le-projet" class="md-nav__link">
+    1. Ajouter une fichier .cs dans le projet
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#construire-une-phrase-selon-des-conditions" class="md-nav__link">
-    Construire une phrase selon des conditions
+  <a href="#2-definir-la-classe" class="md-nav__link">
+    2. Définir la classe
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mettre-des-variables-dans-une-chaine-de-caracteres" class="md-nav__link">
-    Mettre des variables dans une chaîne de caractères
-  </a>
-  
-    <nav class="md-nav" aria-label="Mettre des variables dans une chaîne de caractères">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#formattage-avec" class="md-nav__link">
-    Formattage avec $
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringformat" class="md-nav__link">
-    string.Format()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-string-sont-des-tableaux" class="md-nav__link">
-    Les string sont des tableaux
+  <a href="#3-niveau-dacces" class="md-nav__link">
+    3. Niveau d'accès
   </a>
   
 </li>
@@ -876,74 +824,45 @@
                 
 
 
-<h1 id="operations-avec-les-chaines-de-caracteres-string">Opérations avec les chaînes de caractères (string)</h1>
-<h2 id="concatenation-combiner-plusieurs-chaines-avec-loperateur">Concaténation : Combiner plusieurs chaînes avec l'opérateur +</h2>
-<p>Exemples de concaténation</p>
-<pre><code>string nom = &quot;Smith&quot;;
-string prenom = &quot;Jean&quot;;
-string nomComplet = &quot;&quot;;
-
-nomComplet = prenom + &quot; &quot; + nom;
-
-</code></pre>
-<h2 id="construire-une-phrase-selon-des-conditions">Construire une phrase selon des conditions</h2>
-<p>En utilisant la concaténation il est possible de configurer un message <strong>variable</strong> à l'utilisateur</p>
-<pre><code>string facture = &quot;&quot;;
-string choix = &quot;&quot;;
-
-Console.WriteLine(&quot;Ajouter un contrôleur (1)Pi ou (2)Pi zéro);
-choix = Console.ReadLine();
-
-if(choix == &quot;1&quot;)
+<h1 id="creer-une-classe">Créer une classe</h1>
+<ul>
+<li>Le nom de la classe doit commencer par une <strong>Majuscule</strong></li>
+<li>Le nom doit être significatif (une classe qui représente un rendez-vous : RendezVous)</li>
+<li>Aucun accent</li>
+</ul>
+<h2 id="1-ajouter-une-fichier-cs-dans-le-projet">1. Ajouter une fichier .cs dans le projet</h2>
+<ul>
+<li>Le nom du fichier .cs doit être le même que celui de la classe</li>
+</ul>
+<h2 id="2-definir-la-classe">2. Définir la classe</h2>
+<p>Dans cet exemple la classe définie est Personne, et représente... quelqu'un.</p>
+<p>Le projet pour travailler s'appelle GestionClasse, d'où le namespace est GestionClasse.</p>
+<pre><code>namespace GestionClasse
 {
-    facture = facture + &quot;Contrôler Pi, &quot;;
-}
-else
-{
-    facture = facture + &quot;Contrôleur Pi zéro, &quot;;
-}
+    public class Personne
+    {
+        public string prenom;
+        public string nom;
+        public int age;
 
-Console.WriteLine(&quot;Matrice de LEDS? o/n&quot;);
-choix = Console.ReadLine();
-
-if(choix == &quot;o&quot;)
-{
-    facture = facture + &quot;Matrice de LEDS, &quot;;
+        public void afficherNomComplet()
+        {
+            Console.WriteLine(&quot;{0} {1}&quot;, prenom, nom);
+        }
+    }
 }
 </code></pre>
-<h2 id="mettre-des-variables-dans-une-chaine-de-caracteres">Mettre des variables dans une chaîne de caractères</h2>
-<p>La méthode Console.WriteLine accepte d'ajouter des variables dans un texte avec l'opérateur + </p>
-<p>Cette façon peut devenir difficile à lire, il existe aussi le formattage au moyen du <strong>$</strong> ou de la méthode string.Format();</p>
-<h3 id="formattage-avec">Formattage avec $</h3>
-<p>En mettant $ devant les "" on peut introduire une variable dans notre châine de caractère directement;</p>
-<pre><code>string nom = &quot;Pierre Paul&quot;;
-string message = $&quot;Bonjour {nom}&quot;;
-
-Console.WriteLine(message);
-</code></pre>
-<p>Résultat : Bonjour Pierre Paul</p>
-<h3 id="stringformat">string.Format()</h3>
-<p>Avec string.Fromat() on peut mettre des accolades dans une phrase pour y introduire les valeurs de notre choix plus tard.</p>
-<pre><code>int nbMoteurs = 12;
-int nbBatteries = 2;
-
-string facture = string.Format(&quot;Nb de moteurs : {0}  Nb de batteries : {1} &quot;, nbMoteurs, nbBatteries);
-
-</code></pre>
-<p>Le premier paramètre de la méthode :
-Une chaîne de caratère avec un nombre entre accolades pour chaque endroit où on insère une valeur</p>
-<p>Les nombres entre accolades doivent commencer à 0. L'ordre est important pour l'insertion des valeurs</p>
-<p>Les autres paramètres :
-Les valeurs à insérer, dans l'ordre selon le nombre entre les accolades</p>
-<h2 id="les-string-sont-des-tableaux">Les string sont des tableaux</h2>
-<p>On peut aller chercher les lettres en utilisant la notation :
-<code>nomDuString[positionDuCaractère]</code></p>
-<p>Par exemple pour afficher les initiales d'un nom complet</p>
-<pre><code>string nom = &quot;Tremblay&quot;;
-string prenom = &quot;Keven&quot;;
-
-Console.WriteLine(prenom[0] + &quot;.&quot; + nom[0] + &quot;.&quot;);
-</code></pre>
+<p>Les attributs prenom, nom et age constituent l'<strong>état</strong> de la classe 
+La méthode afficherNomComplet() est la seule interaction et fait partie du <strong>comportement</strong> de la classe</p>
+<h2 id="3-niveau-dacces">3. Niveau d'accès</h2>
+<p>Dans l'exemple précédent, on observe le mot clé <code>public</code></p>
+<p>Une classe est généralement publique, c'est à dire que l'on peut l'utiliser à partir de n'importe quel endroit dans le code!</p>
+<p>Par contre il y a plusieurs niveau d'accès possibles et ils sont spécialement importants pour les attributs de la classe</p>
+<ul>
+<li>public    : toujours accessible à partir du code, on peut faire n'importe quoi (ou presque) avec</li>
+<li>private   : l'objet s'occupe lui même de modifier cet attribut, probablement à travers une méthode</li>
+<li>protected : accessible et visible seulement pour la classe ou une classe qui en hérite</li>
+</ul>
 
 
 
@@ -962,7 +881,7 @@ Console.WriteLine(prenom[0] + &quot;.&quot; + nom[0] + &quot;.&quot;);
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../tableau/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tableaux" rel="prev">
+        <a href="../POO_definition/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -971,20 +890,20 @@ Console.WriteLine(prenom[0] + &quot;.&quot; + nom[0] + &quot;.&quot;);
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tableaux
+              Introduction
             </div>
           </div>
         </a>
       
       
         
-        <a href="../POO_definition/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../POO_utilisation/" class="md-footer__link md-footer__link--next" aria-label="Next: Instance" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction
+              Instance
             </div>
           </div>
           <div class="md-footer__button md-icon">
