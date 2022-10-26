@@ -861,33 +861,31 @@
 <h2 id="utiliser-les-methodes-comportements">Utiliser les méthodes (comportements)</h2>
 <p>Les méthodes publiques d'une instance de classe s'utilisent comme les attributs.</p>
 <p>En reprenant la classe Personne</p>
-<p>public class Personne
+<pre><code>public class Personne
 {
     public string prenom;
     public string nom;
-    public int age;</p>
-<pre><code>public void afficherNomComplet()
-{
-    Console.WriteLine("{0} {1}", prenom, nom);
+    public int age;
+
+    public void afficherNomComplet()
+    {
+        Console.WriteLine(&quot;{0} {1}&quot;, prenom, nom);
+    }
 }
 </code></pre>
-<p>}</p>
-<pre><code>
-Il est possible d'utiliser la méthode afficherNomComplet à partir de l'instance de la classe
-
-</code></pre>
-<p>static void Main(string[] args)
+<p>Il est possible d'utiliser la méthode afficherNomComplet à partir de l'instance de la classe</p>
+<pre><code>static void Main(string[] args)
 {
-    Personne eleve = new Personne();</p>
-<pre><code>eleve.prenom = "Éric";
-eleve.nom = "Treamblay";
-eleve.age = 27;
+    Personne eleve = new Personne();
 
-eleve.afficherNomComplet();
+    eleve.prenom = &quot;Éric&quot;;
+    eleve.nom = &quot;Treamblay&quot;;
+    eleve.age = 27;
+
+    eleve.afficherNomComplet();
+}
 </code></pre>
-<p>}
-```
-La console affichera : Éric Tremblay</p>
+<p>La console affichera : Éric Tremblay</p>
 
 
 
