@@ -471,8 +471,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-niveau-dacces" class="md-nav__link">
-    3. Niveau d'accès
+  <a href="#3-attributs-et-comportements" class="md-nav__link">
+    3. Attributs et comportements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-niveau-dacces" class="md-nav__link">
+    4. Niveau d'accès
   </a>
   
 </li>
@@ -494,6 +501,20 @@
     <li class="md-nav__item">
       <a href="../POO_utilisation/" class="md-nav__link">
         Instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../POO_constructeur/" class="md-nav__link">
+        Constructeur
       </a>
     </li>
   
@@ -804,8 +825,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-niveau-dacces" class="md-nav__link">
-    3. Niveau d'accès
+  <a href="#3-attributs-et-comportements" class="md-nav__link">
+    3. Attributs et comportements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-niveau-dacces" class="md-nav__link">
+    4. Niveau d'accès
   </a>
   
 </li>
@@ -847,17 +875,29 @@
 
         public void afficherNomComplet()
         {
-            Console.WriteLine(&quot;{0} {1}&quot;, prenom, nom);
+            Console.WriteLine(&quot;{0} {1}&quot;, this.prenom, this.nom);
         }
     }
 }
 </code></pre>
-<p>Les attributs prenom, nom et age constituent l'<strong>état</strong> de la classe 
+<p>Les <strong>attributs</strong> prenom, nom et age constituent l'<strong>état</strong> de la classe 
 La méthode afficherNomComplet() est la seule interaction et fait partie du <strong>comportement</strong> de la classe</p>
-<h2 id="3-niveau-dacces">3. Niveau d'accès</h2>
+<h2 id="3-attributs-et-comportements">3. Attributs et comportements</h2>
+<ul>
+<li>Les attributs sont des variables ou des structures de données (tableau, liste, classe, ...)</li>
+<li>Lorsque l'on utilise un <strong>attribut dans un comportement (méthode de la classe)</strong> il faut utiliser le mot clé <strong>this</strong> en avant de l'attritbut</li>
+</ul>
+<p>Exemple d'utilisation d'un attribut dans une méthode de la classe :</p>
+<pre><code>    public void changerNom(string nom)
+    {
+        this.nom = nom
+    }
+</code></pre>
+<p>Dans cet exemple this.nom est l'attribut et nom est le paramètre.</p>
+<h2 id="4-niveau-dacces">4. Niveau d'accès</h2>
 <p>Dans l'exemple précédent, on observe le mot clé <code>public</code></p>
 <p>Une classe est généralement publique, c'est à dire que l'on peut l'utiliser à partir de n'importe quel endroit dans le code!</p>
-<p>Par contre il y a plusieurs niveau d'accès possibles et ils sont spécialement importants pour les attributs de la classe</p>
+<p>Par contre il y a plusieurs niveau d'accès possibles et ils sont spécialement importants pour les attributs et les comportements de la classe</p>
 <ul>
 <li>public    : toujours accessible à partir du code, on peut faire n'importe quoi (ou presque) avec</li>
 <li>private   : l'objet s'occupe lui même de modifier cet attribut, probablement à travers une méthode</li>
