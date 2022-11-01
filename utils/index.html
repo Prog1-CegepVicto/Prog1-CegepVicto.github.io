@@ -1050,10 +1050,12 @@ nomEnMajuscules = nom.ToUpper();
 <code>using System.IO;</code></p>
 <p>Un peu comme dans le cas du générateur de nombres aléatoires, il y a une variable à déclarer et initialiser avant de lire le fichier​
 <code>StreamReader lecteur = new StreamReader("MonTexte.txt");​</code></p>
-<p><strong>ATTENTION! :</strong>
-- Entre les parenthèses il faut donner le nom du fichier à lire et ce fichier doit être dans le même répertoire que le projet​
-- Dans Visual Studio, dans l'explorateur de solutions, cliquer de droite sur le fichier texte et sélectionner Propriétés
-- À la propriété <strong>Copier dans le répertoire de sortie</strong> choisir  <strong>Copier si plus récent</strong></p>
+<p><strong>ATTENTION! :</strong></p>
+<ul>
+<li>Entre les parenthèses il faut donner le nom du fichier à lire et ce fichier doit être dans le même répertoire que le projet​</li>
+<li>Dans Visual Studio, dans l'explorateur de solutions, cliquer de droite sur le fichier texte et sélectionner Propriétés</li>
+<li>À la propriété <strong>Copier dans le répertoire de sortie</strong> choisir  <strong>Copier si plus récent</strong></li>
+</ul>
 <p>Enfin, on peut lire une ligne du fichier​
 <code>texte = lecteur.ReadLine();​</code></p>
 <p>Il faut fermer le lecteur quand nos traitements sont terminés, sinon l'ordinateur considère que le fichier est en cours d'utilisation​
