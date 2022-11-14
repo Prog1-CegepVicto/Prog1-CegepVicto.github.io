@@ -715,9 +715,88 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          POO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         POO
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-classe-eleve" class="md-nav__link">
+    1. Classe Eleve
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classe-fraction" class="md-nav__link">
+    2. Classe Fraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-classe-arme" class="md-nav__link">
+    3. Classe Arme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-classe-caracteristique" class="md-nav__link">
+    4. Classe Caracteristique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-classe-tableau-dynamique-et-programme" class="md-nav__link">
+    5. Classe Tableau dynamique et programme
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Classe Tableau dynamique et programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-tableaudynamique" class="md-nav__link">
+    5.1 TableauDynamique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-programme-principale" class="md-nav__link">
+    5.2 Programme principale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -778,6 +857,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-classe-eleve" class="md-nav__link">
+    1. Classe Eleve
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classe-fraction" class="md-nav__link">
+    2. Classe Fraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-classe-arme" class="md-nav__link">
+    3. Classe Arme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-classe-caracteristique" class="md-nav__link">
+    4. Classe Caracteristique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-classe-tableau-dynamique-et-programme" class="md-nav__link">
+    5. Classe Tableau dynamique et programme
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Classe Tableau dynamique et programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-tableaudynamique" class="md-nav__link">
+    5.1 TableauDynamique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-programme-principale" class="md-nav__link">
+    5.2 Programme principale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -791,6 +933,7 @@
 
 
 <h1 id="solutions-possibles-aux-exercices-de-poo-1-a-3">Solutions possibles aux exercices de POO (1 à 3)</h1>
+<h2 id="1-classe-eleve">1. Classe Eleve</h2>
 <pre><code>public class Eleve
 {
     public string nom;
@@ -840,6 +983,7 @@
 
 }
 </code></pre>
+<h2 id="2-classe-fraction">2. Classe Fraction</h2>
 <pre><code>public class Fraction
 {
     public int numerateur;
@@ -859,6 +1003,7 @@
     }
 }
 </code></pre>
+<h2 id="3-classe-arme">3. Classe Arme</h2>
 <pre><code>public class Arme
 {
     public string nom;
@@ -900,6 +1045,182 @@
                 this.bonusMagic = 0;
             }
         }
+    }
+}
+</code></pre>
+<h2 id="4-classe-caracteristique">4. Classe Caracteristique</h2>
+<pre><code></code></pre>
+<h2 id="5-classe-tableau-dynamique-et-programme">5. Classe Tableau dynamique et programme</h2>
+<h3 id="51-tableaudynamique">5.1 TableauDynamique</h3>
+<pre><code>public class TableauDynamique
+{
+    double[] tab;
+    int cnt;
+    public TableauDynamique()
+    {
+        this.tab = new double[10];
+        this.cnt = 0;
+    }
+
+    public void ajouterNombre(double nombre)
+    {
+        if (this.cnt &lt; this.tab.Length)
+        {
+            this.tab[this.cnt] = nombre;
+            this.cnt++;
+        }
+        else 
+        {
+            // Nouveau tableau de 1.5 fois la longueur
+            double[] nouvTab = new double[this.tab.Length + this.tab.Length/2];
+            // Copier les données du tableau actuel dans le nouveau tableau
+            for (int i = 0; i &lt; this.tab.Length; i++)
+            {
+                nouvTab[i] = this.tab[i];
+            }
+            // Remplacer le tableau actuel par le nouveau tableau
+            this.tab = nouvTab;
+
+            this.tab[this.cnt] = nombre;
+            this.cnt++;
+        }
+    }
+
+    public double calculerTotal()
+    {
+        double total = 0.0;
+
+        for (int i = 0; i &lt; this.cnt; i++)
+        {
+            total += this.tab[i];
+        }
+
+        return total;
+    }
+
+    public double calculerMoyenne()
+    { 
+        return this.calculerTotal()/ this.cnt;
+    }
+
+    public double calculerMediane()
+    {
+        double mediane = 0;
+
+        this.trierAsc();
+
+        int position = this.cnt / 2;
+
+        if (this.cnt % 2 == 0)
+        {
+
+
+            mediane = (this.tab[position] + this.tab[position - 1])/2;
+        }
+        else
+        {
+            mediane = this.tab[position];
+        }
+
+        return mediane;
+    }
+
+    public double calculerEcartType()
+    {
+        double moyenne = this.calculerMoyenne();
+        double sommeCarreEcart = 0.0;
+        double ecartType = 0.0;
+
+        for (int i = 0; i &lt; this.cnt; i++)
+        {
+            sommeCarreEcart += Math.Pow(this.tab[i] - moyenne, 2);
+        }
+        sommeCarreEcart /= this.cnt - 1;
+
+        ecartType = Math.Sqrt(sommeCarreEcart);
+
+        return ecartType;
+    }
+
+    public void trierAsc()
+    {
+        // Classer mon tableau du plus petit au plus grand
+        // pour chaque case du tableau
+        for (int i = 0; i &lt; this.cnt; i++)
+        {
+            // trouver l'index(la position) de la note minimum du tableau restant
+            int positionMin = trouverMin(i);
+            // échange la note à la position minimum avec la note à la position actuelle
+            double temp = this.tab[positionMin];
+            this.tab[positionMin] = this.tab[i];
+            this.tab[i] = temp;
+        }
+    }
+
+    public int trouverMin(int depart)
+    {
+        int positionMin = depart;
+
+        for (int i = depart; i &lt; this.cnt; i++)
+        {
+            if (this.tab[i] &lt; this.tab[positionMin])
+            {
+                positionMin = i;
+            }
+        }
+
+        return positionMin;
+    }
+}
+</code></pre>
+<h3 id="52-programme-principale">5.2 Programme principale</h3>
+<pre><code>static void Main(string[] args)
+{
+    double note = 0.0;
+    TableauDynamique tabNotes = new TableauDynamique();
+
+    int option = 1;
+
+    while (note &gt;= 0.0)
+    {
+        Console.Clear();
+        Console.WriteLine(&quot;Entrer les notes de votre groupe, note négative pour arrêter&quot;);
+
+        double.TryParse(Console.ReadLine(), out note);
+
+        if (note &gt;= 0.0)
+        {
+            tabNotes.ajouterNombre(note);
+        }
+    }
+
+
+    while (option &gt; 0 &amp;&amp; option &lt; 5)
+    {
+        Console.Clear();
+        Console.Write(&quot;Choisir une option 1-4\n 1. Moyenne\n 2. Mediane\n 3. Ecart type\n 4. Quitter&quot;);
+        int.TryParse(Console.ReadLine(), out option);
+        switch (option)
+        {
+            case 1:
+                Console.WriteLine(&quot;Moyenne : {0}&quot;, tabNotes.calculerMoyenne());
+                break;
+            case 2:
+                Console.WriteLine(&quot;Mediane : {0}&quot;, tabNotes.calculerMediane());
+                break;
+            case 3:
+                Console.WriteLine(&quot;Ecart type {0}&quot;, tabNotes.calculerEcartType());
+                break;
+            case 4:
+                Console.WriteLine(&quot;Fin&quot;);
+                break;
+            default:
+                Console.WriteLine(&quot;Option invalide&quot;);
+                option = 1;
+                break;
+        }
+        Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
+        Console.ReadKey();
     }
 }
 </code></pre>
