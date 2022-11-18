@@ -1116,6 +1116,24 @@ nomEnMajuscules = nom.ToUpper();
 <li>Pour ajouter un élément on utilise la méthode <strong>Add</strong>(début de la liste) ou <strong>Append</strong> (fin de la liste)</li>
 <li>Plusieurs autre méthodes sont disponibles</li>
 </ul>
+<p>Exemples:</p>
+<pre><code>// déclaration
+List&lt;string&gt; nomItems;
+
+// initialisation (instantiation)
+nomItems = new List&lt;string&gt;();
+
+// ajouter
+this.nomItems.Add(nom);
+
+// utilisation avec une boucle
+double sousTotal = 0.0;
+
+for (int i = 0; i &lt; this.prixItems.Count; i++)
+{
+    sousTotal += this.prixItems[i];
+}
+</code></pre>
 <p>Documentation officielle : https://learn.microsoft.com/fr-ca/dotnet/api/system.collections.generic.list-1?view=net-7.0</p>
 
 

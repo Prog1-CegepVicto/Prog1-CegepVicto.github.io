@@ -776,15 +776,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-tableaudynamique" class="md-nav__link">
-    5.1 TableauDynamique
+  <a href="#51-classe" class="md-nav__link">
+    5.1 Classe
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-programme-principale" class="md-nav__link">
-    5.2 Programme principale
+  <a href="#52-programme" class="md-nav__link">
+    5.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-classe-facture-et-programme" class="md-nav__link">
+    6. Classe Facture et programme
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Classe Facture et programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-classe" class="md-nav__link">
+    6.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-programme" class="md-nav__link">
+    6.2 Programme
   </a>
   
 </li>
@@ -900,15 +927,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-tableaudynamique" class="md-nav__link">
-    5.1 TableauDynamique
+  <a href="#51-classe" class="md-nav__link">
+    5.1 Classe
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-programme-principale" class="md-nav__link">
-    5.2 Programme principale
+  <a href="#52-programme" class="md-nav__link">
+    5.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-classe-facture-et-programme" class="md-nav__link">
+    6. Classe Facture et programme
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Classe Facture et programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-classe" class="md-nav__link">
+    6.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-programme" class="md-nav__link">
+    6.2 Programme
   </a>
   
 </li>
@@ -1051,7 +1105,7 @@
 <h2 id="4-classe-caracteristique">4. Classe Caracteristique</h2>
 <pre><code></code></pre>
 <h2 id="5-classe-tableau-dynamique-et-programme">5. Classe Tableau dynamique et programme</h2>
-<h3 id="51-tableaudynamique">5.1 TableauDynamique</h3>
+<h3 id="51-classe">5.1 Classe</h3>
 <pre><code>public class TableauDynamique
 {
     double[] tab;
@@ -1174,7 +1228,7 @@
     }
 }
 </code></pre>
-<h3 id="52-programme-principale">5.2 Programme principale</h3>
+<h3 id="52-programme">5.2 Programme</h3>
 <pre><code>static void Main(string[] args)
 {
     double note = 0.0;
@@ -1220,6 +1274,125 @@
                 option = 1;
                 break;
         }
+        Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
+        Console.ReadKey();
+    }
+}
+</code></pre>
+<h2 id="6-classe-facture-et-programme">6. Classe Facture et programme</h2>
+<h3 id="61-classe">6.1 Classe</h3>
+<pre><code>public class Facture
+{
+    List&lt;string&gt; nomItems;
+    List&lt;double&gt; prixItems;
+    double taxe;
+
+    public Facture(double taxe) 
+    {
+        this.taxe = taxe;
+        this.nomItems = new List&lt;string&gt;();
+        this.prixItems = new List&lt;double&gt;();
+    }
+
+    public void ajouterItem(string nom, double prix)
+    {
+        this.nomItems.Add(nom);
+        this.prixItems.Add(prix);
+    }
+
+    public double calculerSousTotal()
+    {
+        double sousTotal = 0.0;
+
+        for (int i = 0; i &lt; this.prixItems.Count; i++)
+        {
+            sousTotal += this.prixItems[i];
+        }
+
+        return sousTotal;
+    }
+
+    public double calculerTaxes()
+    {
+        double taxes = calculerSousTotal() * this.taxe;
+
+        return taxes;
+
+        // ou seulement
+        // return calculerSousTotal() * this.taxe;
+    }
+
+    public double calculerTotal()
+    {
+        double total = calculerSousTotal() + calculerTaxes(); 
+
+        return total;
+
+        // ou seulement
+        // return calculerSousTotal() + calculerTaxes(); 
+    }
+
+    public void afficherFacture()
+    {
+        // parcourir les listes pour afficher les noms et prix 
+        // puisque les cases correspondent au niveau des positions (index)
+        for (int i = 0; i &lt; this.nomItems.Count; i++)
+        {
+            Console.WriteLine(&quot;{0} : {1}&quot;, this.nomItems[i], this.prixItems[i]);
+            // ou bien
+            // Console.Writeline(this.nomItems[i] + &quot; : &quot; + this.prixItems[i]);
+        }
+        Console.WriteLine(&quot;Sous total : {0}&quot;, calculerSousTotal());
+        Console.WriteLine(&quot;Taxes : {0}&quot;, calculerTaxes());
+        Console.WriteLine(&quot;Total : {0}&quot;, calculerTotal());
+    }
+}
+</code></pre>
+<h3 id="62-programme">6.2 Programme</h3>
+<pre><code>static void programmeFacture()
+{
+    Facture facture = new Facture(0.14975);
+    int choix = 1;
+
+    while (choix &lt; 3 &amp;&amp; choix &gt; 0)
+    {
+        Console.Clear();
+        Console.WriteLine(&quot;1. Entrer item\n 2. Imprimer facture\n 3. Quitter&quot;);
+        // Quand on rentre autre chose qu'un int avec int.TryParse
+        // La méthode retourne faux, sinon vrai
+        if(!int.TryParse(Console.ReadLine(), out choix))
+        {
+            Console.WriteLine(&quot;Recommencer l'opération, choix invalide&quot;);
+        }
+
+        if (choix == 1)
+        {
+            string nom = &quot;&quot;;
+            double prix = 0.0;
+            Console.WriteLine(&quot;Entrer le nom de l'item&quot;);
+            nom = Console.ReadLine();
+            Console.WriteLine(&quot;Entrer le prix de l'item&quot;);
+            double.TryParse(Console.ReadLine(), out prix);
+
+            facture.ajouterItem(nom, prix);
+        }
+        else if (choix == 2)
+        {
+            facture.afficherFacture();
+        }
+        else if (choix == 3)
+        {
+            // quand je veux quitter mettre un nombre qui fait arrêter la boucle
+            // dans choix
+            choix = 0;
+        }
+        else
+        {
+            // pour ne pas sortir de la boucle quand le choix n'est pas bon
+            // remettre choix à 1
+            choix = 1;
+        }
+
         Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
         Console.ReadKey();
     }
