@@ -821,6 +821,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-classe-carte-et-programme" class="md-nav__link">
+    7. Classe Carte et Programme
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Classe Carte et Programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-classe" class="md-nav__link">
+    7.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-programme" class="md-nav__link">
+    7.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-classe-item-et-integration-avec-la-classe-facture" class="md-nav__link">
+    8. Classe Item et intégration avec la classe Facture
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Classe Item et intégration avec la classe Facture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-classe" class="md-nav__link">
+    8.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-programme" class="md-nav__link">
+    8.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -963,6 +1017,60 @@
           <li class="md-nav__item">
   <a href="#62-programme" class="md-nav__link">
     6.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-classe-carte-et-programme" class="md-nav__link">
+    7. Classe Carte et Programme
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Classe Carte et Programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-classe" class="md-nav__link">
+    7.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-programme" class="md-nav__link">
+    7.2 Programme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-classe-item-et-integration-avec-la-classe-facture" class="md-nav__link">
+    8. Classe Item et intégration avec la classe Facture
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Classe Item et intégration avec la classe Facture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-classe" class="md-nav__link">
+    8.1 Classe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-programme" class="md-nav__link">
+    8.2 Programme
   </a>
   
 </li>
@@ -1396,6 +1504,211 @@
         Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
         Console.ReadKey();
     }
+}
+</code></pre>
+<h2 id="7-classe-carte-et-programme">7. Classe Carte et Programme</h2>
+<h3 id="71-classe">7.1 Classe</h3>
+<pre><code>public class Carte
+{
+    public string sorte;
+    public int valeur;
+
+    public Carte(string sorte, int valeur)
+    {
+        this.sorte = sorte;
+        this.valeur = valeur;
+    }
+
+    public string donnerNomCarte()
+    {
+        string nom = &quot;&quot;;
+
+        if (valeur == 1)
+        {
+            nom = &quot;As de &quot;;
+        }
+        else if (valeur == 11)
+        {
+            nom = &quot;Valet de &quot;;
+        }
+        else if (valeur == 12)
+        {
+            nom = &quot;Dame de &quot;;
+        }
+        else if (valeur == 13)
+        {
+            nom = &quot;Roi de &quot;;
+        }
+        else
+        {
+            nom = this.valeur + &quot; de &quot;;
+        }
+
+        nom += this.sorte;
+
+        return nom;
+    }
+}
+</code></pre>
+<h3 id="72-programme">7.2 Programme</h3>
+<pre><code>static void programmeCarte()
+{
+    Random random = new Random();
+    Carte[] cartes = new Carte[10];
+    string[] sortes = { &quot;Trèfle&quot;, &quot;Pique&quot;, &quot;Carreau&quot;, &quot;Coeur&quot; };
+
+    for (int i = 0; i &lt; cartes.Length; i++)
+    {
+        int choixSorte = random.Next(0, sortes.Length);
+        cartes[i] = new Carte(sortes[choixSorte], random.Next(1, 14));
+        Console.WriteLine(cartes[i].donnerNomCarte());
+    }
+}
+</code></pre>
+<h2 id="8-classe-item-et-integration-avec-la-classe-facture">8. Classe Item et intégration avec la classe Facture</h2>
+<h3 id="81-classe">8.1 Classe</h3>
+<pre><code>public class Item
+{
+    public string nom;
+    public double prix;
+    public int code;
+    public int qte;
+
+    public Item()
+    { }
+    public Item(string nom, double prix, int code, int qte)
+    {
+        this.nom = nom;
+        this.prix = prix;
+        this.code = code;
+        this.qte = qte;
+    }
+}
+</code></pre>
+<pre><code>public class FactureItem
+{
+    // On remplace les listes de noms et de prix
+    // par une liste de la classe item
+    List&lt;Item&gt; items;
+    double taxe;
+
+    public FactureItem(double taxe)
+    {
+        this.taxe = taxe;
+        // Comme le tableau la liste doit être initialisée dans le constructeur
+        this.items = new List&lt;Item&gt;();
+    }
+
+    public void ajouterItem(string nom, double prix, int code, int qte)
+    {
+        // Avant d'ajouter un item dans la liste il faut initialiser l'item
+        Item item = new Item(nom, prix*qte, code, qte);
+        // On ajoute ensuite l'instance item dans la liste
+        items.Add(item);
+    }
+
+    public double calculerSousTotal()
+    {
+        double sousTotal = 0.0;
+
+        for (int i = 0; i &lt; this.items.Count; i++)
+        {
+            sousTotal += this.items[i].prix;
+        }
+
+        return sousTotal;
+    }
+
+    public double calculerTaxes()
+    {
+        double taxes = calculerSousTotal() * this.taxe;
+
+        return taxes;
+
+        // ou seulement
+        // return calculerSousTotal() * this.taxe;
+    }
+
+    public double calculerTotal()
+    {
+        double total = calculerSousTotal() + calculerTaxes();
+
+        return total;
+
+        // ou seulement
+        // return calculerSousTotal() + calculerTaxes(); 
+    }
+
+    public void afficherFacture()
+    {
+        // parcourir les listes pour afficher les attritbuts de chaque item
+        for (int i = 0; i &lt; this.items.Count; i++)
+        {
+            Console.WriteLine(&quot;{0} : {1} : {2} : {3}&quot;, this.items[i].nom, this.items[i].prix, this.items[i].code, this.items[i].qte);
+        }
+        Console.WriteLine(&quot;Sous total : {0}&quot;, calculerSousTotal());
+        Console.WriteLine(&quot;Taxes : {0}&quot;, calculerTaxes());
+        Console.WriteLine(&quot;Total : {0}&quot;, calculerTotal());
+    }
+}
+</code></pre>
+<h3 id="82-programme">8.2 Programme</h3>
+<pre><code>static void programmeItem()
+{
+    FactureItem facture = new FactureItem(0.14975);
+    int choix = 1;
+
+    while (choix &lt; 3 &amp;&amp; choix &gt; 0)
+    {
+        Console.Clear();
+        Console.WriteLine(&quot;1. Entrer item\n 2. Imprimer facture\n 3. Quitter&quot;);
+        // Quand on rentre autre chose qu'un int avec int.TryParse
+        // La méthode retourne faux, sinon vrai
+        if (!int.TryParse(Console.ReadLine(), out choix))
+        {
+            Console.WriteLine(&quot;Recommencer l'opération, choix invalide&quot;);
+        }
+
+        if (choix == 1)
+        {
+            string nom = &quot;&quot;;
+            double prix = 0.0;
+            int code = 0;
+            int qte = 0;
+            // on récupère toutes les informations de l'item
+            Console.WriteLine(&quot;Entrer le nom de l'item&quot;);
+            nom = Console.ReadLine();
+            Console.WriteLine(&quot;Entrer le prix de l'item&quot;);
+            double.TryParse(Console.ReadLine(), out prix);
+            Console.WriteLine(&quot;Entrer le code de l'item&quot;);
+            int.TryParse(Console.ReadLine(), out code);
+            Console.WriteLine(&quot;Entrer la qauntité&quot;);
+            int.TryParse(Console.ReadLine(), out qte);
+
+            facture.ajouterItem(nom, prix, code, qte);
+        }
+        else if (choix == 2)
+        {
+            facture.afficherFacture();
+        }
+        else if (choix == 3)
+        {
+            // quand je veux quitter, mettre un nombre qui fait arrêter la boucle
+            // dans choix. On pourrait laisser l'option vide
+            // idéalement il faudrait repenser la logique de la boucle
+            choix = 0;
+        }
+        else
+        {
+            // pour ne pas sortir de la boucle quand le choix n'est pas bon
+            // remettre choix à 1
+            choix = 1;
+        }
+
+        Console.WriteLine(&quot;Appuyer sur une touche pour continuer&quot;);
+        Console.ReadKey();
+    }
+}
 }
 </code></pre>
 
