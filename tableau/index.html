@@ -441,98 +441,23 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_9">
-          Programmation orientée objet
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation orientée objet" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_9">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation orientée objet
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_definition/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_creation/" class="md-nav__link">
-        Classe
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_utilisation/" class="md-nav__link">
-        Instance
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_constructeur/" class="md-nav__link">
-        Constructeur
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../utils/" class="md-nav__link">
         Méthodes utiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GIthub
       </a>
     </li>
   
@@ -643,20 +568,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exPOO00/" class="md-nav__link">
-        POO
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -753,50 +664,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../solBouclesTableaux/" class="md-nav__link">
-        Boucles et tableaux
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../solPOO/" class="md-nav__link">
-        POO
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../solDnd/" class="md-nav__link">
-        Labo DnD
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../solPendu/" class="md-nav__link">
-        Labo Pendu
+        Pendu
       </a>
     </li>
   
@@ -896,8 +765,8 @@
 <p>Exemple en C#</p>
 <p><code>int[] notes = new int[30];</code></p>
 <h3 id="declaration-alternative">Déclaration alternative</h3>
-<p>Quand on sait déjà ce qu'il y a dans le tableau, on peut déclarer le tableau différement.</p>
-<p><code>int[] notes = new int[]{98, 76, 42, 73, 89};</code>
+<p>Quand on sait déjà ce qu'il y a dans le tableau, on peut déclarer le tableau différement.
+<code>int[] notes = new int[]{98, 76, 42, 73, 89};</code>
 ou
 <code>int[] notes = {98, 76, 42, 73, 89};</code></p>
 <h2 id="utiliser-un-tableau">Utiliser un tableau</h2>
@@ -922,6 +791,7 @@ Console.WriteLine(notes[2]);
 for(int i = 0; i &lt; notes.Length; i++)
 {
     moyenne = moyenne + notes[i];
+    i++;
 }
 moyenne = moyenne / notes.Length;
 </code></pre>

@@ -13,7 +13,7 @@
     
     
       
-        <title>Labo Pendu - Programmation 1 - Automne 2022</title>
+        <title>Pendu - Programmation 1 - Automne 2022</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Labo Pendu
+              Pendu
             
           </span>
         </div>
@@ -378,98 +378,23 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_9">
-          Programmation orientée objet
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation orientée objet" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_9">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation orientée objet
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_definition/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_creation/" class="md-nav__link">
-        Classe
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_utilisation/" class="md-nav__link">
-        Instance
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POO_constructeur/" class="md-nav__link">
-        Constructeur
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../utils/" class="md-nav__link">
         Méthodes utiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GIthub
       </a>
     </li>
   
@@ -580,20 +505,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exPOO00/" class="md-nav__link">
-        POO
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -690,48 +601,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../solBouclesTableaux/" class="md-nav__link">
-        Boucles et tableaux
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../solPOO/" class="md-nav__link">
-        POO
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../solDnd/" class="md-nav__link">
-        Labo DnD
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -744,7 +613,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Labo Pendu
+        Pendu
       </a>
       
     </li>
@@ -811,9 +680,7 @@
     // Afficher les instructions
     Console.WriteLine(&quot;Bienvenue au jeu du pendu, vous devez trouver toutes les lettres d'un mot au hasard. \n\n Chaque fois que vous choisissez une lettre : \n - Les lettres sont affichées à la bonne place dans le mot caché\n ou \n - Un essai de moins \n\n La partie est gagnée quand toutes les lettre sont trouvées\n ou perdues quand il n'y a plus d'essai \n Enter pour continuer.&quot;);
     Console.ReadLine();
-
     // Choisir un mot à deviner
-    // Fait en même temps que l'initialisation de la variable mot
 
     // Tant que je n'ai pas deviné le mot et que j'ai des essais
     while(!motDevine &amp;&amp; essai &gt; 0)
@@ -822,10 +689,8 @@
         Console.Clear();
         Console.WriteLine(&quot;Entrer une lettre :&quot;);
         lettre = Console.ReadLine();
-
         // Vérifier si la lettre est dans le mot
         lettreDansMot = verifierSiLettreDansMot(mot, lettre);
-
         // Si la lettre est dans le mot 
         if (lettreDansMot)
         {
@@ -837,20 +702,17 @@
         {
             essai--;
         }
-
         // Vérifier si le mot est complet
         if (motCache == mot)
         {
             motDevine = true;
         }
-
         // Afficher résultat du tour
         Console.WriteLine(&quot;Mot : &quot; + motCache);
         Console.WriteLine(&quot;Essais restant : &quot; + essai);
         Console.WriteLine(&quot;Appuyer sur Entrer pour continuer.&quot;);
         Console.ReadLine();
     }
-
     // Afficher le résultat
     if (motDevine)
     {
@@ -913,7 +775,7 @@ static string ajusterMotCache(string mot, string motCache, string lettre)
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../solDnd/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Labo DnD" rel="prev">
+        <a href="../solSem5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semaine 5" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -922,7 +784,7 @@ static string ajusterMotCache(string mot, string motCache, string lettre)
               <span class="md-footer__direction">
                 Previous
               </span>
-              Labo DnD
+              Semaine 5
             </div>
           </div>
         </a>
