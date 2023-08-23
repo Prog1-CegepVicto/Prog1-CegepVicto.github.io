@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../POO_constructeur/">
+        <link rel="prev" href="../lecture-ecriture/">
       
       
-        <link rel="next" href="../exSem1/">
+        <link rel="next" href="../si/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Méthodes utiles - Programmation 1 - Cégep de Victoriaville</title>
+        <title>Débogage - Programmation 1 - Cégep de Victoriaville</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilitaires-et-essentiels" class="md-skip">
+        <a href="#debogage" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Méthodes utiles
+              Débogage
             
           </span>
         </div>
@@ -266,11 +266,99 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../debogage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Débogage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Débogage
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-derreurs" class="md-nav__link">
+    Types d'erreurs
+  </a>
+  
+    <nav class="md-nav" aria-label="Types d'erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erreur-de-compilation" class="md-nav__link">
+    Erreur de compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreur-dexecution" class="md-nav__link">
+    Erreur d'exécution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils" class="md-nav__link">
+    Outils
+  </a>
+  
+    <nav class="md-nav" aria-label="Outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-point-darret" class="md-nav__link">
+    Le point d'arrêt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lexecution-pas-a-pas" class="md-nav__link">
+    L'exécution pas à pas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -488,135 +576,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Méthodes utiles
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
         Méthodes utiles
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#afficher-a-la-console-sans-sauter-de-ligne" class="md-nav__link">
-    Afficher à la console sans sauter de ligne
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#effacer-la-console" class="md-nav__link">
-    Effacer la console
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inclure-un-saut-de-ligne-dans-une-message-de-type-string" class="md-nav__link">
-    Inclure un saut de ligne dans une message de type string
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saisir-a-la-console" class="md-nav__link">
-    Saisir à la console
-  </a>
-  
-    <nav class="md-nav" aria-label="Saisir à la console">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#texte" class="md-nav__link">
-    Texte
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nombre-entier-int" class="md-nav__link">
-    Nombre entier (int)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nombre-reel-double" class="md-nav__link">
-    Nombre réel (double)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generer-une-nombre-aleatoire" class="md-nav__link">
-    Générer une nombre aléatoire
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faire-une-pause" class="md-nav__link">
-    Faire une pause
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caculer-la-puissance-exposant-et-la-racine-carre-dun-nombre" class="md-nav__link">
-    Caculer la puissance (exposant) et la racine carré d'un nombre
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mettre-en-majusculesminuscules-une-chaine-de-caracteres-string-toupper-tolower" class="md-nav__link">
-    Mettre en majuscules/minuscules une chaîne de caractères (string) : ToUpper(), ToLower()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lire-un-fichier-de-texte-extension-txt" class="md-nav__link">
-    Lire un fichier de texte (extension .txt)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -921,51 +885,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#afficher-a-la-console-sans-sauter-de-ligne" class="md-nav__link">
-    Afficher à la console sans sauter de ligne
+  <a href="#types-derreurs" class="md-nav__link">
+    Types d'erreurs
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#effacer-la-console" class="md-nav__link">
-    Effacer la console
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inclure-un-saut-de-ligne-dans-une-message-de-type-string" class="md-nav__link">
-    Inclure un saut de ligne dans une message de type string
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saisir-a-la-console" class="md-nav__link">
-    Saisir à la console
-  </a>
-  
-    <nav class="md-nav" aria-label="Saisir à la console">
+    <nav class="md-nav" aria-label="Types d'erreurs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#texte" class="md-nav__link">
-    Texte
+  <a href="#erreur-de-compilation" class="md-nav__link">
+    Erreur de compilation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nombre-entier-int" class="md-nav__link">
-    Nombre entier (int)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nombre-reel-double" class="md-nav__link">
-    Nombre réel (double)
+  <a href="#erreur-dexecution" class="md-nav__link">
+    Erreur d'exécution
   </a>
   
 </li>
@@ -976,37 +912,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generer-une-nombre-aleatoire" class="md-nav__link">
-    Générer une nombre aléatoire
+  <a href="#outils" class="md-nav__link">
+    Outils
+  </a>
+  
+    <nav class="md-nav" aria-label="Outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-point-darret" class="md-nav__link">
+    Le point d'arrêt
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#faire-une-pause" class="md-nav__link">
-    Faire une pause
+        
+          <li class="md-nav__item">
+  <a href="#lexecution-pas-a-pas" class="md-nav__link">
+    L'exécution pas à pas
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#caculer-la-puissance-exposant-et-la-racine-carre-dun-nombre" class="md-nav__link">
-    Caculer la puissance (exposant) et la racine carré d'un nombre
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mettre-en-majusculesminuscules-une-chaine-de-caracteres-string-toupper-tolower" class="md-nav__link">
-    Mettre en majuscules/minuscules une chaîne de caractères (string) : ToUpper(), ToLower()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lire-un-fichier-de-texte-extension-txt" class="md-nav__link">
-    Lire un fichier de texte (extension .txt)
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1025,96 +953,32 @@
                   
 
 
-<h1 id="utilitaires-et-essentiels">Utilitaires et essentiels</h1>
-<h2 id="afficher-a-la-console-sans-sauter-de-ligne">Afficher à la console sans sauter de ligne</h2>
-<pre><code>Console.Write(&quot;Mon texte.&quot;);
-Console.Write(&quot; La suite de mon texte.&quot;);
-</code></pre>
-<h2 id="effacer-la-console">Effacer la console</h2>
-<p><code>Console.Clear();</code></p>
-<h2 id="inclure-un-saut-de-ligne-dans-une-message-de-type-string">Inclure un saut de ligne dans une message de type string</h2>
-<p>Le symble \n dans un texte fera sauter une ligne dans un string</p>
-<p><code>Console.WriteLine("Ma première ligne \n Ma deuxième ligne");</code></p>
-<h2 id="saisir-a-la-console">Saisir à la console</h2>
-<h3 id="texte">Texte</h3>
-<pre><code>string leTexte = &quot;&quot;;
-
-Console.WriteLine(&quot;Entrer votre texte&quot;);
-leTexte = Console.ReadLine();
-</code></pre>
-<h3 id="nombre-entier-int">Nombre entier (int)</h3>
-<pre><code>int nombre = 0;
-
-Console.WriteLine(&quot;Entrer votre nombre&quot;);
-int.TryParse(Console.ReadLine(), out nombre);
-</code></pre>
-<h3 id="nombre-reel-double">Nombre réel (double)</h3>
-<pre><code>double nombre = 0;
-
-Console.WriteLine(&quot;Entrer votre nombre&quot;);
-double.TryParse(Console.ReadLine(), out nombre);
-</code></pre>
-<h2 id="generer-une-nombre-aleatoire">Générer une nombre aléatoire</h2>
-<p>Placer cette initialisation au début de votre méthode</p>
-<p><code>Random aleatoire = new Random();</code></p>
-<p>Pour assigner une nombre aléatoire à une variable</p>
-<p><code>nombre = aleatoire.Next();</code></p>
-<p>Pour assigner une nombre aléatoire avec un maximum (commence à 0)
-<strong>Le maximum doit toujours être plus grand de 1 que le nombre maximum désiré</strong></p>
-<p><code>nombre = aleatoire.Next(101);</code></p>
-<p>Pour assigner une nombre aléatoire avec un minimum et un maximum
-<strong>Le maximum doit toujours être plus grand de 1 que le nombre maximum désiré</strong></p>
-<p><code>nombre = aleatoire.Next(1, 101);</code></p>
-<h2 id="faire-une-pause">Faire une pause</h2>
-<p><code>Thread.Sleep(1000);</code> </p>
-<p>Le paramètre passé à la méthode Sleep est un nombre de millisecondes. Le paramètre ci-dessus fait une pause de 1 seconde.</p>
-<h2 id="caculer-la-puissance-exposant-et-la-racine-carre-dun-nombre">Caculer la puissance (exposant) et la racine carré d'un nombre</h2>
-<p><code>Math.Pow(2,5);</code> équivalent de 2 puissance 5, donne 32
-<code>Math.Sqrt(4);</code>  équivalent de la racine carré de 2, donne 2</p>
-<h2 id="mettre-en-majusculesminuscules-une-chaine-de-caracteres-string-toupper-tolower">Mettre en majuscules/minuscules une chaîne de caractères (string) : ToUpper(), ToLower()</h2>
-<pre><code>string nom = &quot;Denis&quot;;
-string nomEnMinuscules = &quot;&quot;;
-string nomEnMajuscules = &quot;&quot;;
-
-// Mettre en minuscule
-
-nomEnMinuscules = nom.ToLower();
-nomEnMajuscules = nom.ToUpper();
-
-</code></pre>
-<h2 id="lire-un-fichier-de-texte-extension-txt">Lire un fichier de texte (extension .txt)</h2>
-<p>On a besoin des outils de traitement des fichiers. Il faut donc ajouter, au début du fichier (avant toutes les autres lignes)
-<code>using System.IO;</code></p>
-<p>Un peu comme dans le cas du générateur de nombres aléatoires, il y a une variable à déclarer et initialiser avant de lire le fichier​
-<code>StreamReader lecteur = new StreamReader("MonTexte.txt");​</code></p>
-<p><strong>ATTENTION! :</strong></p>
+<h1 id="debogage">Débogage</h1>
+<p>Le débogage sert à diagnostiquer les erreurs d'un programme. Il nous permet entre autre d'observer les données en mémoire pendant l'exécution du programme. </p>
+<p>Les environnements de développement possèdent tous des outils pour effectuer ce processus essentiel.</p>
+<h2 id="types-derreurs">Types d'erreurs</h2>
+<h3 id="erreur-de-compilation">Erreur de compilation</h3>
+<p>L'erreur de compilation empêche le programme de démarrer. </p>
+<p>L'environnement de développement (Visual Studio dans le cadre du cours) identifie toutes les lignes fautives et fournit une description des erreurs ainsi qu'un code unique relié à celle-ci.</p>
+<h3 id="erreur-dexecution">Erreur d'exécution</h3>
+<p>Elle est plus difficile à observer car le programme s'exécute quand même. L'erreur d'exécution arrive quand les instructions ne donnent pas le bon résultat.</p>
+<p>L'environnement de développement ne fournit aucune indication que cette erreur s'est produite. Elle est une des raisons derrière le développement des méthodes de segmentation du code (méthodes et programmation orientée objet).</p>
+<h2 id="outils">Outils</h2>
+<h3 id="le-point-darret">Le point d'arrêt</h3>
+<p>Il arrête l'exécution du code à la ligne choisie.
+Il permet d'observer l'état des données en mémoire.</p>
+<p>Dans Visual Studio :</p>
 <ul>
-<li>Entre les parenthèses il faut donner le nom du fichier à lire et ce fichier doit être dans le même répertoire que le projet​</li>
-<li>Dans Visual Studio, dans l'explorateur de solutions, cliquer de droite sur le fichier texte et sélectionner Propriétés</li>
-<li>À la propriété <strong>Copier dans le répertoire de sortie</strong> choisir  <strong>Copier si plus récent</strong></li>
+<li>Placer le curseur de la souris dans la marge de gauche à la ligne désirée et cliquer</li>
+<li>Un point rouge apparaît, il signifie que l'exécution peut être arrêtée à cet endroit</li>
 </ul>
-<p>Enfin, on peut lire une ligne du fichier​
-<code>texte = lecteur.ReadLine();​</code></p>
-<p>Il faut fermer le lecteur quand nos traitements sont terminés, sinon l'ordinateur considère que le fichier est en cours d'utilisation​
-<code>lecteur.Close();</code></p>
-<p>Exemple complet </p>
-<pre><code>static void Main(string[] args)
-{
-    string texte = &quot;&quot;;
-    string cheminFichier = &quot;monTexte.txt&quot;;
-    StreamReader lecteur = new StreamReader(cheminFichier);
-
-    // Tant que le lecteur n'est pas à la fin du fichier
-    while (!lecteur.EndOfStream)
-    { 
-        texte = lecteur.ReadLine();
-
-        Console.WriteLine(texte);
-    }
-
-    lecteur.Close();
-}
-</code></pre>
+<p><img alt="Point d'arrêt VS" src="\docs\img\pointArret.png" /></p>
+<h3 id="lexecution-pas-a-pas">L'exécution pas à pas</h3>
+<p>Un fois l'exécution d'un programme arrêtée, il est possible d'exécuter chaque ligne suivant une par une.</p>
+<p>Dans Visual Studio :</p>
+<ul>
+<li></li>
+</ul>
 
 
 
