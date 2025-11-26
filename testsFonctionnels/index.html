@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../solSem4a/">
+        <link rel="prev" href="../tableau/">
       
       
-        <link rel="next" href="../solBouclesTableaux/">
+        <link rel="next" href="../string/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Semaine 5 - Programmation 1 - Automne 2022</title>
+        <title>Tests fontionnels - Programmation 1 - Automne 2022</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#guide-de-survie-les-tests-fonctionnels" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semaine 5
+              Tests fontionnels
             
           </span>
         </div>
@@ -215,18 +220,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -247,7 +254,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -569,10 +576,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../testsFonctionnels/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests fontionnels
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -588,6 +622,165 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partie-1-tester-une-methode-niveau-micro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 1 : Tester une Méthode (Niveau Micro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie 1 : Tester une Méthode (Niveau Micro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-analyser-le-contrat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Analyser le Contrat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-le-chemin-heureux-happy-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Le "Chemin Heureux" (Happy Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-les-cas-limites-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Les Cas Limites (Boundaries)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-les-cas-derreur-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Les Cas d'Erreur (Exceptions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-2-tester-une-classe-niveau-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 2 : Tester une Classe (Niveau Macro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie 2 : Tester une Classe (Niveau Macro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-linitialisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : L'Initialisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-accesseurs-et-mutateurs-getset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Accesseurs et Mutateurs (Get/Set)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-scenarios-de-vie-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Scénarios de Vie (Séquences)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-structure-dun-test-le-modele-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Structure d'un Test : Le modèle "AAA"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La Structure d&#39;un Test : Le modèle &#34;AAA&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1049,20 +1242,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1083,7 +1274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1182,17 +1373,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../solSem5/" class="md-nav__link">
         
   
   
@@ -1208,7 +1392,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1350,6 +1533,155 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partie-1-tester-une-methode-niveau-micro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 1 : Tester une Méthode (Niveau Micro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie 1 : Tester une Méthode (Niveau Micro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-analyser-le-contrat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Analyser le Contrat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-le-chemin-heureux-happy-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Le "Chemin Heureux" (Happy Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-les-cas-limites-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Les Cas Limites (Boundaries)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-les-cas-derreur-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Les Cas d'Erreur (Exceptions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-2-tester-une-classe-niveau-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 2 : Tester une Classe (Niveau Macro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie 2 : Tester une Classe (Niveau Macro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-linitialisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : L'Initialisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-accesseurs-et-mutateurs-getset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Accesseurs et Mutateurs (Get/Set)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-scenarios-de-vie-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Scénarios de Vie (Séquences)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-structure-dun-test-le-modele-aaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Structure d'un Test : Le modèle "AAA"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La Structure d&#39;un Test : Le modèle &#34;AAA&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1366,274 +1698,124 @@
 
 
 
-  <h1>Semaine 5</h1>
-
-<pre><code>// Écrire une méthode qui lit la taille d'un utilisateur et dit s'il est petit, moyen, ou grand
-// petit : moins de 1,70m 
-// moyen : de 1,70m à 1,82m
-// grand : plus de 1,82m
-static void ex1()
+<h1 id="guide-de-survie-les-tests-fonctionnels">Guide de Survie : Les Tests Fonctionnels</h1>
+<p><strong>De la méthode à la classe</strong></p>
+<p>Passer du code à la vérification demande un changement de mentalité. On ne cherche plus à <em>construire</em> quelque chose qui marche, mais à <em>prouver</em> que cela fonctionne dans toutes les situations (même les pires).</p>
+<p>Ce guide divise la procédure en deux niveaux : le niveau <strong>Micro</strong> (la méthode) et le niveau <strong>Macro</strong> (la classe).</p>
+<hr />
+<h2 id="partie-1-tester-une-methode-niveau-micro">Partie 1 : Tester une Méthode (Niveau Micro)</h2>
+<p><em>Approche "Boîte Noire"</em></p>
+<p>Imaginez que la méthode est une boîte noire. Vous ne regardez pas le code à l'intérieur. Vous vous concentrez uniquement sur ce qui rentre (<strong>Entrées</strong>) et ce qui sort (<strong>Sorties</strong>).</p>
+<h3 id="etape-1-analyser-le-contrat">Étape 1 : Analyser le Contrat</h3>
+<p>Le <strong>Contrat</strong> est déterminé par deux éléments :</p>
+<ol>
+<li>Le <strong>Summary</strong> : La description de la méthode, de ses paramètres et de son retour prend toute sa signfication. Elle détermine l'objectif de la méthode</li>
+<li>La <strong>signature</strong> de la méthode : La signature nous donne des détails techniques comme le type des variables et le niveau d'accès (public, private, etc..)</li>
+</ol>
+<p>Avant d'écrire le test, posez-vous deux questions :</p>
+<ol>
+<li>Quels sont les paramètres acceptés ? (Ex: un entier, une chaîne, un objet)</li>
+<li>Quel est le résultat attendu ? (Une valeur de retour ou une exception ?)</li>
+</ol>
+<h3 id="etape-2-le-chemin-heureux-happy-path">Étape 2 : Le "Chemin Heureux" (Happy Path)</h3>
+<p>C'est le scénario idéal où l'utilisateur fait exactement ce qu'il faut.</p>
+<ul>
+<li><strong>Objectif :</strong> Valider que la logique de base fonctionne.</li>
+<li><strong>Exemple :</strong> Pour une addition <code>(2, 2)</code>, je m'attends à recevoir <code>4</code>.</li>
+</ul>
+<h3 id="etape-3-les-cas-limites-boundaries">Étape 3 : Les Cas Limites (Boundaries)</h3>
+<p>C'est ici que se cachent 80% des bugs. Testez les frontières des types de données :</p>
+<ul>
+<li><strong>Nombres :</strong> Testez <code>0</code>, <code>1</code>, <code>-1</code>, la valeur maximale (<code>MaxInt</code>) et minimale.</li>
+<li><strong>Listes/Tableaux :</strong> Une liste vide, une liste avec 1 seul élément, le premier et le dernier élément.</li>
+<li><strong>Chaînes de caractères :</strong> Une chaîne vide <code>""</code>, une chaîne avec seulement des espaces <code>" "</code>, ou <code>null</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Règle d'or :</strong> Si votre méthode accepte un nombre, testez toujours 0 et un nombre négatif.</p>
+</blockquote>
+<h3 id="etape-4-les-cas-derreur-exceptions">Étape 4 : Les Cas d'Erreur (Exceptions)</h3>
+<p>Si la méthode a des règles (ex: "l'âge ne peut pas être négatif"), vous devez tester son comportement avec de mauvaises données.</p>
+<ul>
+<li><strong>Action :</strong> Appeler la méthode avec une valeur invalide.</li>
+<li><strong>Attente :</strong> La méthode doit lancer une <strong>Exception</strong> (mécanique vue en Programmation 2, ex: <code>ArgumentException</code> qui). Elle ne doit pas "ne rien faire" ou planter silencieusement.</li>
+</ul>
+<p>Ce que l'on peut faire pour corriger présentement : </p>
+<ul>
+<li><strong>Retour hâtif</strong> : tester la valeur au début de la méthode et utiliser return pour l'arrêter.</li>
+<li><strong>Retour significatif</strong> : prévoir un retour qui nous dit que la méthode est erronnée (ex: -1 pour un index de tableau)</li>
+</ul>
+<hr />
+<h2 id="partie-2-tester-une-classe-niveau-macro">Partie 2 : Tester une Classe (Niveau Macro)</h2>
+<p><em>Gestion de l'État</em></p>
+<p>Une classe possède une "mémoire", un "état" (ses attributs). Le résultat d'une méthode dépend souvent de ce qui s'est passé avant.</p>
+<h3 id="etape-1-linitialisation">Étape 1 : L'Initialisation</h3>
+<ul>
+<li>Créez une instance de la classe (via le constructeur).</li>
+<li>Vérifiez que les attributs ont bien leurs valeurs par défaut en utilisant le débogueur.</li>
+</ul>
+<h3 id="etape-2-accesseurs-et-mutateurs-getset">Étape 2 : Accesseurs et Mutateurs (Get/Set)</h3>
+<p>Normalement, les attributs d'une classe ne sont pas public. Nous ajoutons une méthode "get" (Accesseur) pour consulter obtenir la valeur d'un attribut et "set" (Mutateur) pour modifier un attribut. Ces méthodes servent à la modification et la lecture directe, les autres méthodes peuvent apporter des changement différent (Classement d'un tableau de nom en ordre alphabétique, affichage à l'écran, etc...)</p>
+<ul>
+<li>Si vous faites un <code>setValeur(10)</code>, le <code>getValeur()</code> doit retourner <code>10</code>.</li>
+<li>Vérifiez que le <code>set</code> respecte les règles de validation (Est-ce que je peux mettre la quantité d'essence d'une voiture à -10 litres).</li>
+</ul>
+<h3 id="etape-3-scenarios-de-vie-sequences">Étape 3 : Scénarios de Vie (Séquences)</h3>
+<p>Testez l'histoire de l'objet. L'ordre des appels est important.</p>
+<ol>
+<li><strong>État initial :</strong> Créer l'objet.</li>
+<li><strong>Action :</strong> Appeler une méthode qui modifie l'état (ex: <code>ajouterArticle</code>).</li>
+<li><strong>Vérification :</strong> Vérifier l'état intermédiaire (ex: l'article est maintenant dans la liste des items du panier).</li>
+<li><strong>Action suivante :</strong> Appeler une autre méthode (ex: <code>viderPanier</code>).</li>
+<li><strong>Vérification finale :</strong> L'objet est-il revenu à zéro ?</li>
+</ol>
+<hr />
+<h2 id="la-structure-dun-test-le-modele-aaa">La Structure d'un Test : Le modèle "AAA"</h2>
+<p>Pour garder vos tests lisibles, utilisez toujours cette structure en trois parties :</p>
+<ol>
+<li>
+<p><strong>A</strong>RRANGE (Préparer) :</p>
+<ul>
+<li>Créer les objets, initialiser les variables.</li>
+<li><em>C'est la mise en place du décor.</em></li>
+</ul>
+</li>
+<li>
+<p><strong>A</strong>CT (Agir) :</p>
+<ul>
+<li>Appeler <strong>LA</strong> méthode que vous voulez tester.</li>
+<li><em>C'est l'action précise.</em></li>
+</ul>
+</li>
+<li>
+<p><strong>A</strong>SSERT (Affirmer/Vérifier) :</p>
+<ul>
+<li>Comparer le résultat obtenu avec le résultat attendu.</li>
+<li><em>C'est le verdict.</em></li>
+</ul>
+</li>
+</ol>
+<h3 id="exemple-de-test">Exemple de test</h3>
+<pre><code>
+public bool Depot_MontantPositif_AugmenteSolde()
 {
-    double taille = 0.0;
+    bool ok = false;
 
-    Console.WriteLine(&quot;Entrez votre taille : &quot;);
-    double.TryParse(Console.ReadLine(), out taille);
+    // 1. ARRANGE
+    Compte monCompte = new Compte();
+    monCompte.solde = 100;
 
-    if (taille &lt; 1.70)
+    // 2. ACT
+    monCompte.Deposer(50);
+
+    // 3. ASSERT
+    if(monCompte.Solde == 150)
     {
-        Console.WriteLine(&quot;Petit&quot;);
-    }
-    else if (taille &lt; 1.83)
-    {
-        Console.WriteLine(&quot;Moyen&quot;);
-    }
-    else if (taille &gt; 1.82)
-    {
-        Console.WriteLine(&quot;Grand&quot;);
-    }
+        ok = true;
+    };
+
+    return ok;
 }
-</code></pre>
-<pre><code>// Écrire la méthode qui trouve le plus grand de trois nombres entrés à la console
-static void ex2()
-{
-    int nb1 = 0; 
-    int nb2 = 0;
-    int nb3 = 0;
 
-    Console.WriteLine(&quot;Entrer 3 nombres&quot;);
-    int.TryParse(Console.ReadLine(), out nb1);
-    int.TryParse(Console.ReadLine(), out nb2);
-    int.TryParse(Console.ReadLine(), out nb3);
-
-    if (nb1 &gt; nb2)
-    {
-        if (nb1 &gt; nb3)
-        {
-            Console.WriteLine(nb1 + &quot; est le plus grand&quot;);
-        }
-        else
-        {
-            Console.WriteLine(nb3 + &quot; est le plus grand&quot;);
-        }
-    }
-    else
-    {
-        if (nb2 &gt; nb3)
-        {
-            Console.WriteLine(nb2 + &quot; est le plus grand&quot;);
-        }
-        else
-        {
-            Console.WriteLine(nb3 + &quot; est le plus grand&quot;);
-        }
-    }
-}
-</code></pre>
-<pre><code>// À partir des angles internes d'un triangle déterminer si le triangle est valide ou non
-// La somme des angles d'un triangle est toujours 180 degrés
-static void ex3()
-{
-    int angle1 = 0;
-    int angle2 = 0;
-    int angle3 = 0;
-
-    Console.WriteLine(&quot;Entrer les 3 angles du triangle&quot;);
-
-    if ((angle1 + angle2 + angle3) == 180)
-    {
-        Console.WriteLine(&quot;Triangle valide&quot;);
-    }
-    else 
-    {
-        Console.WriteLine(&quot;Pas un triangle&quot;);
-    }
-}
-</code></pre>
-<pre><code>// Saisir la longueur des 3 côtés d'un triangle (a, b et c)
-// À partir des informations déterminer si le triangle est
-// Équilatéral : tous les côtés ont la même longueur
-// Isocèle : 2 côtés égaux
-// Scalène : aucun côté n'est égal 
-static void ex4()
-{
-    int a = 0;
-    int b = 0;
-    int c = 0;
-
-    Console.WriteLine(&quot;Entrer la longueur des côtés du triangle&quot;);
-    int.TryParse(Console.ReadLine(), out a);
-    int.TryParse(Console.ReadLine(), out b);
-    int.TryParse(Console.ReadLine(), out c);
-
-    if (a == b)
-    {
-        if (b == c)
-        {
-            Console.WriteLine(&quot;Équilatéral&quot;);
-        }
-        else
-        {
-            Console.WriteLine(&quot;Isocèle&quot;);
-        }
-    }
-    else
-    {
-        if (b == c)
-        {
-            Console.WriteLine(&quot;Isocèle&quot;);
-        }
-        else
-        {
-            Console.WriteLine(&quot;Scalène&quot;);
-        }
-    }
-}
-</code></pre>
-<pre><code>// À partir des informations fournies par l'utilisateur calculer la facture du mois pour sa consommation d'électricité
-// Frais d'accès au réseau par jour : 0.42238$
-// Jusqu'à 40kWh par jour pour le total des jours (ex: 30 jours = 1200kWh) : 0.06319$ par kWh
-// kWh supplémentaires : 0.09749$ par kWh
-static void ex5()
-{
-    int nombreJours = 0;
-    double kWh = 0.0;
-    double seuil = 0.0;
-    double acces = 0.0;
-    double total = 0.0;
-
-    Console.WriteLine(&quot;Combien de jours : &quot;);
-    int.TryParse(Console.ReadLine(), out nombreJours);
-
-    Console.WriteLine(&quot;Combien de kWh : &quot;);
-    double.TryParse(Console.ReadLine(), out kWh);
-
-    seuil = nombreJours * 40;
-    acces = nombreJours * 0.42238;
-    total = total + acces;
-
-    if (kWh &lt; seuil)
-    {
-        total = total + kWh * 0.06319;
-    }
-    else 
-    {
-        total = total + seuil * 0.06319;
-        total = total + (kWh - seuil) * 0.09749;
-    }
-}
-</code></pre>
-<pre><code>// Jeux pair ou impair
-// Le premier joueur choisi 0 ou 1
-// Le premier joueur choisi pair ou impair
-// On efface la console
-// Le deuxième joueur choisi 0 ou 1
-// On affiche le gagnant selon la somme des deux nombres
-// Si la sommme correspond au type de résultat choisi par le premier joueur (pair ou impair) il a gagné
-// Sinon le 2ème joueur a gagné
-static void ex6()
-{
-    int nbJoueur1 = 0;
-    int nbJoueur2 = 0;
-    string pairImpair = &quot;pair&quot;;
-
-    Console.WriteLine(&quot;Joueur 1 choisi 1 ou 0&quot;);
-    int.TryParse(Console.ReadLine(), out nbJoueur1);
-
-    Console.WriteLine(&quot;Joueur 1 choisi pair/impair&quot;);
-    pairImpair = Console.ReadLine();
-
-    Console.Clear();
-
-    Console.WriteLine(&quot;Joueur 2 choisi 1 ou 0&quot;);
-    int.TryParse(Console.ReadLine(), out nbJoueur2);
-
-    Console.Clear();
-
-    if ((nbJoueur1 + nbJoueur2) % 2 == 0)
-    {
-        if (pairImpair == &quot;pair&quot;)
-        {
-            Console.WriteLine(&quot;Joueur 1 gagne!&quot;);
-        }
-        else
-        {
-            Console.WriteLine(&quot;Joueur 2 gagne!&quot;);
-        }
-    }
-    else
-    {
-        if (pairImpair == &quot;impair&quot;)
-        {
-            Console.WriteLine(&quot;Joueur 1 gagne!&quot;);
-        }
-        else
-        {
-            Console.WriteLine(&quot;Joueur 2 gagne!&quot;);
-        }
-    }
-}
-</code></pre>
-<pre><code>// Pour être admis en médecine il faut 
-// Une cote R au-dessus de 33.0
-// Une note supérieure à 70% en biologie, chimie et mathématiques
-// Une moyenne supérieure à 80% pour les 3 cours précédents
-// Écrire le programme qui détermine si l'utilisateur est éligible
-static void ex7()
-{
-    double coteR = 0.0;
-    double bio = 0.0;
-    double chimie = 0.0;
-    double math = 0.0;
-    double moyenne = 0.0;
-    bool admissible = true;
-
-    Console.WriteLine(&quot;Entrer la cote R&quot;);
-    double.TryParse(Console.ReadLine(), out coteR);
-
-    Console.WriteLine(&quot;Entrer la note de biologie&quot;);
-    double.TryParse(Console.ReadLine(), out bio);
-
-    Console.WriteLine(&quot;Entrer la note de chimie&quot;);
-    double.TryParse(Console.ReadLine(), out chimie);
-
-    Console.WriteLine(&quot;Entrer la note de math&quot;);
-    double.TryParse(Console.ReadLine(), out math);
-
-    moyenne = (bio + chimie + math) / 3;
-
-    if (coteR &lt; 33.0)
-    {
-        admissible = false;
-    }
-    else if (moyenne &lt; 80.0)
-    {
-        admissible = false;
-    }
-    else
-    {
-        if (bio &lt; 70.0)
-        {
-            admissible = false;
-        }
-        if (chimie &lt; 70.0)
-        {
-            admissible = false;
-        }
-        if (math &lt; 70.0)
-        {
-            admissible = false;
-        }
-    }
-
-    if (admissible)
-    {
-        Console.WriteLine(&quot;Tu peux aller en médecine&quot;);
-    }
-    else
-    {
-        Console.WriteLine(&quot;Tu devras te contenter d'attendre à l'urgence&quot;);
-    }
-}
 </code></pre>
 
 
