@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -810,7 +810,7 @@
   <span class="md-ellipsis">
     
   
-    Tests fontionnels
+    Tests fonctionnels
   
 
     
@@ -1664,15 +1664,15 @@
 
 
 <h1 id="condition">Condition</h1>
-<p>La condition est une instruction qui permet de contrôler notre programe :</p>
+<p>La condition est une instruction qui permet de contrôler notre programme :</p>
 <ul>
 <li>Dans un jeu, si le joueur n'a plus de vie le jeu arrête</li>
-<li>Si je paie le caissier du Chic-Choco-Latté, j'obtiens ma crème glacéé</li>
+<li>Si je paie le caissier du Chic-Choco-Latté, j'obtiens ma crème glacée</li>
 <li>Si le total de mon panier sur amazon.ca dépasse 75$ je n'ai pas de frais de livraison</li>
 </ul>
 <p>Le programme qui utilise un condition prend en fait une décision selon les données</p>
 <h2 id="linstruction-si">L'instruction SI</h2>
-<p>l'instruction SI ... ALORS ... SINON est utiliée pour la prise de décision</p>
+<p>L'instruction SI ... ALORS ... SINON est utilisée pour la prise de décision</p>
 <p>SI ma condition est vraie ALORS
     faire les instructions du bloc 1
 SINON
@@ -1680,7 +1680,7 @@ SINON
 <ul>
 <li>La partie SINON n'est pas obligatoire mais la plupart du temps nécessaire pour le bon fonctionnement du programme.</li>
 <li>La condition doit avoir une valeur VRAI ou FAUX</li>
-<li>La condition est soit une variable de type bool, une compraison ou une combinaison de plusieurs bool/comparaisons.</li>
+<li>La condition est soit une variable de type bool, une comparaison ou une combinaison de plusieurs bool/comparaisons.</li>
 </ul>
 <h2 id="syntaxe-en-c">Syntaxe en C#</h2>
 <pre><code>// Instructions avant la prise de décision
@@ -1706,7 +1706,7 @@ choix = Console.ReadLine();
 
 if(choix == &quot;Sushis&quot;)
 {
-    total = total + prixSushis
+    total = total + prixSushis;
 }
 
 Console.WriteLine(&quot;Total : &quot; + total + &quot;$&quot;);
@@ -1714,7 +1714,7 @@ Console.WriteLine(&quot;Total : &quot; + total + &quot;$&quot;);
 <hr />
 <pre><code>int age = 0;
 
-Console.Writeline(&quot;Quel est votre âge? &quot;);
+Console.WriteLine(&quot;Quel est votre âge? &quot;);
 int.TryParse(Console.ReadLine(), out age);
 
 if(age &gt; 18)
@@ -1731,12 +1731,12 @@ else
 <p>SI ma première comparaison est vraie ALORS</p>
 <pre><code>faire les instructions du bloc 1
 </code></pre>
-<p>SINON SI ma deuxième compraison est vraie ALORS</p>
+<p>SINON SI ma deuxième comparaison est vraie ALORS</p>
 <pre><code>faire les instructions du bloc 2
 </code></pre>
 <p>... On peut en faire autant que l'on veut et finalement</p>
 <p>SINON</p>
-<pre><code>faire les instruction quand je n'ai rien eu de vrai
+<pre><code>faire les instructions quand je n'ai rien eu de vrai
 </code></pre>
 <h2 id="syntaxe-en-c_1">Syntaxe en C#</h2>
 <pre><code>// Instructions avant la prise de décision
@@ -1752,7 +1752,7 @@ else if(autre condition)
 ...
 else
 {
-    // Instruction quand je n'ai trouvé aucune conditioin vraie
+    // Instruction quand je n'ai trouvé aucune condition vraie
 }
 
 // Instructions après la décision
@@ -1829,10 +1829,10 @@ else
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
