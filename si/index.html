@@ -1668,7 +1668,7 @@
 <ul>
 <li>Dans un jeu, si le joueur n'a plus de vie le jeu arrête</li>
 <li>Si je paie le caissier du Chic-Choco-Latté, j'obtiens ma crème glacée</li>
-<li>Si le total de mon panier sur amazon.ca dépasse 75$ je n'ai pas de frais de livraison</li>
+<li>Si le total de mon panier sur amazon.ca dépasse 35$ je n'ai pas de frais de livraison</li>
 </ul>
 <p>Le programme qui utilise un condition prend en fait une décision selon les données</p>
 <h2 id="linstruction-si">L'instruction SI</h2>
@@ -1758,20 +1758,25 @@ else
 // Instructions après la décision
 </code></pre>
 <h2 id="exemple-en-c">Exemple en C#</h2>
-<pre><code>int nombre = 0;
+<pre><code>int choix = 0;
+
+Console.WriteLine(&quot;Menu : &quot;
+Console.WriteLine(&quot;1. Sushis&quot;);
+Console.WriteLine(&quot;2. Tartare&quot;);
+Console.WriteLine(&quot;3. Rouleaux de printemps&quot;);
 
 Console.WriteLine(&quot;Entrer le choix de menu : &quot;);
-int.TryParse(Console.ReadLine(), out nombre);
+int.TryParse(Console.ReadLine(), out choix);
 
-if(nombre == 1)
+if(choix == 1)
 {
     Console.WriteLine(&quot;Vos Sushis seront livrés bientôt&quot;);
 }
-else if(nombre == 2)
+else if(choix == 2)
 {
     Console.WriteLine(&quot;Votre tartare sera livré bientôt&quot;);
 }
-else if(nombre == 3)
+else if(choix == 3)
 {
     Console.WriteLine(&quot;Vos rouleaux de printemps seront livrés bientôt&quot;);
 }
