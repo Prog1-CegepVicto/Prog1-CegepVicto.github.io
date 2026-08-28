@@ -1656,18 +1656,18 @@
 
 
 <h1 id="boucle-for">Boucle : for</h1>
-<p>La boucle for fait un nombre déterminé de répétitions.</p>
-<p>Elle est utilisée quand on sait exactement le nombre d'opérations à effectuer.</p>
+<p>La boucle for effectue un nombre déterminé de répétitions.</p>
+<p>Elle est utilisée lorsqu’on sait exactement le nombre d’opérations à effectuer.</p>
 <h2 id="syntaxe">Syntaxe</h2>
-<pre><code>for(variable pour compter; condition de fin; modification de la variable pour compter)
+<pre><code>for (variable pour compter; condition de fin; modification de la variable pour compter)
 {
     // instructions
 }
 </code></pre>
 <h3 id="en-c">En C#</h3>
-<p>Par convention (et en lien avec les mathématiques) les compteurs utilisés sont habituellement :
-i, j, k, u, v, w</p>
-<p>Mais il est possible de nommer les variables autrement tant que l'on respecte les règles de nomenclature d'une variable</p>
+<p>Par convention (et en lien avec les mathématiques), les compteurs utilisés sont habituellement :
+i, j, k, u, v, w.</p>
+<p>Il est possible de nommer les variables autrement, tant que l’on respecte les règles de nomenclature d’une variable.</p>
 <pre><code>// Cette boucle affiche de 0 à 9 à l'écran
 for(int i = 0; i &lt; 10; i++)
 {
@@ -1675,12 +1675,12 @@ for(int i = 0; i &lt; 10; i++)
 }
 </code></pre>
 <h2 id="condition-de-fin">Condition de fin</h2>
-<p>La boucle arrête quand la condition de fin a une valeur logique : FAUX</p>
+<p>La boucle s’arrête lorsque la condition de fin a une valeur logique : FAUX.</p>
 <p>Il n'est pas obligatoire de toujours utiliser une incrémentation de 1</p>
 <h2 id="repeter-des-instructions">Répéter des instructions</h2>
-<p>For sert souvent à répéter des instructions un nombre de fois déterminé.</p>
-<p>La variable qui sert de compteur joue aussi fréquement un rôle dans les instructions.</p>
-<p>Par exemple cette boucle effectue 8 fois les instructions entre les accolades</p>
+<p>La boucle for sert souvent à répéter des instructions un nombre de fois déterminé.</p>
+<p>La variable qui sert de compteur joue aussi fréquemment un rôle dans les instructions.</p>
+<p>Par exemple, cette boucle effectue 8 fois les instructions entre les accolades :</p>
 <pre><code>string motDePasse = &quot;&quot;;
 for(int i = 0; i &lt; 8; i++)
 {
@@ -1688,17 +1688,17 @@ for(int i = 0; i &lt; 8; i++)
 }
 </code></pre>
 <ul>
-<li>Ici le mot de passe commence vide. </li>
-<li>i est la variable qui sert de compteur, elle commence à 0 et augmente de 1 à chaque fois que les instructions de la boucle sont exécutées.</li>
+<li>Ici, le mot de passe commence vide.</li>
+<li>i est la variable qui sert de compteur. Elle commence à 0 et augmente de 1 à chaque fois que les instructions de la boucle sont exécutées.</li>
 <li>Les instructions de la boucle sont exécutées autant de fois que i est plus petit que 8.</li>
-<li>À chaque fois que les instructions de la boucle sont exécutées on ajoute i au string.</li>
-<li>À la fin de la boucle le mot de passe contient "01234567".</li>
+<li>À chaque fois que les instructions de la boucle sont exécutées, on ajoute i à la chaîne de caractères.</li>
+<li>À la fin de la boucle, le mot de passe contient "01234567".</li>
 </ul>
 <h2 id="utilisation-avec-les-tableaux">Utilisation avec les tableaux</h2>
-<p>Dans la grande majorité des cas, la boucle for est utilisée pour parcourir un tableau de la première à la dernière case.</p>
-<p>La variable compteur (i, j, k, etc..) est utilisée pour désigner la case (l'index) du tableau à traiter.</p>
-<p>Un tableau commence toujours à l'index (numéro de la case) 0, donc on donne au compteur (ex: i, j, k) la valeur de 0 pour commencer.</p>
-<p>Un tableau finit toujours à la case dont l'index est : le nombre d'éléments (cases) du tableau - 1. Donc on met la condition de fin de la boucle à : compteur &lt; nombre d'éléments.</p>
+<p>Dans la grande majorité des cas, la boucle for est utilisée pour parcourir un tableau, de la première à la dernière case.</p>
+<p>La variable compteur (i, j, k, etc.) est utilisée pour désigner la case, c’est-à-dire l’index du tableau à traiter.</p>
+<p>Un tableau commence toujours à l’index (numéro de la case) 0. Donc, on donne au compteur (ex. : i, j, k) la valeur 0 pour commencer.</p>
+<p>Un tableau finit toujours à la case dont l’index est : le nombre d’éléments (cases) du tableau - 1. Donc, on met la condition de fin de la boucle à : compteur &lt; nombre d’éléments.</p>
 <pre><code>// Boucle générale pour parcourir un tableau
 // Ici on assigne un nombre aléatoire de 0 à 100 pour chaque élément du tableau
 Random rng = new Random();

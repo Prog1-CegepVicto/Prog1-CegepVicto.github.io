@@ -1610,26 +1610,26 @@
 
 
 <h1 id="structure-de-donnees-tableau">Structure de données : tableau</h1>
-<p>Le tableau permet d'avoir <strong>plusieurs valeurs</strong> stockées en mémoire pour <strong>une seule variable</strong>.</p>
-<p>Les données stockées dans le tableau doivent être de la même nature comme :</p>
+<p>Le tableau permet d’avoir <strong>plusieurs valeurs</strong> stockées en mémoire pour <strong>une seule variable</strong>.</p>
+<p>Les données stockées dans le tableau doivent être de la même nature, comme :</p>
 <ul>
-<li>Une série de noms</li>
-<li>Une série de notes</li>
-<li>Les prix des items dans un panier</li>
+<li>une série de noms ;</li>
+<li>une série de notes ;</li>
+<li>les prix des articles dans un panier.</li>
 </ul>
-<p>Le tableau permet entre autre :</p>
+<p>Le tableau permet, entre autres choses :</p>
 <ul>
-<li>Faciliter le traitement de variables multiples (ex.: note1, note2, note3, ...)</li>
-<li>Utiliser une boucle pour traiter plusieurs données</li>
-<li>Améliorer le temps d'accès au données (Les données d'un tableau sont placée une à côté de l'autre en mémoire)</li>
+<li>de faciliter le traitement de variables multiples (ex. : note1, note2, note3, ...);</li>
+<li>d’utiliser une boucle pour traiter plusieurs données ;</li>
+<li>d’améliorer le temps d’accès aux données (les données d’un tableau sont placées les unes à côté des autres en mémoire).</li>
 </ul>
 <h2 id="declaration">Déclaration</h2>
-<p><code>type[] nom = new type[nombre d'élément]</code></p>
-<p>Le nombre de données dans un tableau doit être fixée lors de la déclaration</p>
+<p><code>type[] nom = new type[nombre d'éléments]</code></p>
+<p>Le nombre de données dans un tableau doit être fixé lors de la déclaration.</p>
 <p>Exemple en C#</p>
 <p><code>int[] notes = new int[30];</code></p>
 <h3 id="declaration-alternative">Déclaration alternative</h3>
-<p>Quand on sait déjà ce qu'il y a dans le tableau, on peut déclarer le tableau différement.</p>
+<p>Quand on sait déjà ce qu’il y a dans le tableau, on peut le déclarer différemment.</p>
 <p><code>int[] notes = new int[]{98, 76, 42, 73, 89};</code>
 ou
 <code>int[] notes = {98, 76, 42, 73, 89};</code></p>
@@ -1637,18 +1637,18 @@ ou
 <ul>
 <li>Comme les variables, les valeurs des tableaux peuvent être utilisées pour des calculs ou modifiées.</li>
 <li>Pour accéder à une donnée du tableau, il faut indiquer sa position.</li>
-<li>La position d'une donnée dans le tableau s'appelle <strong>index</strong></li>
-<li>La numérotation des <strong>index</strong> du tableau <strong>commence toujours à 0</strong></li>
-<li>On peut obtenir la longueur d'un tableau en utilisant <code>nomDuTableau.Length</code></li>
+<li>La position d’une donnée dans le tableau s’appelle <strong>index</strong>.</li>
+<li>La numérotation des <strong>index</strong> du tableau <strong>commence toujours à 0</strong>.</li>
+<li>On peut obtenir la longueur d’un tableau en utilisant <code>nomDuTableau.Length</code>.</li>
 </ul>
-<p>Quelques exemples d'utilisation</p>
+<p>Quelques exemples d’utilisation :</p>
 <pre><code>int[] notes = {98, 76, 42, 73, 89};
 double moyenne = 0;
 
 // Modifier la première note du tableau
 notes[0] = 97;
 
-// Afficher la 3ème notes du tableau
+// Afficher la 3e note du tableau
 Console.WriteLine(notes[2]);
 
 // Faire la moyenne avec une boucle
@@ -1658,7 +1658,7 @@ for(int i = 0; i &lt; notes.Length; i++)
 }
 moyenne = moyenne / notes.Length;
 </code></pre>
-<p><strong>On utilise souvent une boucle pour accéder à chacune des valeurs du tableau!</strong></p>
+<p><strong>On utilise souvent une boucle <em>for</em> pour accéder à chacune des valeurs du tableau !</strong></p>
 
 
 
