@@ -1625,24 +1625,23 @@
 </ul>
 <h2 id="declaration">Déclaration</h2>
 <p><code>type[] nom = new type[nombre d'éléments]</code></p>
-<p>Le nombre de données dans un tableau doit être fixé lors de la déclaration.</p>
+<p>Le nombre de données dans un tableau doit être fixé lors de la déclaration. Chacune des valeurs du tableau est initialisée à la valeur par défaut pour son type (par exemple 0 pour les nombres) </p>
 <p>Exemple en C#</p>
-<p><code>int[] notes = new int[30];</code></p>
+<p><code>int[] notes = new int[5];</code></p>
 <h3 id="declaration-alternative">Déclaration alternative</h3>
-<p>Quand on sait déjà ce qu’il y a dans le tableau, on peut le déclarer différemment.</p>
-<p><code>int[] notes = new int[]{98, 76, 42, 73, 89};</code>
-ou
-<code>int[] notes = {98, 76, 42, 73, 89};</code></p>
+<p>Quand on sait déjà ce qu’il y a dans le tableau, on peut le déclarer comme ceci:</p>
+<p><code>int[] notes = [98, 76, 42, 73, 89];</code></p>
+<p>La taille du tableau est automatiquement déterminée par le nombre de valeurs fournies.</p>
 <h2 id="utiliser-un-tableau">Utiliser un tableau</h2>
 <ul>
 <li>Comme les variables, les valeurs des tableaux peuvent être utilisées pour des calculs ou modifiées.</li>
-<li>Pour accéder à une donnée du tableau, il faut indiquer sa position.</li>
+<li>Pour accéder à une donnée du tableau, il faut indiquer sa position:</li>
 <li>La position d’une donnée dans le tableau s’appelle <strong>index</strong>.</li>
 <li>La numérotation des <strong>index</strong> du tableau <strong>commence toujours à 0</strong>.</li>
 <li>On peut obtenir la longueur d’un tableau en utilisant <code>nomDuTableau.Length</code>.</li>
 </ul>
 <p>Quelques exemples d’utilisation :</p>
-<pre><code>int[] notes = {98, 76, 42, 73, 89};
+<pre><code>int[] notes = [98, 76, 42, 73, 89];
 double moyenne = 0;
 
 // Modifier la première note du tableau
