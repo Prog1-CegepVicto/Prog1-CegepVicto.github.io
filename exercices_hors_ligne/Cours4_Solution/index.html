@@ -19,7 +19,7 @@
     
     
       
-        <title>Cours 4 - Programmation 1 - Automne 2026</title>
+        <title>Solution - Cours 4 - Programmation 1 - Automne 2026</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cours-4" class="md-skip">
+        <a href="#solution-cours-4" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours 4
+              Solution - Cours 4
             
           </span>
         </div>
@@ -1474,10 +1474,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a" class="md-nav__link">
+  <a href="#a-cout-total-des-pizzas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A
+        A. Coût total des pizzas
       
     </span>
   </a>
@@ -1485,10 +1485,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#b" class="md-nav__link">
+  <a href="#b-temps-pour-atteindre-400-litres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B
+        B. Temps pour atteindre 400 litres
       
     </span>
   </a>
@@ -1496,10 +1496,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
+  <a href="#c-livraison-gratuite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C
+        C. Livraison gratuite ?
       
     </span>
   </a>
@@ -1507,10 +1507,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#d" class="md-nav__link">
+  <a href="#d-temps-avant-que-bowser-rattrape-mario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        D
+        D. Temps avant que Bowser rattrape Mario
       
     </span>
   </a>
@@ -1534,10 +1534,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-3" class="md-nav__link">
+  <a href="#exercice-3-terrain" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 3
+        Exercice 3 - Terrain
       
     </span>
   </a>
@@ -1545,10 +1545,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-4" class="md-nav__link">
+  <a href="#exercice-4-reservoir-dessence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 4
+        Exercice 4 - Réservoir d'essence
       
     </span>
   </a>
@@ -1572,47 +1572,116 @@
 
 
 
-<h1 id="cours-4">Cours 4</h1>
+<h1 id="solution-cours-4">Solution - Cours 4</h1>
+<p>Voici des solutions de référence pour les exercices du cours 4.</p>
+<hr />
 <h2 id="exercice-1">Exercice 1</h2>
-<p>Déterminez les entrées, les sorties et les traitements à effectuer.
-Donnez un nom significatif aux variables et indiquez leur type.</p>
-<h3 id="a">A</h3>
-<p>Une pizzeria vend des pizzas à 18,99 $. Un client commande plusieurs pizzas. Quel est le coût total ?</p>
-<h3 id="b">B</h3>
-<p>Un réservoir contient déjà 100 litres d'eau. Un robinet ajoute 12 litres par minute.
-Combien de temps faudra-t-il pour atteindre 400 litres ?</p>
-<h3 id="c">C</h3>
-<p>Un site de vente en ligne donne la livraison gratuite pour les paniers de plus de 70 $ avant les taxes. Est-ce que je paie la livraison ?</p>
-<h3 id="d">D</h3>
-<p>Mario court à 8 km/h. Bowser court à 10 km/h.
-Mario a commencé 30 minutes avant Bowser.
-Après combien de temps Bowser rattrapera-t-elle Mario ?</p>
+<h3 id="a-cout-total-des-pizzas">A. Coût total des pizzas</h3>
+<p>Variables possibles :</p>
+<pre><code class="language-csharp">double prixUnitaire = 18.99;
+int nbPizzas;
+double coutTotal;
+</code></pre>
+<p>Formule :</p>
+<pre><code class="language-csharp">coutTotal = prixUnitaire * nbPizzas;
+</code></pre>
+<h3 id="b-temps-pour-atteindre-400-litres">B. Temps pour atteindre 400 litres</h3>
+<p>Variables possibles :</p>
+<pre><code class="language-csharp">double reservoir = 100;
+double debit = 12;
+double objectif = 400;
+double temps;
+</code></pre>
+<p>Formule :</p>
+<pre><code class="language-csharp">temps = (objectif - reservoir) / debit;
+</code></pre>
+<h3 id="c-livraison-gratuite">C. Livraison gratuite ?</h3>
+<p>Variables possibles :</p>
+<pre><code class="language-csharp">double totalAvantTaxes;
+bool livraisonGratuite;
+</code></pre>
+<p>Condition :</p>
+<pre><code class="language-csharp">livraisonGratuite = totalAvantTaxes &gt; 70;
+</code></pre>
+<h3 id="d-temps-avant-que-bowser-rattrape-mario">D. Temps avant que Bowser rattrape Mario</h3>
+<p>Variables :</p>
+<pre><code class="language-csharp">double vitesseMario = 8;
+double vitesseBowser = 10;
+double avanceMario = 8 * 0.5; // 30 minutes = 0.5 heure
+double temps;
+</code></pre>
+<p>Comme Bowser est plus rapide, on calcule le temps nécessaire pour compenser l’avance :</p>
+<pre><code class="language-csharp">temps = avanceMario / (vitesseBowser - vitesseMario);
+</code></pre>
+<hr />
 <h2 id="exercice-2">Exercice 2</h2>
-<p>Écrivez le programme correspondant à l'exercice 1.D en demandant les informations sur la vitesse initiale et le temps.</p>
-<h2 id="exercice-3">Exercice 3</h2>
-<p>Écrivez le programme suivant :</p>
-<p>Demandez la longueur et la largeur d'un terrain en mètres.
-Donnez le périmètre en mètres et en pieds.
-Donnez l'aire en mètres carrés et en pieds carrés.</p>
-<h2 id="exercice-4">Exercice 4</h2>
-<p>Réservoir d'essence</p>
-<p>Écrivez le programme interactif suivant :</p>
-<ol>
-<li>Demandez la capacité du réservoir du véhicule de l'utilisateur.</li>
-<li>Demandez sa consommation de carburant par kilomètre.</li>
-<li>Demandez la destination de l'utilisateur.</li>
-<li>Demandez la distance à parcourir.</li>
-<li>Demandez la quantité d'essence ajoutée à la station à la fin.</li>
-<li>Demandez le prix par litre de l'essence à la pompe (ex. : 1,869 $ par litre).</li>
-</ol>
-<p>On suppose que le réservoir commence plein.</p>
-<p>Affichez un résumé incluant :</p>
-<ul>
-<li>La quantité d'essence restante dans le réservoir à l'arrivée à la destination.</li>
-<li>Le prix de l'essence utilisée pour faire le trajet.</li>
-<li>La quantité d'essence dans le réservoir après l'ajout d'essence.</li>
-<li>Le prix de l'ajout.</li>
-</ul>
+<pre><code class="language-csharp">Console.Write(&quot;Vitesse de Mario (km/h) : &quot;);
+double vitesseMario = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Vitesse de Bowser (km/h) : &quot;);
+double vitesseBowser = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Avance de Mario (en heures) : &quot;);
+double avanceMario = double.Parse(Console.ReadLine());
+
+double temps = (vitesseMario * avanceMario) / (vitesseBowser - vitesseMario);
+
+Console.WriteLine(&quot;Bowser rattrapera Mario après &quot; + temps + &quot; heure(s).&quot;);
+</code></pre>
+<hr />
+<h2 id="exercice-3-terrain">Exercice 3 - Terrain</h2>
+<pre><code class="language-csharp">Console.Write(&quot;Longueur du terrain (m) : &quot;);
+double longueur = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Largeur du terrain (m) : &quot;);
+double largeur = double.Parse(Console.ReadLine());
+
+double perimetreMetres = 2 * (longueur + largeur);
+double aireMetresCarres = longueur * largeur;
+
+double perimetrePieds = perimetreMetres * 3.28084;
+double airePiedsCarres = aireMetresCarres * 10.7639;
+
+Console.WriteLine(&quot;Périmètre : &quot; + perimetreMetres + &quot; m&quot;);
+Console.WriteLine(&quot;Périmètre : &quot; + perimetrePieds + &quot; pieds&quot;);
+Console.WriteLine(&quot;Aire : &quot; + aireMetresCarres + &quot; m²&quot;);
+Console.WriteLine(&quot;Aire : &quot; + airePiedsCarres + &quot; pieds²&quot;);
+</code></pre>
+<hr />
+<h2 id="exercice-4-reservoir-dessence">Exercice 4 - Réservoir d'essence</h2>
+<pre><code class="language-csharp">Console.Write(&quot;Capacité du réservoir (L) : &quot;);
+double capaciteReservoir = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Consommation par kilomètre (L/km) : &quot;);
+double consoParKm = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Destination : &quot;);
+string destination = Console.ReadLine();
+
+Console.Write(&quot;Distance à parcourir (km) : &quot;);
+double distance = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Quantité ajoutée à la fin (L) : &quot;);
+double ajoutEssence = double.Parse(Console.ReadLine());
+
+Console.Write(&quot;Prix par litre ($) : &quot;);
+double prixParLitre = double.Parse(Console.ReadLine());
+
+double essenceUtilisee = distance * consoParKm;
+double essenceRestante = capaciteReservoir - essenceUtilisee;
+double coutEssenceUtilisee = essenceUtilisee * prixParLitre;
+double essenceApresAjout = essenceRestante + ajoutEssence;
+double coutAjout = ajoutEssence * prixParLitre;
+
+Console.WriteLine(&quot;Destination : &quot; + destination);
+Console.WriteLine(&quot;Essence restante à l'arrivée : &quot; + essenceRestante + &quot; L&quot;);
+Console.WriteLine(&quot;Prix de l'essence utilisée : &quot; + coutEssenceUtilisee + &quot; $&quot;);
+Console.WriteLine(&quot;Essence après ajout : &quot; + essenceApresAjout + &quot; L&quot;);
+Console.WriteLine(&quot;Prix de l'ajout : &quot; + coutAjout + &quot; $&quot;);
+</code></pre>
+<blockquote>
+<p>Note : si l'utilisateur doit faire un trajet plus long que la capacité du réservoir, il faut ajouter une condition pour gérer le cas où le réservoir est vide avant d’arriver.</p>
+</blockquote>
 
 
 

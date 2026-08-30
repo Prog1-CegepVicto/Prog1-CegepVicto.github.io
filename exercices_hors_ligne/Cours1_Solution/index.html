@@ -19,7 +19,7 @@
     
     
       
-        <title>Cours 4 - Programmation 1 - Automne 2026</title>
+        <title>Solution - Cours 1 - Programmation 1 - Automne 2026</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cours-4" class="md-skip">
+        <a href="#solution-cours-1" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cours 4
+              Solution - Cours 1
             
           </span>
         </div>
@@ -1470,56 +1470,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exercice 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#d" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        D
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1545,10 +1495,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-4" class="md-nav__link">
+  <a href="#exercice-defi-dialogue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 4
+        Exercice défi - Dialogue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-defi-cadre-ascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice défi - Cadre ASCII
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-defi-date-de-naissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice défi - Date de naissance
       
     </span>
   </a>
@@ -1572,47 +1544,88 @@
 
 
 
-<h1 id="cours-4">Cours 4</h1>
+<h1 id="solution-cours-1">Solution - Cours 1</h1>
+<p>Voici des solutions de référence en C# pour les exercices du cours 1.</p>
+<hr />
 <h2 id="exercice-1">Exercice 1</h2>
-<p>Déterminez les entrées, les sorties et les traitements à effectuer.
-Donnez un nom significatif aux variables et indiquez leur type.</p>
-<h3 id="a">A</h3>
-<p>Une pizzeria vend des pizzas à 18,99 $. Un client commande plusieurs pizzas. Quel est le coût total ?</p>
-<h3 id="b">B</h3>
-<p>Un réservoir contient déjà 100 litres d'eau. Un robinet ajoute 12 litres par minute.
-Combien de temps faudra-t-il pour atteindre 400 litres ?</p>
-<h3 id="c">C</h3>
-<p>Un site de vente en ligne donne la livraison gratuite pour les paniers de plus de 70 $ avant les taxes. Est-ce que je paie la livraison ?</p>
-<h3 id="d">D</h3>
-<p>Mario court à 8 km/h. Bowser court à 10 km/h.
-Mario a commencé 30 minutes avant Bowser.
-Après combien de temps Bowser rattrapera-t-elle Mario ?</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez votre nom complet : &quot;);
+string nom = Console.ReadLine();
+
+Console.WriteLine(&quot;Bienvenue &quot; + nom);
+</code></pre>
+<hr />
 <h2 id="exercice-2">Exercice 2</h2>
-<p>Écrivez le programme correspondant à l'exercice 1.D en demandant les informations sur la vitesse initiale et le temps.</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez votre nom : &quot;);
+string nom = Console.ReadLine();
+
+Console.Write(&quot;Entrez votre programme : &quot;);
+string programme = Console.ReadLine();
+
+Console.WriteLine();
+Console.WriteLine(&quot;Nom : &quot; + nom);
+Console.WriteLine(&quot;Programme : &quot; + programme);
+</code></pre>
+<hr />
 <h2 id="exercice-3">Exercice 3</h2>
-<p>Écrivez le programme suivant :</p>
-<p>Demandez la longueur et la largeur d'un terrain en mètres.
-Donnez le périmètre en mètres et en pieds.
-Donnez l'aire en mètres carrés et en pieds carrés.</p>
-<h2 id="exercice-4">Exercice 4</h2>
-<p>Réservoir d'essence</p>
-<p>Écrivez le programme interactif suivant :</p>
-<ol>
-<li>Demandez la capacité du réservoir du véhicule de l'utilisateur.</li>
-<li>Demandez sa consommation de carburant par kilomètre.</li>
-<li>Demandez la destination de l'utilisateur.</li>
-<li>Demandez la distance à parcourir.</li>
-<li>Demandez la quantité d'essence ajoutée à la station à la fin.</li>
-<li>Demandez le prix par litre de l'essence à la pompe (ex. : 1,869 $ par litre).</li>
-</ol>
-<p>On suppose que le réservoir commence plein.</p>
-<p>Affichez un résumé incluant :</p>
-<ul>
-<li>La quantité d'essence restante dans le réservoir à l'arrivée à la destination.</li>
-<li>Le prix de l'essence utilisée pour faire le trajet.</li>
-<li>La quantité d'essence dans le réservoir après l'ajout d'essence.</li>
-<li>Le prix de l'ajout.</li>
-</ul>
+<pre><code class="language-csharp">Console.Write(&quot;Nom : &quot;);
+string nom = Console.ReadLine();
+
+Console.Write(&quot;Âge : &quot;);
+int age = int.Parse(Console.ReadLine());
+
+Console.Write(&quot;Ville : &quot;);
+string ville = Console.ReadLine();
+
+Console.Write(&quot;Jeu préféré : &quot;);
+string jeuPrefere = Console.ReadLine();
+
+Console.Write(&quot;Série préférée : &quot;);
+string seriePreferee = Console.ReadLine();
+
+Console.WriteLine();
+Console.WriteLine(&quot;Nom : &quot; + nom);
+Console.WriteLine(&quot;Âge : &quot; + age);
+Console.WriteLine(&quot;Ville : &quot; + ville);
+Console.WriteLine(&quot;Jeu préféré : &quot; + jeuPrefere);
+Console.WriteLine(&quot;Série préférée : &quot; + seriePreferee);
+</code></pre>
+<hr />
+<h2 id="exercice-defi-dialogue">Exercice défi - Dialogue</h2>
+<pre><code class="language-csharp">Console.WriteLine(&quot;Bonjour !&quot;);
+Console.Write(&quot;Comment t'appelles-tu ? &quot;);
+string nom = Console.ReadLine();
+Console.Write(&quot;Quel âge as-tu ? &quot;);
+int age = int.Parse(Console.ReadLine());
+Console.Write(&quot;Dans quelle ville habites-tu ? &quot;);
+string ville = Console.ReadLine();
+
+Console.WriteLine();
+Console.WriteLine(&quot;Nom : &quot; + nom);
+Console.WriteLine(&quot;Âge : &quot; + age);
+Console.WriteLine(&quot;Ville : &quot; + ville);
+</code></pre>
+<hr />
+<h2 id="exercice-defi-cadre-ascii">Exercice défi - Cadre ASCII</h2>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez votre nom : &quot;);
+string nom = Console.ReadLine();
+
+Console.WriteLine(&quot;**************&quot;);
+Console.WriteLine(&quot;* Bonjour &quot; + nom + &quot; *&quot;);
+Console.WriteLine(&quot;**************&quot;);
+</code></pre>
+<hr />
+<h2 id="exercice-defi-date-de-naissance">Exercice défi - Date de naissance</h2>
+<pre><code class="language-csharp">Console.Write(&quot;Jour : &quot;);
+int jour = int.Parse(Console.ReadLine());
+
+Console.Write(&quot;Mois : &quot;);
+int mois = int.Parse(Console.ReadLine());
+
+Console.Write(&quot;Année : &quot;);
+int annee = int.Parse(Console.ReadLine());
+
+Console.WriteLine(jour + &quot;-&quot; + mois + &quot;-&quot; + annee);
+</code></pre>
 
 
 
