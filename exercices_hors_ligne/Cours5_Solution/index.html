@@ -1484,10 +1484,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-3-caracteristiques-dun-personnage" class="md-nav__link">
+  <a href="#exercice-3-notes-de-3-etudiants" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 3 - Caractéristiques d'un personnage
+        Exercice 3 - Notes de 3 étudiants
       
     </span>
   </a>
@@ -1512,23 +1512,21 @@
 
 
 <h1 id="solution-cours-5">Solution - Cours 5</h1>
-<p>Voici des solutions de référence pour les exercices du cours 5.</p>
+<p>Voici des solutions de référence pour les exercices du cours 5, en utilisant des tableaux mais sans boucles.</p>
 <hr />
 <h2 id="exercice-1-prix-de-trois-articles">Exercice 1 - Prix de trois articles</h2>
 <pre><code class="language-csharp">double[] prixArticles = new double[3];
 
-for (int i = 0; i &lt; prixArticles.Length; i++)
-{
-    Console.Write(&quot;Prix du produit &quot; + (i + 1) + &quot; : &quot;);
-    prixArticles[i] = double.Parse(Console.ReadLine());
-}
+Console.Write(&quot;Prix du premier article : &quot;);
+prixArticles[0] = double.Parse(Console.ReadLine());
 
-double sousTotal = 0;
+Console.Write(&quot;Prix du deuxième article : &quot;);
+prixArticles[1] = double.Parse(Console.ReadLine());
 
-for (int i = 0; i &lt; prixArticles.Length; i++)
-{
-    sousTotal += prixArticles[i];
-}
+Console.Write(&quot;Prix du troisième article : &quot;);
+prixArticles[2] = double.Parse(Console.ReadLine());
+
+double sousTotal = prixArticles[0] + prixArticles[1] + prixArticles[2];
 
 Console.WriteLine(&quot;Sous-total : &quot; + sousTotal + &quot; $&quot;);
 </code></pre>
@@ -1537,55 +1535,52 @@ Console.WriteLine(&quot;Sous-total : &quot; + sousTotal + &quot; $&quot;);
 <pre><code class="language-csharp">string[] prenoms = new string[3];
 string[] noms = new string[3];
 
-for (int i = 0; i &lt; 3; i++)
-{
-    Console.Write(&quot;Prénom de la personne &quot; + (i + 1) + &quot; : &quot;);
-    prenoms[i] = Console.ReadLine();
+Console.Write(&quot;Prénom de la personne 1 : &quot;);
+prenoms[0] = Console.ReadLine();
+Console.Write(&quot;Nom de la personne 1 : &quot;);
+noms[0] = Console.ReadLine();
 
-    Console.Write(&quot;Nom de la personne &quot; + (i + 1) + &quot; : &quot;);
-    noms[i] = Console.ReadLine();
-}
+Console.Write(&quot;Prénom de la personne 2 : &quot;);
+prenoms[1] = Console.ReadLine();
+Console.Write(&quot;Nom de la personne 2 : &quot;);
+noms[1] = Console.ReadLine();
+
+Console.Write(&quot;Prénom de la personne 3 : &quot;);
+prenoms[2] = Console.ReadLine();
+Console.Write(&quot;Nom de la personne 3 : &quot;);
+noms[2] = Console.ReadLine();
 
 Console.WriteLine();
-Console.WriteLine(&quot;Noms complets :&quot;);
-
-for (int i = 0; i &lt; 3; i++)
-{
-    Console.WriteLine(noms[i] + &quot; &quot; + prenoms[i]);
-}
+Console.WriteLine(&quot;Nom complet 1 : &quot; + noms[0] + &quot; &quot; + prenoms[0]);
+Console.WriteLine(&quot;Nom complet 2 : &quot; + noms[1] + &quot; &quot; + prenoms[1]);
+Console.WriteLine(&quot;Nom complet 3 : &quot; + noms[2] + &quot; &quot; + prenoms[2]);
 </code></pre>
 <hr />
-<h2 id="exercice-3-caracteristiques-dun-personnage">Exercice 3 - Caractéristiques d'un personnage</h2>
-<pre><code class="language-csharp">int[] scores = new int[3];
-string[] nomsScores = { &quot;Force&quot;, &quot;Dextérité&quot;, &quot;Intelligence&quot; };
+<h2 id="exercice-3-notes-de-3-etudiants">Exercice 3 - Notes de 3 étudiants</h2>
+<pre><code class="language-csharp">double[] notes = new double[3];
 
-for (int i = 0; i &lt; scores.Length; i++)
-{
-    Console.Write(nomsScores[i] + &quot; : &quot;);
-    scores[i] = int.Parse(Console.ReadLine());
-}
+Console.Write(&quot;Note 1 : &quot;);
+notes[0] = double.Parse(Console.ReadLine());
 
-int force = scores[0];
-int dexterite = scores[1];
-int intelligence = scores[2];
+Console.Write(&quot;Note 2 : &quot;);
+notes[1] = double.Parse(Console.ReadLine());
 
-int modifForce = (force - 10) / 2;
-int modifDexterite = (dexterite - 10) / 2;
-int modifIntelligence = (intelligence - 10) / 2;
+Console.Write(&quot;Note 3 : &quot;);
+notes[2] = double.Parse(Console.ReadLine());
 
-double bonusAttaque = (modifForce + modifIntelligence) / 2.0;
-double bonusDefense = (modifDexterite + modifIntelligence) / 3.0;
+double moyenne = (notes[0] + notes[1] + notes[2]) / 3;
 
-Console.WriteLine();
-Console.WriteLine(&quot;Force : &quot; + force + &quot; | Modificateur : &quot; + modifForce);
-Console.WriteLine(&quot;Dextérité : &quot; + dexterite + &quot; | Modificateur : &quot; + modifDexterite);
-Console.WriteLine(&quot;Intelligence : &quot; + intelligence + &quot; | Modificateur : &quot; + modifIntelligence);
-Console.WriteLine(&quot;Bonus d'attaque : &quot; + bonusAttaque);
-Console.WriteLine(&quot;Bonus de défense : &quot; + bonusDefense);
+Console.WriteLine(&quot;Note 1 : &quot; + notes[0]);
+Console.WriteLine(&quot;Note 2 : &quot; + notes[1]);
+Console.WriteLine(&quot;Note 3 : &quot; + notes[2]);
+Console.WriteLine(&quot;Moyenne : &quot; + moyenne);
+
+notes[2] = notes[2] + 5;
+double nouvelleMoyenne = (notes[0] + notes[1] + notes[2]) / 3;
+
+Console.WriteLine(&quot;Nouvelle note 3 : &quot; + notes[2]);
+Console.WriteLine(&quot;Nouvelle moyenne : &quot; + nouvelleMoyenne);
 </code></pre>
-<blockquote>
-<p>Remarque : dans plusieurs jeux de rôle, on utilise parfois des divisions entières ou des arrondis selon les règles du jeu. Ici, la solution suit la logique de l’énoncé.</p>
-</blockquote>
 
 
 

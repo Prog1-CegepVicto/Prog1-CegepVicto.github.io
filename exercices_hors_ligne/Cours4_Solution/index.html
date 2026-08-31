@@ -1545,10 +1545,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-4-reservoir-dessence" class="md-nav__link">
+  <a href="#exercice-4-caracteristiques-dun-personnage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 4 - Réservoir d'essence
+        Exercice 4 - Caractéristiques d'un personnage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-5-reservoir-dessence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice 5 - Réservoir d'essence
       
     </span>
   </a>
@@ -1648,7 +1659,32 @@ Console.WriteLine(&quot;Aire : &quot; + aireMetresCarres + &quot; m²&quot;);
 Console.WriteLine(&quot;Aire : &quot; + airePiedsCarres + &quot; pieds²&quot;);
 </code></pre>
 <hr />
-<h2 id="exercice-4-reservoir-dessence">Exercice 4 - Réservoir d'essence</h2>
+<h2 id="exercice-4-caracteristiques-dun-personnage">Exercice 4 - Caractéristiques d'un personnage</h2>
+<pre><code class="language-csharp">Console.Write(&quot;Force : &quot;);
+int force = int.Parse(Console.ReadLine());
+
+Console.Write(&quot;Dextérité : &quot;);
+int dexterite = int.Parse(Console.ReadLine());
+
+Console.Write(&quot;Intelligence : &quot;);
+int intelligence = int.Parse(Console.ReadLine());
+
+int modifForce = (force - 10) / 2;
+int modifDexterite = (dexterite - 10) / 2;
+int modifIntelligence = (intelligence - 10) / 2;
+
+double bonusAttaque = (modifForce + modifIntelligence) / 2.0;
+double bonusDefense = (modifDexterite + modifIntelligence) / 3.0;
+
+Console.WriteLine();
+Console.WriteLine(&quot;Force : &quot; + force + &quot; | Modificateur : &quot; + modifForce);
+Console.WriteLine(&quot;Dextérité : &quot; + dexterite + &quot; | Modificateur : &quot; + modifDexterite);
+Console.WriteLine(&quot;Intelligence : &quot; + intelligence + &quot; | Modificateur : &quot; + modifIntelligence);
+Console.WriteLine(&quot;Bonus d'attaque : &quot; + bonusAttaque);
+Console.WriteLine(&quot;Bonus de défense : &quot; + bonusDefense);
+</code></pre>
+<hr />
+<h2 id="exercice-5-reservoir-dessence">Exercice 5 - Réservoir d'essence</h2>
 <pre><code class="language-csharp">Console.Write(&quot;Capacité du réservoir (L) : &quot;);
 double capaciteReservoir = double.Parse(Console.ReadLine());
 
@@ -1679,9 +1715,6 @@ Console.WriteLine(&quot;Prix de l'essence utilisée : &quot; + coutEssenceUtilis
 Console.WriteLine(&quot;Essence après ajout : &quot; + essenceApresAjout + &quot; L&quot;);
 Console.WriteLine(&quot;Prix de l'ajout : &quot; + coutAjout + &quot; $&quot;);
 </code></pre>
-<blockquote>
-<p>Note : si l'utilisateur doit faire un trajet plus long que la capacité du réservoir, il faut ajouter une condition pour gérer le cas où le réservoir est vide avant d’arriver.</p>
-</blockquote>
 
 
 
