@@ -1839,14 +1839,17 @@ double.TryParse(Console.ReadLine(), out nombre);
 <h2 id="generer-une-nombre-aleatoire">Générer une nombre aléatoire</h2>
 <p>Placer cette initialisation au début de votre méthode</p>
 <p><code>Random aleatoire = new Random();</code></p>
-<p>Pour assigner une nombre aléatoire à une variable</p>
-<p><code>nombre = aleatoire.Next();</code></p>
-<p>Pour assigner une nombre aléatoire avec un maximum (commence à 0)
-<strong>Le maximum doit toujours être plus grand de 1 que le nombre maximum désiré</strong></p>
-<p><code>nombre = aleatoire.Next(101);</code></p>
-<p>Pour assigner une nombre aléatoire avec un minimum et un maximum
-<strong>Le maximum doit toujours être plus grand de 1 que le nombre maximum désiré</strong></p>
-<p><code>nombre = aleatoire.Next(1, 101);</code></p>
+<p>Pour obtenir un entier positif aléatoire (entre 0 et Int32.MaxValue)</p>
+<p><code>int nombre = aleatoire.Next();</code></p>
+<p>Pour obtenir un entier positif aléatoire avec un maximum (entre 0 et max - 1)</p>
+<p><code>int nombre = aleatoire.Next(max);</code></p>
+<p>Par ex. pour obtenir un entier entre 0 et 100:</p>
+<p><code>int nombre = aleatoire.Next(101);</code></p>
+<p>Pour assigner une entier positif avec un minimum et un maximum (entre min et max - 1)</p>
+<p><code>int nombre = aleatoire.Next(min, max);</code></p>
+<p>Par ex. pour obtenir un entier entre 1 et 6 (lancé de dé):</p>
+<p><code>int nombre = aleatoire.Next(1, 7);</code></p>
+<p>Il existe des variantes pour obtenir des doubles (.NextDouble()) ou des sequences d'octets (.NextBytes()).</p>
 <h2 id="faire-une-pause">Faire une pause</h2>
 <p><code>Thread.Sleep(1000);</code> </p>
 <p>Le paramètre passé à la méthode Sleep est un nombre de millisecondes. Le paramètre ci-dessus fait une pause de 1 seconde.</p>
