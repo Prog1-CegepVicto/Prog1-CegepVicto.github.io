@@ -1588,6 +1588,19 @@
 <hr />
 <h2 id="exercice-1">Exercice 1</h2>
 <h3 id="a-cout-total-des-pizzas">A. Coût total des pizzas</h3>
+<p><strong>Entrées :</strong></p>
+<ul>
+<li>Le nombre de pizzas commandées.</li>
+<li>Le prix unitaire d'une pizza, soit 18,99 $.</li>
+</ul>
+<p><strong>Sorties :</strong></p>
+<ul>
+<li>Le coût total de la commande.</li>
+</ul>
+<p><strong>Traitement :</strong></p>
+<ul>
+<li>Multiplier le nombre de pizzas par le prix unitaire.</li>
+</ul>
 <p>Variables possibles :</p>
 <pre><code class="language-csharp">double prixUnitaire = 18.99;
 int nbPizzas;
@@ -1597,16 +1610,43 @@ double coutTotal;
 <pre><code class="language-csharp">coutTotal = prixUnitaire * nbPizzas;
 </code></pre>
 <h3 id="b-temps-pour-atteindre-400-litres">B. Temps pour atteindre 400 litres</h3>
+<p><strong>Entrées :</strong></p>
+<ul>
+<li>La quantité initiale dans le réservoir, soit 100 litres.</li>
+<li>Le débit du robinet, soit 12 litres par minute.</li>
+<li>La quantité à atteindre, soit 400 litres.</li>
+</ul>
+<p><strong>Sorties :</strong></p>
+<ul>
+<li>Le temps nécessaire pour atteindre 400 litres, en minutes.</li>
+</ul>
+<p><strong>Traitement :</strong></p>
+<ul>
+<li>Soustraire la quantité initiale de la quantité à atteindre, puis diviser le résultat par le débit.</li>
+</ul>
 <p>Variables possibles :</p>
-<pre><code class="language-csharp">double reservoir = 100;
-double debit = 12;
-double objectif = 400;
-double temps;
+<pre><code class="language-csharp">double reservoirLitres = 100;
+double debitLitresParMinute = 12;
+double objectifLitres = 400;
+double tempsMinutes;
 </code></pre>
 <p>Formule :</p>
-<pre><code class="language-csharp">temps = (objectif - reservoir) / debit;
+<pre><code class="language-csharp">tempsMinutes = (objectifLitres - reservoirLitres) / debitLitresParMinute;
 </code></pre>
 <h3 id="c-livraison-gratuite">C. Livraison gratuite ?</h3>
+<p><strong>Entrées :</strong></p>
+<ul>
+<li>Le total du panier avant les taxes.</li>
+<li>Le seuil de livraison gratuite, soit 70 $.</li>
+</ul>
+<p><strong>Sorties :</strong></p>
+<ul>
+<li>Une indication précisant si la livraison est gratuite.</li>
+</ul>
+<p><strong>Traitement :</strong></p>
+<ul>
+<li>Vérifier si le total avant taxes est supérieur à 70 $.</li>
+</ul>
 <p>Variables possibles :</p>
 <pre><code class="language-csharp">double totalAvantTaxes;
 bool livraisonGratuite;
@@ -1615,14 +1655,31 @@ bool livraisonGratuite;
 <pre><code class="language-csharp">livraisonGratuite = totalAvantTaxes &gt; 70;
 </code></pre>
 <h3 id="d-temps-avant-que-bowser-rattrape-mario">D. Temps avant que Bowser rattrape Mario</h3>
+<p><strong>Entrées :</strong></p>
+<ul>
+<li>La vitesse de Mario, soit 8 km/h.</li>
+<li>La vitesse de Bowser, soit 10 km/h.</li>
+<li>L'avance de Mario, soit 30 minutes ou 0,5 heure.</li>
+</ul>
+<p><strong>Sorties :</strong></p>
+<ul>
+<li>Le temps nécessaire à Bowser pour rattraper Mario, en heures.</li>
+</ul>
+<p><strong>Traitement :</strong></p>
+<ul>
+<li>Calculer la distance parcourue par Mario pendant son avance.</li>
+<li>Calculer la différence entre les vitesses de Bowser et de Mario.</li>
+<li>Diviser la distance d'avance par cette différence de vitesse.</li>
+</ul>
 <p>Variables :</p>
-<pre><code class="language-csharp">double vitesseMario = 8;
-double vitesseBowser = 10;
-double avanceMario = 8 * 0.5; // 30 minutes = 0.5 heure
-double temps;
+<pre><code class="language-csharp">double vitesseMarioKmParHeure = 8;
+double vitesseBowserKmParHeure = 10;
+double avanceMarioHeures = 0.5;
+double avanceMarioKilometres = vitesseMarioKmParHeure * avanceMarioHeures;
+double tempsHeures;
 </code></pre>
 <p>Comme Bowser est plus rapide, on calcule le temps nécessaire pour compenser l’avance :</p>
-<pre><code class="language-csharp">temps = avanceMario / (vitesseBowser - vitesseMario);
+<pre><code class="language-csharp">tempsHeures = avanceMarioKilometres / (vitesseBowserKmParHeure - vitesseMarioKmParHeure);
 </code></pre>
 <hr />
 <h2 id="exercice-2">Exercice 2</h2>
