@@ -1487,7 +1487,8 @@
 
 
 <h1 id="solutions-possibles-aux-exercices-de-la-semaine-2">Solutions possibles aux exercices de la semaine 2</h1>
-<pre><code>static void ex1()
+<pre><code> // 1. Compte à rebours
+static void ex1()
 {
     int nombre = 0;
 
@@ -1498,13 +1499,14 @@
     // descendre le nombre jusqu'à 0
     // pour arrêter à 1 on utilise la condition : nombre &gt; 0
     while (nombre &gt;= 0)
-    { 
+    {
         Console.WriteLine(nombre);
         nombre--;
     }
 }
 </code></pre>
-<pre><code>static void ex2()
+<pre><code> // 2. Nombre d’occurrences
+static void ex2()
 {
     int nombre = 1; // le nombre que l'utilisateur entre à chaque tour de boucle, on le met à 1 pour que la boucle commence
     int positif = 0; // le compteur de nombres positifs
@@ -1533,7 +1535,8 @@
     Console.WriteLine(&quot;Nombres négatifs : &quot; + negatif);
 }
 </code></pre>
-<pre><code>static void ex3()
+<pre><code>// 3. Calcul d'une moyenne
+static void ex3()
 {
     double note = 0;
     double total = 0;

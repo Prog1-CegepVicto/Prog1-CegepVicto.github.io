@@ -692,6 +692,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boucle-avec-compteur-et-instruction-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boucle avec compteur et instruction break
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1582,6 +1593,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boucle-avec-compteur-et-instruction-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boucle avec compteur et instruction break
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1600,7 +1622,7 @@
 
 
 <h1 id="boucle-while">Boucle : while</h1>
-<p>La boucle while continue <strong>tant que</strong> son travail n’est pas fini.</p>
+<p>La boucle <code>while</code> continue <strong>tant que</strong> son travail n’est pas fini.</p>
 <h2 id="syntaxe">Syntaxe</h2>
 <pre><code>while(condition)
 {
@@ -1615,7 +1637,7 @@
 
 }
 </code></pre>
-<p>ne s’arrête jamais !</p>
+<p>ne s’arrête jamais, sauf si on utilise le mot clé <code>break</code> pour forcer la sortie de la boucle.</p>
 <h2 id="boucle-avec-compteur">Boucle avec compteur</h2>
 <p>La technique habituelle pour déterminer le nombre de fois que la boucle est exécutée est la suivante :</p>
 <ul>
@@ -1628,6 +1650,27 @@ int compteur = 0;
 while(compteur &lt; 10)
 {
     // instructions
+}
+</code></pre>
+<h2 id="boucle-avec-compteur-et-instruction-break">Boucle avec compteur et instruction <code>break</code></h2>
+<p><code>while</code> est souvent utilisé avec un compteur et une instruction <code>break</code> pour sortir de la boucle quand une condition est remplie avant que le compteur n'atteigne sa valeur maximale . Par exemple, pour demander un mot de passe à l'utilisateur et arrêter la boucle si le mot de passe est correct ou si le nombre d'essais est épuisé :</p>
+<pre><code>string motDePasseCorrect = &quot;Secret123&quot;;
+int essaisRestants = 3;
+
+while (essaisRestants &gt; 0)
+{
+    Console.Write(&quot;Entrez le mot de passe : &quot;);
+    string saisie = Console.ReadLine();
+
+    if (saisie == motDePasseCorrect)
+    {
+        Console.WriteLine(&quot;Connexion réussie !&quot;);
+        break; // Sortie immédiate de la boucle : les autres essais ne sont pas nécessaires
+    }
+
+    // À ce point-ci on sait que le mot de passe est incorrect, on décrémente le nombre d'essais restants
+    essaisRestants = essaisRestants - 1;
+    Console.WriteLine(&quot;Mot de passe incorrect. Essais restants :&quot; + essaisRestants);
 }
 </code></pre>
 
