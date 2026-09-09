@@ -1536,7 +1536,9 @@ static void ex2()
 }
 </code></pre>
 <pre><code>// 3. Calcul d'une moyenne
-static void ex3()
+
+// 3a: sans break;
+static void ex3a()
 {
     double note = 0;
     double total = 0;
@@ -1545,7 +1547,7 @@ static void ex3()
 
     while (note &gt;= 0)
     {
-        Console.WriteLine(&quot;Entre une note (note négative pour arrêter) &quot;);
+        Console.WriteLine(&quot;Entrez une note (note négative pour arrêter) &quot;);
         double.TryParse(Console.ReadLine(), out note);
 
         // Seulement si on a une note positive
@@ -1562,6 +1564,33 @@ static void ex3()
 
     Console.WriteLine(&quot;Nombre de notes : &quot; + nbNotes + &quot;, Moyenne : &quot; + moyenne);
 }
+
+// 3b: en utilisant break;
+static void ex3b()
+{
+    double note = 0;
+    double total = 0;
+    int nbNotes = 0;
+    double moyenne = 0;
+
+    while (true)
+    {
+        Console.WriteLine(&quot;Entrez une note (note négative pour arrêter) &quot;);
+        double.TryParse(Console.ReadLine(), out note);
+        if (note &lt; 0)
+        {
+            break;
+        }
+
+        total = total + note;
+        nbNotes++;
+    }
+
+    moyenne = total / nbNotes;
+
+    Console.WriteLine(&quot;Nombre de notes : &quot; + nbNotes + &quot;, Moyenne : &quot; + moyenne);
+}
+
 </code></pre>
 
 
