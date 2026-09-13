@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../methode/">
+        <link rel="prev" href="../lecture-ecriture/">
       
       
-        <link rel="next" href="../for/">
+        <link rel="next" href="../si/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>While - Programmation 1 - Automne 2026</title>
+        <title>Validation des données - Programmation 1 - Automne 2026</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#boucle-while" class="md-skip">
+        <a href="#validation-des-donnees" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              While
+              Validation des données
             
           </span>
         </div>
@@ -492,10 +492,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../validation-donnees/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation des données
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -511,6 +538,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-valider-les-entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pourquoi valider les entrées ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valider-un-entier-avec-inttryparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valider un entier avec int.TryParse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valider-un-nombre-reel-avec-doubletryparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valider un nombre réel avec double.TryParse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valider-une-chaine-avec-if-else-if-et-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valider une chaîne avec if, else if et else
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redemander-une-donnee-invalide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redemander une donnée invalide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fail-fast-et-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fail fast et sortie anticipée
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fail fast et sortie anticipée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fail-fast-echouer-rapidement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fail fast : échouer rapidement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#early-exit-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Early exit : sortie anticipée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contre-exemple-sans-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contre-exemple : sans sortie anticipée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -576,20 +728,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
@@ -610,7 +760,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -625,37 +775,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    While
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../while/" class="md-nav__link">
         
   
   
@@ -671,70 +794,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#syntaxe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Syntaxe
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#condition-de-fin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Condition de fin
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#boucle-avec-compteur" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Boucle avec compteur
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#boucle-avec-compteur-et-instruction-break" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Boucle avec compteur et instruction break
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1645,10 +1704,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntaxe" class="md-nav__link">
+  <a href="#pourquoi-valider-les-entrees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntaxe
+        Pourquoi valider les entrées ?
       
     </span>
   </a>
@@ -1656,10 +1715,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#condition-de-fin" class="md-nav__link">
+  <a href="#valider-un-entier-avec-inttryparse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Condition de fin
+        Valider un entier avec int.TryParse
       
     </span>
   </a>
@@ -1667,10 +1726,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boucle-avec-compteur" class="md-nav__link">
+  <a href="#valider-un-nombre-reel-avec-doubletryparse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boucle avec compteur
+        Valider un nombre réel avec double.TryParse
       
     </span>
   </a>
@@ -1678,13 +1737,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boucle-avec-compteur-et-instruction-break" class="md-nav__link">
+  <a href="#valider-une-chaine-avec-if-else-if-et-else" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boucle avec compteur et instruction break
+        Valider une chaîne avec if, else if et else
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redemander-une-donnee-invalide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redemander une donnée invalide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fail-fast-et-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fail fast et sortie anticipée
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fail fast et sortie anticipée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fail-fast-echouer-rapidement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fail fast : échouer rapidement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#early-exit-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Early exit : sortie anticipée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contre-exemple-sans-sortie-anticipee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contre-exemple : sans sortie anticipée
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1705,56 +1825,173 @@
 
 
 
-<h1 id="boucle-while">Boucle : while</h1>
-<p>La boucle <code>while</code> continue <strong>tant que</strong> son travail n’est pas fini.</p>
-<h2 id="syntaxe">Syntaxe</h2>
-<pre><code>while(condition)
-{
-    // instructions
-}
-</code></pre>
-<h2 id="condition-de-fin">Condition de fin</h2>
-<p>La boucle s’arrête lorsque la condition entre parenthèses a une valeur logique : faux.</p>
-<p>Donc, une boucle :</p>
-<pre><code>while(true)
-{
-
-}
-</code></pre>
-<p>ne s’arrête jamais, sauf si on utilise le mot clé <code>break</code> pour forcer la sortie de la boucle.</p>
-<h2 id="boucle-avec-compteur">Boucle avec compteur</h2>
-<p>La technique habituelle pour déterminer le nombre de fois que la boucle est exécutée est la suivante :</p>
+<h1 id="validation-des-donnees">Validation des données</h1>
+<h2 id="pourquoi-valider-les-entrees">Pourquoi valider les entrées ?</h2>
+<p>Les données saisies par l'utilisateur ne doivent jamais être considérées comme valides automatiquement. L'utilisateur peut entrer une valeur vide, du texte à la place d'un nombre ou une valeur qui ne respecte pas les règles du programme.</p>
+<p><code>Console.ReadLine()</code> lit une ligne au clavier et retourne toujours une chaîne de caractères (<code>string</code>). Il faut donc vérifier et convertir cette entrée avant de l'utiliser.</p>
+<p>Une validation permet de :</p>
 <ul>
-<li>une variable qui compte les tours ; elle commence habituellement à 0 ;</li>
-<li>la condition entre parenthèses donne vrai ou faux selon la valeur du compteur ;</li>
-<li>la boucle fait ses instructions tant que le compteur est plus petit que le nombre maximum de boucles à faire.</li>
+<li>éviter que le programme plante;</li>
+<li>s'assurer que la donnée a le bon type;</li>
+<li>s'assurer que la donnée respecte les règles du programme;</li>
+<li>demander une nouvelle valeur avec un message compréhensible.</li>
 </ul>
-<pre><code>// Cette boucle exécute ses instructions 10 fois
-int compteur = 0;
-while(compteur &lt; 10)
+<h2 id="valider-un-entier-avec-inttryparse">Valider un entier avec <code>int.TryParse</code></h2>
+<p><code>int.TryParse</code> tente de convertir une chaîne en nombre entier. La méthode retourne <code>true</code> si la conversion réussit et <code>false</code> dans le cas contraire.</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez votre âge : &quot;);
+string saisie = Console.ReadLine();
+int age;
+
+if (int.TryParse(saisie, out age))
 {
-    // instructions
+    Console.WriteLine(&quot;Votre âge est &quot; + age + &quot;.&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Veuillez entrer un nombre entier.&quot;);
 }
 </code></pre>
-<h2 id="boucle-avec-compteur-et-instruction-break">Boucle avec compteur et instruction <code>break</code></h2>
-<p><code>while</code> est souvent utilisé avec un compteur et une instruction <code>break</code> pour sortir de la boucle quand une condition est remplie avant que le compteur n'atteigne sa valeur maximale . Par exemple, pour demander un mot de passe à l'utilisateur et arrêter la boucle si le mot de passe est correct ou si le nombre d'essais est épuisé :</p>
-<pre><code>string motDePasseCorrect = &quot;Secret123&quot;;
-int essaisRestants = 3;
+<p>La valeur convertie est placée dans la variable <code>age</code>. Si la conversion échoue, le bloc <code>else</code> est exécuté.</p>
+<h2 id="valider-un-nombre-reel-avec-doubletryparse">Valider un nombre réel avec <code>double.TryParse</code></h2>
+<p>Pour une valeur pouvant contenir des décimales, on utilise <code>double.TryParse</code>.</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez le prix : &quot;);
+string saisie = Console.ReadLine();
+double prix;
 
-while (essaisRestants &gt; 0)
+if (double.TryParse(saisie, out prix))
 {
-    Console.Write(&quot;Entrez le mot de passe : &quot;);
-    string saisie = Console.ReadLine();
+    Console.WriteLine(&quot;Le prix est de &quot; + prix + &quot; $&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Veuillez entrer un nombre réel.&quot;);
+}
+</code></pre>
+<p>La conversion vérifie le type de la donnée, mais pas nécessairement sa valeur. Il faut donc ajouter une condition si le programme impose une règle :</p>
+<pre><code class="language-csharp">double prix;
 
-    if (saisie == motDePasseCorrect)
+if (double.TryParse(saisie, out prix))
+{
+    if (prix &gt;= 0)
     {
-        Console.WriteLine(&quot;Connexion réussie !&quot;);
-        break; // Sortie immédiate de la boucle : les autres essais ne sont pas nécessaires
+        Console.WriteLine(&quot;Prix accepté.&quot;);
     }
+    else
+    {
+        Console.WriteLine(&quot;Le prix ne peut pas être négatif.&quot;);
+    }
+}
+else
+{
+    Console.WriteLine(&quot;Veuillez entrer un nombre réel.&quot;);
+}
+</code></pre>
+<h2 id="valider-une-chaine-avec-if-else-if-et-else">Valider une chaîne avec <code>if</code>, <code>else if</code> et <code>else</code></h2>
+<p>Une chaîne est déjà retournée par <code>Console.ReadLine()</code>, mais elle peut être vide ou ne pas correspondre aux choix attendus.</p>
+<pre><code class="language-csharp">Console.Write(&quot;Choisissez une couleur (rouge, vert ou bleu) : &quot;);
+string couleur = Console.ReadLine();
 
-    // À ce point-ci on sait que le mot de passe est incorrect, on décrémente le nombre d'essais restants
-    essaisRestants = essaisRestants - 1;
-    Console.WriteLine(&quot;Mot de passe incorrect. Essais restants :&quot; + essaisRestants);
+if (couleur == &quot;rouge&quot;)
+{
+    Console.WriteLine(&quot;Vous avez choisi le rouge.&quot;);
+}
+else if (couleur == &quot;vert&quot;)
+{
+    Console.WriteLine(&quot;Vous avez choisi le vert.&quot;);
+}
+else if (couleur == &quot;bleu&quot;)
+{
+    Console.WriteLine(&quot;Vous avez choisi le bleu.&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Cette couleur n'est pas valide.&quot;);
+}
+</code></pre>
+<p>On peut aussi vérifier qu'une chaîne n'est pas vide :</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez votre prénom : &quot;);
+string prenom = Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(prenom))
+{
+    Console.WriteLine(&quot;Le prénom ne peut pas être vide.&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Bonjour &quot; + prenom + &quot; !&quot;);
+}
+</code></pre>
+<p><code>string.IsNullOrWhiteSpace</code> retourne <code>true</code> si la chaîne est <code>null</code>, vide ou composée uniquement d'espaces.</p>
+<h2 id="redemander-une-donnee-invalide">Redemander une donnée invalide</h2>
+<p>Pour obliger l'utilisateur à fournir une donnée valide, on place la lecture dans une boucle <code>while</code> :</p>
+<pre><code class="language-csharp">int age;
+
+do
+{
+    Console.Write(&quot;Entrez votre âge : &quot;);
+}
+while (!int.TryParse(Console.ReadLine(), out age) || age &lt; 0);
+
+Console.WriteLine(&quot;Âge accepté : &quot; + age);
+</code></pre>
+<p>La boucle recommence tant que la saisie n'est pas un entier ou que l'âge est négatif.</p>
+<h2 id="fail-fast-et-sortie-anticipee">Fail fast et sortie anticipée</h2>
+<h3 id="fail-fast-echouer-rapidement">Fail fast : échouer rapidement</h3>
+<p><strong>Fail fast</strong> signifie <strong>échouer rapidement</strong>. On vérifie une donnée dès qu'elle est reçue. Si elle est invalide, on arrête immédiatement le traitement au lieu de continuer avec une valeur incorrecte.</p>
+<p>Cette approche rend l'erreur plus facile à repérer et évite qu'elle provoque un problème plus loin dans le programme.</p>
+<pre><code class="language-csharp">int quantite;
+
+if (!int.TryParse(Console.ReadLine(), out quantite))
+{
+    Console.WriteLine(&quot;La quantité doit être un entier.&quot;);
+    return;
+}
+
+Console.WriteLine(&quot;Quantité acceptée : &quot; + quantite);
+</code></pre>
+<h3 id="early-exit-sortie-anticipee">Early exit : sortie anticipée</h3>
+<p><strong>Early exit</strong> signifie <strong>sortie anticipée</strong>. C'est le fait de quitter une méthode ou le programme dès que la suite du traitement n'a plus de raison d'être.</p>
+<p>Les sorties anticipées évitent d'imbriquer inutilement des blocs <code>if/else</code> et améliorent la lisibilité du code. Les cas invalides sont traités immédiatement, puis le traitement principal reste au même niveau d'indentation.</p>
+<pre><code class="language-csharp">Console.Write(&quot;Entrez un prix positif : &quot;);
+string saisie = Console.ReadLine();
+double prix;
+
+if (!double.TryParse(saisie, out prix))
+{
+    Console.WriteLine(&quot;Prix invalide.&quot;);
+    return;
+}
+
+if (prix &lt; 0)
+{
+    Console.WriteLine(&quot;Le prix ne peut pas être négatif.&quot;);
+    return;
+}
+
+Console.WriteLine(&quot;Prix accepté : &quot; + prix + &quot; $&quot;);
+</code></pre>
+<p>Ici, les cas invalides sont traités en premier. <code>return</code> quitte immédiatement le programme top-level, sans ajouter de bloc <code>else</code>. Le traitement principal reste visible à la fin du code. On peut traduire <strong>early exit</strong> par <strong>sortie anticipée</strong>, <strong>retour anticipé</strong> ou <strong>arrêt anticipé</strong>, selon le contexte.</p>
+<h3 id="contre-exemple-sans-sortie-anticipee">Contre-exemple : sans sortie anticipée</h3>
+<p>Sans sortie anticipée, on doit imbriquer les blocs <code>if/else</code>. Le code fonctionne, mais il devient plus difficile à lire lorsque le nombre de validations augmente.</p>
+<pre><code class="language-csharp">// Exemple sans sortie anticipée: À NE PAS SUIVRE
+Console.Write(&quot;Entrez un prix positif : &quot;);
+string saisie = Console.ReadLine();
+double prix;
+
+if (double.TryParse(saisie, out prix))
+{
+    if (prix &gt;= 0)
+    {
+        Console.WriteLine(&quot;Prix accepté : &quot; + prix + &quot; $&quot;);
+    }
+    else
+    {
+        Console.WriteLine(&quot;Le prix ne peut pas être négatif.&quot;);
+    }
+}
+else
+{
+    Console.WriteLine(&quot;Prix invalide.&quot;);
 }
 </code></pre>
 
