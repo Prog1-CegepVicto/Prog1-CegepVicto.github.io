@@ -1657,6 +1657,36 @@ static void ex4b()
     }
 }
 </code></pre>
+<pre><code>// 4c. Recherche dans un tableau avec break sans variable &quot;trouve&quot;
+static void ex4c()
+{
+    int[] nombres = [4, 18, 7, 25, 10, 3, 14, 21, 8, 16];
+    int nombreRecherche;
+    int position = 0;
+
+    Console.Write(&quot;Entrez un nombre à rechercher : &quot;);
+    int.TryParse(Console.ReadLine(), out nombreRecherche);
+
+    while (position &lt; nombres.Length)
+    {
+        if (nombres[position] == nombreRecherche)
+        {
+            break;
+        }
+
+        position++;
+    }
+
+    if (position == nombres.Length)
+    {
+        Console.WriteLine(&quot;Le nombre n'est pas présent dans le tableau.&quot;);
+    }
+    else
+    {
+        Console.WriteLine(&quot;Le nombre est présent dans le tableau.&quot;);
+    }
+}
+</code></pre>
 
 
 

@@ -1865,7 +1865,7 @@
 
 
 
-<h1 id="guide-de-survie-les-tests-fonctionnels">Guide de Survie : Les Tests Fonctionnels</h1>
+<h1 id="guide-de-survie-les-tests-fonctionnels">Guide de survie : les tests fonctionnels</h1>
 <p><strong>De la méthode à la classe</strong></p>
 <p>Passer du code à la vérification demande un changement de mentalité. On ne cherche plus à <em>construire</em> quelque chose qui marche, mais à <em>prouver</em> que cela fonctionne dans toutes les situations (même les pires).</p>
 <p>Ce guide divise la procédure en deux niveaux : le niveau <strong>Micro</strong> (la méthode) et le niveau <strong>Macro</strong> (la classe).</p>
@@ -1876,12 +1876,12 @@
 <h3 id="etape-1-analyser-le-contrat">Étape 1 : Analyser le Contrat</h3>
 <p>Le <strong>Contrat</strong> est déterminé par deux éléments :</p>
 <ol>
-<li>Le <strong>Summary</strong> : La description de la méthode, de ses paramètres et de son retour prend toute sa signfication. Elle détermine l'objectif de la méthode</li>
-<li>La <strong>signature</strong> de la méthode : La signature nous donne des détails techniques comme le type des variables et le niveau d'accès (public, private, etc..)</li>
+<li>Le <strong>summary</strong> : la description de la méthode, de ses paramètres et de sa valeur de retour prend toute sa signification. Elle détermine l'objectif de la méthode.</li>
+<li>La <strong>signature</strong> de la méthode : la signature nous donne des détails techniques comme le type des variables et le niveau d'accès (<code>public</code>, <code>private</code>, etc.).</li>
 </ol>
 <p>Avant d'écrire le test, posez-vous deux questions :</p>
 <ol>
-<li>Quels sont les paramètres acceptés ? (Ex: un entier, une chaîne, un objet)</li>
+<li>Quels sont les paramètres acceptés ? (Ex. : un entier, une chaîne, un objet)</li>
 <li>Quel est le résultat attendu ? (Une valeur de retour ou une exception ?)</li>
 </ol>
 <h3 id="etape-2-le-chemin-heureux-happy-path">Étape 2 : Le "Chemin Heureux" (Happy Path)</h3>
@@ -1893,7 +1893,7 @@
 <h3 id="etape-3-les-cas-limites-boundaries">Étape 3 : Les Cas Limites (Boundaries)</h3>
 <p>C'est ici que se cachent 80% des bugs. Testez les frontières des types de données :</p>
 <ul>
-<li><strong>Nombres :</strong> Testez <code>0</code>, <code>1</code>, <code>-1</code>, la valeur maximale (<code>MaxInt</code>) et minimale.</li>
+<li><strong>Nombres :</strong> testez <code>0</code>, <code>1</code>, <code>-1</code>, la valeur maximale (<code>MaxInt</code>) et la valeur minimale.</li>
 <li><strong>Listes/Tableaux :</strong> Une liste vide, une liste avec 1 seul élément, le premier et le dernier élément.</li>
 <li><strong>Chaînes de caractères :</strong> Une chaîne vide <code>""</code>, une chaîne avec seulement des espaces <code>" "</code>, ou <code>null</code>.</li>
 </ul>
@@ -1901,15 +1901,15 @@
 <p><strong>Règle d'or :</strong> Si votre méthode accepte un nombre, testez toujours 0 et un nombre négatif.</p>
 </blockquote>
 <h3 id="etape-4-les-cas-derreur-exceptions">Étape 4 : Les Cas d'Erreur (Exceptions)</h3>
-<p>Si la méthode a des règles (ex: "l'âge ne peut pas être négatif"), vous devez tester son comportement avec de mauvaises données.</p>
+<p>Si la méthode a des règles (ex. : « l'âge ne peut pas être négatif »), vous devez tester son comportement avec de mauvaises données.</p>
 <ul>
 <li><strong>Action :</strong> Appeler la méthode avec une valeur invalide.</li>
-<li><strong>Attente :</strong> La méthode doit lancer une <strong>Exception</strong> (mécanique vue en Programmation 2, ex: <code>ArgumentException</code> qui). Elle ne doit pas "ne rien faire" ou planter silencieusement.</li>
+<li><strong>Attente :</strong> la méthode doit lancer une <strong>exception</strong> (mécanisme vu en Programmation 2, par ex. <code>ArgumentException</code>). Elle ne doit pas « ne rien faire » ou planter silencieusement.</li>
 </ul>
-<p>Ce que l'on peut faire pour corriger présentement : </p>
+<p>Ce que l'on peut faire pour corriger le problème :</p>
 <ul>
-<li><strong>Retour hâtif</strong> : tester la valeur au début de la méthode et utiliser return pour l'arrêter.</li>
-<li><strong>Retour significatif</strong> : prévoir un retour qui nous dit que la méthode est erronnée (ex: -1 pour un index de tableau)</li>
+<li><strong>Retour hâtif</strong> : tester la valeur au début de la méthode et utiliser <code>return</code> pour l'arrêter.</li>
+<li><strong>Retour significatif</strong> : prévoir une valeur de retour qui indique que la méthode est erronée (ex. : <code>-1</code> pour un index de tableau).</li>
 </ul>
 <hr />
 <h2 id="partie-2-tester-une-classe-niveau-macro">Partie 2 : Tester une Classe (Niveau Macro)</h2>
@@ -1921,18 +1921,18 @@
 <li>Vérifiez que les attributs ont bien leurs valeurs par défaut en utilisant le débogueur.</li>
 </ul>
 <h3 id="etape-2-accesseurs-et-mutateurs-getset">Étape 2 : Accesseurs et Mutateurs (Get/Set)</h3>
-<p>Normalement, les attributs d'une classe ne sont pas public. Nous ajoutons une méthode "get" (Accesseur) pour consulter obtenir la valeur d'un attribut et "set" (Mutateur) pour modifier un attribut. Ces méthodes servent à la modification et la lecture directe, les autres méthodes peuvent apporter des changement différent (Classement d'un tableau de nom en ordre alphabétique, affichage à l'écran, etc...)</p>
+<p>Normalement, les attributs d'une classe ne sont pas publics. Nous ajoutons une méthode « get » (accesseur) pour consulter et obtenir la valeur d'un attribut et « set » (mutateur) pour modifier un attribut. Ces méthodes servent à la modification et à la lecture directe. Les autres méthodes peuvent apporter des changements différents (classement d'un tableau de noms par ordre alphabétique, affichage à l'écran, etc.).</p>
 <ul>
 <li>Si vous faites un <code>setValeur(10)</code>, le <code>getValeur()</code> doit retourner <code>10</code>.</li>
-<li>Vérifiez que le <code>set</code> respecte les règles de validation (Est-ce que je peux mettre la quantité d'essence d'une voiture à -10 litres).</li>
+<li>Vérifiez que le <code>set</code> respecte les règles de validation (puis-je mettre la quantité d'essence d'une voiture à -10 litres ?).</li>
 </ul>
 <h3 id="etape-3-scenarios-de-vie-sequences">Étape 3 : Scénarios de Vie (Séquences)</h3>
 <p>Testez l'histoire de l'objet. L'ordre des appels est important.</p>
 <ol>
-<li><strong>État initial :</strong> Créer l'objet.</li>
-<li><strong>Action :</strong> Appeler une méthode qui modifie l'état (ex: <code>ajouterArticle</code>).</li>
-<li><strong>Vérification :</strong> Vérifier l'état intermédiaire (ex: l'article est maintenant dans la liste des items du panier).</li>
-<li><strong>Action suivante :</strong> Appeler une autre méthode (ex: <code>viderPanier</code>).</li>
+<li><strong>État initial :</strong> créer l'objet.</li>
+<li><strong>Action :</strong> appeler une méthode qui modifie l'état (ex. : <code>ajouterArticle</code>).</li>
+<li><strong>Vérification :</strong> vérifier l'état intermédiaire (ex. : l'article est maintenant dans la liste des articles du panier).</li>
+<li><strong>Action suivante :</strong> appeler une autre méthode (ex. : <code>viderPanier</code>).</li>
 <li><strong>Vérification finale :</strong> L'objet est-il revenu à zéro ?</li>
 </ol>
 <hr />
@@ -1942,7 +1942,7 @@
 <li>
 <p><strong>A</strong>RRANGE (Préparer) :</p>
 <ul>
-<li>Créer les objets, initialiser les variables.</li>
+<li>Créer les objets et initialiser les variables.</li>
 <li><em>C'est la mise en place du décor.</em></li>
 </ul>
 </li>
