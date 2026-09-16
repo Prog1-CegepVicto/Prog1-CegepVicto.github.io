@@ -1929,7 +1929,7 @@ while (essaisRestants &gt; 0)
     essaisRestants--;
     Console.WriteLine(&quot;Mot de passe incorrect.&quot;);
     Console.WriteLine(&quot;Essais restants : &quot; + essaisRestants);
-    Thread.Sleep(TimeSpan.FromSeconds(1));
+    Thread.Sleep(1000);
 }
 
 if (connexionReussie)
@@ -1956,14 +1956,15 @@ int chiffres = 0;
 
 for (int position = 0; position &lt; mot.Length; position++)
 {
-    char caractere = char.ToLower(mot[position]);
+    char caractere = mot[position];
 
     if (char.IsDigit(caractere))
     {
         chiffres++;
     }
-    else if (caractere == 'a' || caractere == 'e' || caractere == 'i'
-        || caractere == 'o' || caractere == 'u' || caractere == 'y')
+    else if (caractere == 'a' || caractere == 'A' || caractere == 'e' || caractere == 'E'
+        || caractere == 'i' || caractere == 'I' || caractere == 'o' || caractere == 'O'
+        || caractere == 'u' || caractere == 'U' || caractere == 'y' || caractere == 'Y')
     {
         voyelles++;
     }
@@ -1994,7 +1995,7 @@ for (int position = 0; position &lt; mot.Length; position++)
 {
     if (mot[position] != ' ')
     {
-        motNettoye += char.ToLower(mot[position]);
+        motNettoye += mot[position];
     }
 }
 
@@ -2194,11 +2195,11 @@ Console.WriteLine(&quot;Poids : &quot; + poids + &quot; kg&quot;);
 Console.WriteLine(&quot;Catégorie : &quot; + categorie);
 </code></pre>
 <pre><code class="language-csharp">Console.WriteLine(&quot;Nom : &quot; + nom);
-Thread.Sleep(TimeSpan.FromSeconds(1));
+Thread.Sleep(1000);
 Console.WriteLine(&quot;Âge : &quot; + age);
-Thread.Sleep(TimeSpan.FromSeconds(1));
+Thread.Sleep(1000);
 Console.WriteLine(&quot;Poids : &quot; + poids + &quot; kg&quot;);
-Thread.Sleep(TimeSpan.FromSeconds(1));
+Thread.Sleep(1000);
 Console.WriteLine(&quot;Catégorie : &quot; + categorie);
 </code></pre>
 
