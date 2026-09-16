@@ -1773,15 +1773,31 @@
 
 <h1 id="lecture-et-ecriture">Lecture et écriture</h1>
 <h2 id="affichage-a-la-console">Affichage à la console</h2>
-<p><code>Console.WriteLine()</code></p>
-<pre><code>// Afficher une phrase directement
-Console.WriteLine(&quot;Voici ma phrase&quot;);
+<p>Il existe deux méthodes importantes :</p>
+<ul>
+<li><code>Console.Write(...)</code> : affiche le texte à la console</li>
+<li><code>Console.WriteLine(...)</code> : affiche le texte et passe à la ligne suivante.</li>
+</ul>
+<pre><code class="language-csharp">Console.Write(&quot;Bonjour&quot;);
+Console.Write(&quot; &quot;);
+Console.Write(&quot;monde&quot;);
+// Affichage : Bonjour monde
 
-// Afficher le contenu d'une variable, même si c'est autre chose qu'une phrase
+Console.WriteLine(&quot;Bonjour&quot;);
+// Affichage : Bonjour
+// puis retour à la ligne
+
+Console.WriteLine();
+// Passe à la ligne suivante sans afficher de texte
+</code></pre>
+<p>Console.WriteLine("Je crois que ma variable contient : " + maVariable + " un entier positif");</p>
+<pre><code>
+Pour faire un retour de ligne sans afficher de texte, on utilise simplement `Console.WriteLine();`.
+
+On peut aussi afficher le contenu d'une variable :
+
+```csharp
 Console.WriteLine(maVariable);
-
-// Afficher une combinaison de variables et de phrases
-Console.WriteLine(&quot;Je crois que ma variable contient : &quot; + maVariable + &quot; un entier positif&quot; );
 </code></pre>
 <h2 id="lecture-a-la-console">Lecture à la console</h2>
 <p>La méthode <code>Console.ReadLine()</code> lit une entrée de l'utilisateur à la console mais il faut assigner le résultat à une variable pour l'utiliser.</p>
