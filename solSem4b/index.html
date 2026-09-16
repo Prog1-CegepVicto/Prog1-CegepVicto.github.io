@@ -1900,12 +1900,20 @@ else
 </code></pre>
 <h2 id="4-redemander-une-quantite-valide">4. Redemander une quantité valide</h2>
 <pre><code class="language-csharp">int quantite;
+string saisie;
 
-do
+while (true)
 {
     Console.Write(&quot;Entrez une quantité positive ou nulle : &quot;);
+    saisie = Console.ReadLine();
+
+    if (int.TryParse(saisie, out quantite) &amp;&amp; quantite &gt;= 0)
+    {
+        break;
+    }
+
+    Console.WriteLine(&quot;Quantité invalide. Entrez un nombre entier positif ou nul.&quot;);
 }
-while (!int.TryParse(Console.ReadLine(), out quantite) || quantite &lt; 0);
 
 Console.WriteLine(&quot;Quantité acceptée : &quot; + quantite);
 </code></pre>
