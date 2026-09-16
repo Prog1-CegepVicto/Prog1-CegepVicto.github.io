@@ -1683,7 +1683,8 @@
 
 
 <h1 id="solutions-possibles-aux-exercices-de-la-semaine-4">Solutions possibles aux exercices de la semaine 4</h1>
-<pre><code>static void ex1()
+<pre><code>// Afficher 15 fois le mot ATTENTION.
+static void ex1()
 {
     for (int i = 0; i &lt; 15; i++)
     { 
@@ -1691,7 +1692,8 @@
     }
 }
 </code></pre>
-<pre><code>static void ex2()
+<pre><code>// Afficher pour chaque nombre de 1 à 10 son carré et son cube.
+static void ex2()
 {
     for (int i = 1; i &lt; 11; i++)
     {
@@ -1699,7 +1701,8 @@
     }
 }
 </code></pre>
-<pre><code>static void ex3()
+<pre><code>// Convertir les températures Fahrenheit de -40 à 40 en Celsius par pas de 5.
+static void ex3()
 {
     double celsius = 0.0;
 
@@ -1710,28 +1713,30 @@
     }
 }
 </code></pre>
-<pre><code>static void ex4()
+<pre><code>// Afficher le montant et la taxe de 15% pour les montants de $5.00 à $100.00 par tranche de $5.00.
+static void ex4()
 {
-    double montant = 5.0;
-    for (int i = 1; i &lt;= 20; i++)
+    for (double montant = 5.0; montant &lt;= 100.0; montant = montant + 5.0)
     {
-        Console.WriteLine(&quot;Montant : &quot; + montant * i + &quot; Taxe : &quot; + montant * i * 0.15);
+        Console.WriteLine(&quot;Montant : &quot; + montant + &quot; Taxe : &quot; + montant * 0.15);
     }
 }
 </code></pre>
-<pre><code>static void ex5()
+<pre><code>// Comparer 0,01 $ doublé chaque jour pendant 30 jours avec 1 million de dollars.
+static void ex5()
 {
     double total = 0.01;
 
-    for (int i = 0; i &lt; 30; i++)
+    for (int i = 1; i &lt;= 30; i++)
     {
-        total *= 2;
+        total = total * 2;
     }
 
     Console.WriteLine(total + &quot;$ est mieux que 1M$&quot;);
 }
 </code></pre>
-<pre><code>static void ex6()
+<pre><code>// Afficher les nombres impairs de 1 à 49.
+static void ex6()
 {
     for (int i = 1; i &lt; 50; i += 2)
     {
@@ -1739,12 +1744,13 @@
     }
 }
 </code></pre>
-<pre><code>static void ex7()
+<pre><code>// Afficher les nombres impairs de 1 à 49, cinq par ligne.
+static void ex7()
 {
     int nbParLigne = 0;
     for (int i = 1; i &lt; 50; i += 2)
     {
-        Console.Write(i);
+        Console.Write(i + &quot; &quot;);
         nbParLigne++;
         if (nbParLigne == 5)
         {
@@ -1754,7 +1760,8 @@
     }
 }
 </code></pre>
-<pre><code>static void ex8a()
+<pre><code>// Afficher le motif en escalier de #.
+static void ex8a()
 {
     // option 1
     string affichage = &quot;&quot;;
@@ -1764,9 +1771,10 @@
         Console.WriteLine(affichage);
     }
     // option 2
+    // i: nombre de chiffres à afficher sur la ligne
     for (int i = 1; i &lt;= 4; i++)
     {
-        for (int j = 0; j &lt; i; j++)
+        for (int j = 1; j &lt;= i; j++)
         {
             Console.Write(&quot;#&quot;);
         }
@@ -1774,7 +1782,8 @@
     }
 }
 </code></pre>
-<pre><code>static void ex8b()
+<pre><code>// Afficher le motif 1, 12, 123, 1234.
+static void ex8b()
 {
     // option 1
     string affichage = &quot;&quot;;
@@ -1794,11 +1803,13 @@
     }
 }
 </code></pre>
-<pre><code>static void ex8c()
+<pre><code>// Afficher le motif de # en ordre décroissant.
+static void ex8c()
 {
-    for (int i = 0; i &lt; 4; i++)
+    // i: nombre de symboles à afficher sur la ligne
+    for (int i = 4; i &gt; 0; i--)
     {
-        for (int j = 0; j &lt; 4 - i; j++)
+        for (int j = 1; j &lt;= i; j++)
         {
             Console.Write(&quot;#&quot;);
         }
@@ -1806,8 +1817,10 @@
     }
 }
 </code></pre>
-<pre><code>static void ex8d()
+<pre><code>// Afficher le motif 1, 23, 456, 78910.
+static void ex8d()
 {
+    // i: nombre de chiffres à afficher sur la ligne
     int nb = 0;
     for (int i = 0; i &lt; 4; i++)
     {
@@ -1820,16 +1833,27 @@
     }
 }
 </code></pre>
-<pre><code>static void ex8e()
+<pre><code>// Afficher les nombres de 1 à 9, trois par ligne.
+static void ex8e()
 {
     int nbParLigne = 0;
-    for (int i = 1; i &lt; 10; i++)
+    for (int i = 1; i &lt;= 9; i++)
     {
-        Console.WriteLine(i);
+        Console.Write(i);
         nbParLigne++;
         if (nbParLigne == 3)
         {
             Console.WriteLine();
+            nbParLigne = 0;
+        }
+    }
+    // Option avec modulo
+    for (int i = 1; i &lt;= 9; i++)
+    {
+        Console.Write(i);
+        if (i % 3 == 0)
+        {
+             Console.WriteLine();
         }
     }
 }
