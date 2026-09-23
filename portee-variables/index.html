@@ -800,6 +800,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#la-fermeture-closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La fermeture (closure)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1389,6 +1400,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../exPorteeArguments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portée et arguments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exPOO00/" class="md-nav__link">
         
   
@@ -1695,6 +1734,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../solPorteeArguments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portée et arguments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../solPOO/" class="md-nav__link">
         
   
@@ -1828,6 +1895,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#la-fermeture-closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La fermeture (closure)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1951,6 +2029,20 @@ for (int i = 0; i &lt; 5; i++)
 
 Console.WriteLine(total);
 </code></pre>
+<h3 id="la-fermeture-closure">La fermeture (closure)</h3>
+<p>Une <strong>fermeture</strong> est le mécanisme par lequel une fonction déclarée à l'intérieur d'une autre portée (ici, dans les instructions du programme principal) peut accéder à une variable qui existe déjà dans cette portée, même si cette variable n'est pas passée en paramètre.</p>
+<pre><code>int compteur = 0;
+
+AugmenterCompteur();
+AugmenterCompteur();
+Console.WriteLine(compteur); // affiche 2
+
+void AugmenterCompteur()
+{
+    compteur = compteur + 1; // accède directement à la variable du programme principal
+}
+</code></pre>
+<p>Ici, <code>AugmenterCompteur</code> n'a aucun paramètre et ne retourne rien, mais elle modifie tout de même <code>compteur</code>, car elle a été déclarée dans la même portée que cette variable et en garde l'accès. C'est différent des exemples précédents (<code>age</code>, <code>nombre</code>), où la variable n'existait qu'à l'intérieur d'une autre fonction, et donc ne pouvait pas être capturée.</p>
 <h2 id="le-passage-darguments">Le passage d'arguments</h2>
 <p>Quand on appelle une fonction avec des paramètres, on lui donne des <strong>arguments</strong>.</p>
 <p>Par défaut, en C#, les arguments sont <strong>passés par valeur</strong> : la fonction reçoit une <strong>copie</strong> de la valeur, pas la variable elle-même.</p>
