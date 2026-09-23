@@ -2029,6 +2029,15 @@ for (int i = 0; i &lt; 5; i++)
 
 Console.WriteLine(total);
 </code></pre>
+<p>La variable déclarée dans la première partie d'un <code>for</code> (par exemple <code>i</code> dans <code>for (int i = 0; ...)</code>) appartient elle aussi à la portée du bloc de la boucle : elle n'existe plus une fois la boucle terminée.</p>
+<pre><code>for (int i = 0; i &lt; 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// Erreur : i n'existe plus ici, on est sorti de la boucle
+Console.WriteLine(i);
+</code></pre>
 <h3 id="la-fermeture-closure">La fermeture (closure)</h3>
 <p>Une <strong>fermeture</strong> est le mécanisme par lequel une fonction déclarée à l'intérieur d'une autre portée (ici, dans les instructions du programme principal) peut accéder à une variable qui existe déjà dans cette portée, même si cette variable n'est pas passée en paramètre.</p>
 <pre><code>int compteur = 0;
@@ -2062,7 +2071,6 @@ void DoublerValeur(int valeur)
 <p>Contrairement au passage par valeur, le paramètre <code>out</code> n'est pas une copie : il pointe vers la même variable que l'argument transmis, donc la fonction peut lui assigner une valeur qui sera visible après l'appel.</p>
 <p>La variable n'a pas besoin d'être initialisée avant l'appel, puisque la fonction doit obligatoirement lui donner une valeur.</p>
 <p>Le mot-clé <code>out</code> doit être écrit deux fois : devant le paramètre dans la signature de la fonction (<code>out int carre</code>) et devant l'argument lors de l'appel (<code>out resultat</code>). Sans l'un des deux, le code ne compile pas.</p>
-<p><code>out</code> est surtout utile lorsqu'une fonction doit retourner <strong>plus d'une valeur</strong>, puisque <code>return</code> ne permet d'en retourner qu'une seule.</p>
 <pre><code>int resultat;
 CalculerCarre(4, out resultat);
 Console.WriteLine(resultat); // affiche 16
@@ -2072,8 +2080,11 @@ void CalculerCarre(int nombre, out int carre)
     carre = nombre * nombre;
 }
 </code></pre>
-<p><code>out</code> est notamment utilisé par des fonctions comme <code>int.TryParse(texte, out valeur)</code>.</p>
-<p>Une fonction avec <code>out</code> n'est pas obligée d'être <code>void</code> : elle peut aussi retourner une valeur avec <code>return</code>, en plus de faire ressortir un résultat par <code>out</code>.</p>
+<p>Il est aussi possible de déclarer la variable directement lors de l'appel, sans la déclarer à l'avance :</p>
+<pre><code>CalculerCarre(4, out int resultat);
+Console.WriteLine(resultat); // affiche 16
+</code></pre>
+<p><code>out</code> est notamment utilisé par des fonctions comme <code>int.TryParse(texte, out valeur)</code>.  <code>out</code> est surtout utile lorsqu'une fonction doit retourner <strong>plus d'une valeur</strong>, puisque <code>return</code> ne permet d'en retourner qu'une seule.</p>
 <pre><code>bool succes;
 int resultat;
 succes = EssayerDiviser(10, 2, out resultat);
