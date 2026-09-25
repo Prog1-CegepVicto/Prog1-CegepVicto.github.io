@@ -748,6 +748,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#la-boucle-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle foreach
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La boucle foreach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcourir-une-chaine-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parcourir une chaîne de caractères
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1918,6 +1957,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#la-boucle-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle foreach
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La boucle foreach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntaxe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcourir-une-chaine-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parcourir une chaîne de caractères
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1998,6 +2076,38 @@ for(int i = 0; i &lt; tab.Length; i++)
     tab[i] = rng.Next(0,101);
 }
 </code></pre>
+<h2 id="la-boucle-foreach">La boucle <code>foreach</code></h2>
+<p>La boucle <code>foreach</code> permet de parcourir tous les éléments d'un tableau, un à la fois.
+Elle est utile lorsqu'on n'a pas besoin de connaître l'index de l'élément traité.</p>
+<h3 id="syntaxe_1">Syntaxe</h3>
+<pre><code>foreach (type element in tableau)
+{
+    // instructions
+}
+</code></pre>
+<p>Par exemple, cette boucle affiche toutes les valeurs du tableau :</p>
+<pre><code>int[] nombres = [10, 20, 30];
+
+foreach (int nombre in nombres)
+{
+    Console.WriteLine(nombre);
+}
+</code></pre>
+<p>À chaque répétition, la variable <code>nombre</code> contient la valeur (une copie) de l'élément suivant du tableau.
+La boucle <code>foreach</code> commence automatiquement au premier élément et s'arrête après le dernier.</p>
+<blockquote>
+<p>Si on doit utiliser l'index ou modifier les éléments du tableau, il faut utiliser une boucle <code>for</code>.</p>
+</blockquote>
+<h3 id="parcourir-une-chaine-de-caracteres">Parcourir une chaîne de caractères</h3>
+<p>Une chaîne de caractères peut aussi être parcourue avec <code>foreach</code>. La variable obtenue  contient un caractère (<code>char</code>) à chaque répétition.</p>
+<pre><code>string mot = &quot;Bonjour&quot;;
+
+foreach (char caractere in mot)
+{
+    Console.WriteLine(caractere);
+}
+</code></pre>
+<p>Cette boucle affiche chaque caractère du mot, un par ligne.</p>
 
 
 

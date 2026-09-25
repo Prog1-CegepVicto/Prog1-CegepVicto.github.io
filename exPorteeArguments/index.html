@@ -2086,12 +2086,12 @@ Console.WriteLine(carre);
 </ul>
 <p>Expliquez pourquoi la valeur affichée n'est pas <code>0</code>.</p>
 <h2 id="4-le-mot-cle-out">4. Le mot-clé <code>out</code></h2>
-<p>Créez une fonction <code>bool EssayerDiviser(int dividende, int diviseur, out int quotient)</code> qui :</p>
+<p>Créez une fonction <code>bool EssayerCalculerRacineCarree(double nombre, out double resultat)</code> qui :</p>
 <ul>
-<li>retourne <code>false</code> et assigne <code>0</code> à <code>quotient</code> si <code>diviseur</code> est égal à <code>0</code>;</li>
-<li>retourne <code>true</code> et assigne le résultat de la division à <code>quotient</code> sinon.</li>
+<li>retourne <code>false</code> et assigne <code>0</code> à <code>resultat</code> si <code>nombre</code> est négatif;</li>
+<li>retourne <code>true</code> et assigne la racine carrée de <code>nombre</code> à <code>resultat</code> sinon.</li>
 </ul>
-<p>Dans le programme principal, demandez deux nombres entiers à l'utilisateur avec <code>Console.ReadLine</code> et <code>int.TryParse</code>, puis affichez le résultat de la division ou un message d'erreur selon la valeur retournée par <code>EssayerDiviser</code>.</p>
+<p>Dans le programme principal, demandez un nombre à l'utilisateur avec <code>Console.ReadLine</code> et <code>double.TryParse</code>, puis affichez la racine carrée ou un message d'erreur si le nombre est négatif ou invalide.</p>
 <h2 id="5-plusieurs-valeurs-de-sortie">5. Plusieurs valeurs de sortie</h2>
 <p>Créez une fonction <code>AnalyserTableau(int[] nombres, out int minimum, out int maximum, out double moyenne)</code> qui calcule en une seule fonction le minimum, le maximum et la moyenne des valeurs d'un tableau.</p>
 <p>Testez la fonction avec un tableau de votre choix et affichez les trois résultats obtenus.</p>

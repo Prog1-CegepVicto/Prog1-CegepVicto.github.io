@@ -2065,32 +2065,34 @@ void Reinitialiser(int nombre)
 </code></pre>
 <p><code>valeur</code> n'affiche pas <code>0</code> après l'appel, car les arguments sont passés par valeur : <code>Reinitialiser</code> reçoit une <strong>copie</strong> de <code>valeur</code> dans son paramètre <code>nombre</code>. Modifier <code>nombre</code> à l'intérieur de la fonction ne touche pas la variable d'origine.</p>
 <h2 id="4-le-mot-cle-out">4. Le mot-clé <code>out</code></h2>
-<pre><code class="language-csharp">Console.Write(&quot;Entrez le dividende : &quot;);
-int.TryParse(Console.ReadLine(), out int dividende);
+<pre><code class="language-csharp">Console.Write(&quot;Entrez un nombre : &quot;);
+double nombre;
 
-Console.Write(&quot;Entrez le diviseur : &quot;);
-int.TryParse(Console.ReadLine(), out int diviseur);
-
-bool succes = EssayerDiviser(dividende, diviseur, out int quotient);
-
-if (succes)
+if (!double.TryParse(Console.ReadLine(), out nombre))
 {
-    Console.WriteLine(&quot;Résultat : &quot; + quotient);
-}
-else
-{
-    Console.WriteLine(&quot;Erreur : division par zéro.&quot;);
+    Console.WriteLine(&quot;Erreur : le nombre entré est invalide.&quot;);
+    return;
 }
 
-bool EssayerDiviser(int dividende, int diviseur, out int quotient)
+double resultat;
+
+if (!EssayerCalculerRacineCarree(nombre, out resultat))
 {
-    if (diviseur == 0)
+    Console.WriteLine(&quot;Erreur : la racine carrée d'un nombre négatif n'est pas définie dans les nombres réels.&quot;);
+    return;
+}
+
+Console.WriteLine(&quot;Racine carrée : &quot; + resultat);
+
+bool EssayerCalculerRacineCarree(double nombre, out double resultat)
+{
+    if (nombre &lt; 0)
     {
-        quotient = 0;
+        resultat = 0;
         return false;
     }
 
-    quotient = dividende / diviseur;
+    resultat = Math.Sqrt(nombre);
     return true;
 }
 </code></pre>
