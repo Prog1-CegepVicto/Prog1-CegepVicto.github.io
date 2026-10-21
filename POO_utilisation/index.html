@@ -1887,9 +1887,9 @@
 <p>Ci-dessus la variable eleve va être une instance de la classe Personne.</p>
 <p>Il est obligatoire d'initialiser une instance avant de l'utiliser!</p>
 <h2 id="initialiser-une-instance">Initialiser une instance</h2>
-<p>Le mot clé <strong>new</strong>, suivit du nom de la classe et de parenthèses initialise une instance</p>
+<p>Le mot clé <strong>new</strong>, suivi du nom de la classe et de parenthèses initialise une instance</p>
 <p><code>Personne eleve = new Personne();</code></p>
-<p>Remarquez que la partie <code>Personne()</code> est écrite commme si une méthode était appelée.</p>
+<p>Remarquez que la partie <code>Personne()</code> est écrite comme si une méthode était appelée.</p>
 <p>Il s'agit d'une méthode spéciale nommée <strong>constructeur</strong> que nous verrons bientôt.</p>
 <h2 id="utiliser-les-attributs-publiques">Utiliser les attributs publiques</h2>
 <p>Lorsqu'un attribut est publique, il est possible d'y accéder directement.</p>
@@ -1909,7 +1909,7 @@
     Personne eleve = new Personne();
 
     eleve.prenom = &quot;Éric&quot;;
-    eleve.nom = &quot;Treamblay&quot;;
+    eleve.nom = &quot;Tremblay&quot;;
     eleve.age = 27;
 }
 </code></pre>
@@ -1924,7 +1924,7 @@
 
     public void afficherNomComplet()
     {
-        Console.WriteLine(&quot;{0} {1}&quot;, prenom, nom);
+        Console.WriteLine($&quot;{this.prenom} {this.nom}&quot;);
     }
 }
 </code></pre>
@@ -1934,7 +1934,7 @@
     Personne eleve = new Personne();
 
     eleve.prenom = &quot;Éric&quot;;
-    eleve.nom = &quot;Treamblay&quot;;
+    eleve.nom = &quot;Tremblay&quot;;
     eleve.age = 27;
 
     eleve.afficherNomComplet();
