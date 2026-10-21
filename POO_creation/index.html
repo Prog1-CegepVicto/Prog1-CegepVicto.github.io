@@ -1946,12 +1946,42 @@ La méthode afficherNomComplet() est la seule interaction et fait partie du <str
 <h2 id="4-niveau-dacces">4. Niveau d'accès</h2>
 <p>Dans l'exemple précédent, on observe le mot clé <code>public</code></p>
 <p>Une classe est généralement publique, c'est à dire que l'on peut l'utiliser à partir de n'importe quel endroit dans le code!</p>
-<p>Par contre il y a plusieurs niveau d'accès possibles et ils sont spécialement importants pour les attributs et les comportements de la classe</p>
-<ul>
-<li>public    : toujours accessible à partir du code, on peut faire n'importe quoi (ou presque) avec</li>
-<li>private   : l'objet s'occupe lui même de modifier cet attribut, probablement à travers une méthode</li>
-<li>protected : accessible et visible seulement pour la classe ou une classe qui en hérite</li>
-</ul>
+<p>Les niveaux d'accès indiquent où une classe, un attribut ou une méthode peut être utilisé. Les règles disponibles ne sont pas tout à fait les mêmes :</p>
+<table>
+<thead>
+<tr>
+<th>Niveau d'accès</th>
+<th>Classe de premier niveau</th>
+<th>Classe imbriquée</th>
+<th>Attribut</th>
+<th>Méthode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>Accessible partout</td>
+<td>Accessible partout</td>
+<td>Accessible partout</td>
+<td>Accessible partout</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>Non permis</td>
+<td>Accessible seulement dans la classe qui la contient</td>
+<td>Accessible seulement dans la classe</td>
+<td>Accessible seulement dans la classe</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>Non permis</td>
+<td>Accessible dans la classe et ses classes dérivées</td>
+<td>Accessible dans la classe et ses classes dérivées</td>
+<td>Accessible dans la classe et ses classes dérivées</td>
+</tr>
+</tbody>
+</table>
+<p>Par défaut, les classes imbriquées, les attributs et les méthodes sont <code>private</code>.  Les classes de premier niveau sont accessibles partout dans le projet (<code>internal</code>).</p>
 
 
 
