@@ -1882,8 +1882,8 @@
 <h1 id="utiliser-une-classe">Utiliser une classe</h1>
 <p>Une fois la classe créée, il faut utiliser une instance de cette classe pour l'incorporer au programme.</p>
 <p>Un programme peut avoir une multitudes d'instances de la même classe.</p>
-<p>Une instance est en fait une variable dont le type est une classe :
-<code>Personne eleve;</code></p>
+<p>Une instance est en fait une variable dont le type est une classe :</p>
+<p><code>Personne eleve;</code></p>
 <p>Ci-dessus la variable eleve va être une instance de la classe Personne.</p>
 <p>Il est obligatoire d'initialiser une instance avant de l'utiliser!</p>
 <h2 id="initialiser-une-instance">Initialiser une instance</h2>
@@ -1913,6 +1913,7 @@
     eleve.age = 27;
 }
 </code></pre>
+<p>Si vous utilisez l'option <em>Instructions de niveau supérieur</em> (<em>Top-Level Statements</em>) lors de la création d'un projet (ie sans la méthode Main), vous devez définir vos classes après les instructions de niveau supérieur. Sinon, vous obtiendrez une erreur de compilation. Concrètement, vous devez placer vos classes <strong>à la fin</strong> du fichier <em>Program.cs</em>.</p>
 <h2 id="utiliser-les-methodes-comportements">Utiliser les méthodes (comportements)</h2>
 <p>Les méthodes publiques d'une instance de classe s'utilisent comme les attributs.</p>
 <p>En reprenant la classe Personne</p>
@@ -1940,7 +1941,7 @@
     eleve.afficherNomComplet();
 }
 </code></pre>
-<p>La console affichera : Éric Tremblay</p>
+<p>La console affichera : <code>Éric Tremblay</code></p>
 
 
 

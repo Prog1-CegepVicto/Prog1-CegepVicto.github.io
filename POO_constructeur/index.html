@@ -1005,6 +1005,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#constructeur-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructeur par défaut
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1818,6 +1829,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#constructeur-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructeur par défaut
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1843,21 +1865,35 @@
 </code></pre>
 <p>Le constructeur porte <strong>toujours</strong> exactement le même nom que la classe</p>
 <p>Exemple de constructeur pour la classe appelée Personne</p>
-<pre><code>public Personne()
-{
-    // Initialisation de l'instance
+<pre><code>class Personne
+{   
+    // Attributs
+    ...
+
+    public Personne()
+    {
+        // Initialisation de l'instance
+
+    }
 }
 </code></pre>
 <h2 id="parametres">Paramètres</h2>
 <p>Comme les méthodes, un constructeur peut recevoir des paramètres pour initialiser notre instance correctement.</p>
 <p>Par exemple :</p>
-<pre><code>public Personne(string prenom, string nom, int age)
-{
-    this.prenom = prenom;
-    this.nom = nom;
-    this.age = age;
+<pre><code>class Personne
+{   
+    public Personne(string prenom, string nom, int age)
+    {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.age = age;
+    }
 }
 </code></pre>
+<h2 id="constructeur-par-defaut">Constructeur par défaut</h2>
+<p>C# fournit un constructeur par défaut (sans paramètres) si aucun constructeur n'est défini dans la classe. </p>
+<p>!!! note ATTENTION
+    Si un constructeur est défini explicitement, le constructeur par défaut fourni par C# n'est plus disponible. Il faut donc définir explicitement un constructeur sans paramètres si on veut l'utiliser.</p>
 
 
 
