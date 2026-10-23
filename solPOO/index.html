@@ -2074,7 +2074,7 @@
         // 1 à 5 = magique, 6 à 100 = pas magique
         if (rng.Next(1, 101) &lt;= 5)
         {
-            // 0.01% -&gt; 1 sur 10000 (nombre 1)
+            // 0.01% -&gt; 1 sur 10000 (nombre 1 tiré)
             int rngBonus = rng.Next(1, 10001);
             if (rngBonus == 1)
             {
@@ -2128,6 +2128,7 @@
     public bool testerReussite(int difficulte)
     {
         Random rng = new Random();
+        // Tirage entier 1 à 20
         int resultat = rng.Next(1, 21) + this.calculerModificateur();
         return resultat &gt; difficulte;
     }
