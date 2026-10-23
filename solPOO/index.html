@@ -2103,7 +2103,30 @@
 }
 </code></pre>
 <h2 id="4-classe-caracteristique">4. Classe Caracteristique</h2>
-<pre><code></code></pre>
+<pre><code class="language-csharp">public class Caracteristique
+{
+    public string nom;
+    public int score;
+
+    public Caracteristique(string nom, int score)
+    {
+        this.nom = nom;
+        this.score = score;
+    }
+
+    public int calculerModificateur()
+    {
+        return this.score / 2 - 5;
+    }
+
+    public bool testerReussite(int difficulte)
+    {
+        Random rng = new Random();
+        int resultat = rng.Next(1, 21) + this.calculerModificateur();
+        return resultat &gt; difficulte;
+    }
+}
+</code></pre>
 <h2 id="5-classe-tableau-dynamique-et-programme">5. Classe Tableau dynamique et programme</h2>
 <h3 id="51-tableaudynamique">5.1 TableauDynamique</h3>
 <pre><code>public class TableauDynamique
