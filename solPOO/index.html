@@ -1998,6 +1998,29 @@
 
     public void ajouterNote(int note)
     {
+        if (this.position &lt; this.notes.Length)
+        {
+            this.notes[this.position] = note;
+            this.position++;
+        }
+    }
+
+    // Assume que le tableau de notes est rempli
+    public double calculerMoyenne()
+    {
+        int total = 0;
+
+        foreach (int note in this.notes)
+        {
+            total += note;
+        }
+
+        return (double)total / this.notes.Length;
+    }
+
+    /* Défi - permet d'ajouter une note même si le tableau est plein. 
+    public void ajouterNote(int note)
+    {
         if (this.position &gt;= this.notes.Length)
         {
             int[] nouvTableau = new int[this.notes.Length + 1];
@@ -2010,21 +2033,7 @@
         this.notes[this.position] = note;
         this.position++;
     }
-
-    public double calculerMoyenne()
-    {
-        int total = 0;
-        double moyenne = 0.0;
-
-        for (int i = 0; i &lt; this.notes.Length; i++)
-        {
-            total = total + notes[i];
-        }
-
-        moyenne = total / this.notes.Length;
-
-        return moyenne;
-    }
+    */
 
 }
 </code></pre>
