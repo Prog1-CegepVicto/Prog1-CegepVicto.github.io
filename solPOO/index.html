@@ -2061,42 +2061,48 @@
 <pre><code>public class Arme
 {
     public string nom;
-    public int dmgMax;
-    public int bonusMagic;
+    public int dommageMax;
+    public int bonusMagique;
 
-    public Arme(string nom, int dmgMax)
+    public Arme(string nom, int dommageMax)
     {
         Random rng = new Random();
         this.nom = nom;
-        this.dmgMax = dmgMax;
+        this.dommageMax = dommageMax;
 
         // L'arme a 5% de chances d'être magique
-        if (rng.Next(0, 101) &lt;= 5)
+        // 1 à 5 = magique, 6 à 100 = pas magique
+        if (rng.Next(1, 101) &lt;= 5)
         {
-            int rngBonus = rng.Next(0, 10001);
-            if (rngBonus &lt;= 1)
+            // 0.01% -&gt; 1 sur 10000 (nombre 1)
+            int rngBonus = rng.Next(1, 10001);
+            if (rngBonus == 1)
             {
-                this.bonusMagic = 5;
+                this.bonusMagique = 5;
             }
-            else if (rngBonus &lt;= 6)
+            // 0.05% -&gt; 5 sur 10000 (2 à 6)
+            else if (rngBonus &lt;= 1 + 5)
             {
-                this.bonusMagic = 4;
+                this.bonusMagique = 4;
             }
-            else if (rngBonus &lt;= 56)
+            // 0.5% -&gt; 50 sur 10000 (7 à 56)
+            else if (rngBonus &lt;= 1 + 5 + 50)
             {
-                this.bonusMagic = 3;
+                this.bonusMagique = 3;
             }
-            else if (rngBonus &lt;= 156)
+            // 1% -&gt; 100 sur 10000 (57 à 156)
+            else if (rngBonus &lt;= 1 + 5 + 50 + 100)
             {
-                this.bonusMagic = 2;
+                this.bonusMagique = 2;
             }
-            else if (rngBonus &lt;= 356)
+            // 2% -&gt; 200 sur 10000 (157 à 356)
+            else if (rngBonus &lt;= 1 + 5 + 50 + 100 + 200)
             {
-                this.bonusMagic = 1;
+                this.bonusMagique = 1;
             }
             else
             {
-                this.bonusMagic = 0;
+                this.bonusMagique = 0;
             }
         }
     }
