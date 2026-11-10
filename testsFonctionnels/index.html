@@ -851,13 +851,74 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#etape-4-les-cas-derreur-exceptions" class="md-nav__link">
+  <a href="#etape-4-les-cas-derreur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 4 : Les Cas d'Erreur (Exceptions)
+        Étape 4 : Les Cas d'Erreur
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-tests-fonctionnels-de-niveau-micro-retourner-lentier-a-index-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de tests fonctionnels de niveau Micro : retourner l'entier à index + 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple de tests fonctionnels de niveau Micro : retourner l&#39;entier à index + 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-analyser-le-contrat_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Analyser le contrat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-tester-le-chemin-heureux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Tester le chemin heureux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-tester-les-cas-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Tester les cas limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-tester-les-cas-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Tester les cas d'erreur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1979,13 +2040,74 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#etape-4-les-cas-derreur-exceptions" class="md-nav__link">
+  <a href="#etape-4-les-cas-derreur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Étape 4 : Les Cas d'Erreur (Exceptions)
+        Étape 4 : Les Cas d'Erreur
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-tests-fonctionnels-de-niveau-micro-retourner-lentier-a-index-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de tests fonctionnels de niveau Micro : retourner l'entier à index + 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple de tests fonctionnels de niveau Micro : retourner l&#39;entier à index + 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-analyser-le-contrat_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Analyser le contrat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-tester-le-chemin-heureux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Tester le chemin heureux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-tester-les-cas-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Tester les cas limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-tester-les-cas-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Tester les cas d'erreur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2100,13 +2222,13 @@
 <h3 id="etape-1-analyser-le-contrat">Étape 1 : Analyser le Contrat</h3>
 <p>Le <strong>Contrat</strong> est déterminé par deux éléments :</p>
 <ol>
-<li>Le <strong>summary</strong> : la description de la méthode, de ses paramètres et de sa valeur de retour prend toute sa signification. Elle détermine l'objectif de la méthode.</li>
+<li>Le <strong>summary</strong> (sommaire): la description de la méthode, de ses paramètres et de sa valeur de retour prend toute sa signification. Elle détermine l'objectif de la méthode.</li>
 <li>La <strong>signature</strong> de la méthode : la signature nous donne des détails techniques comme le type des variables et le niveau d'accès (<code>public</code>, <code>private</code>, etc.).</li>
 </ol>
 <p>Avant d'écrire le test, posez-vous deux questions :</p>
 <ol>
 <li>Quels sont les paramètres acceptés ? (Ex. : un entier, une chaîne, un objet)</li>
-<li>Quel est le résultat attendu ? (Une valeur de retour ou une exception ?)</li>
+<li>Quel est le résultat attendu ? (Une valeur de retour normale ou un résultat signalant une entrée invalide ?)</li>
 </ol>
 <h3 id="etape-2-le-chemin-heureux-happy-path">Étape 2 : Le "Chemin Heureux" (Happy Path)</h3>
 <p>C'est le scénario idéal où l'utilisateur fait exactement ce qu'il faut.</p>
@@ -2124,17 +2246,123 @@
 <blockquote>
 <p><strong>Règle d'or :</strong> Si votre méthode accepte un nombre, testez toujours 0 et un nombre négatif.</p>
 </blockquote>
-<h3 id="etape-4-les-cas-derreur-exceptions">Étape 4 : Les Cas d'Erreur (Exceptions)</h3>
+<h3 id="etape-4-les-cas-derreur">Étape 4 : Les Cas d'Erreur</h3>
 <p>Si la méthode a des règles (ex. : « l'âge ne peut pas être négatif »), vous devez tester son comportement avec de mauvaises données.</p>
 <ul>
-<li><strong>Action :</strong> Appeler la méthode avec une valeur invalide.</li>
-<li><strong>Attente :</strong> la méthode doit lancer une <strong>exception</strong> (mécanisme vu en Programmation 2, par ex. <code>ArgumentException</code>). Elle ne doit pas « ne rien faire » ou planter silencieusement.</li>
+<li><strong>Action :</strong> appeler la méthode avec une valeur invalide.</li>
+<li><strong>Attente :</strong> vérifier le résultat prévu pour signaler l'erreur, par exemple <code>-1</code>.</li>
 </ul>
 <p>Ce que l'on peut faire pour corriger le problème :</p>
 <ul>
 <li><strong>Retour hâtif</strong> : tester la valeur au début de la méthode et utiliser <code>return</code> pour l'arrêter.</li>
 <li><strong>Retour significatif</strong> : prévoir une valeur de retour qui indique que la méthode est erronée (ex. : <code>-1</code> pour un index de tableau).</li>
 </ul>
+<h3 id="exemple-de-tests-fonctionnels-de-niveau-micro-retourner-lentier-a-index-1">Exemple de tests fonctionnels de niveau Micro : retourner l'entier à <code>index + 1</code></h3>
+<p>La méthode <code>ObtenirElementSuivant</code> reçoit un index et un tableau d'entiers positifs. Elle retourne la valeur située à la position <code>index + 1</code>. </p>
+<p>L'index doit donc être compris entre <code>0</code> et <code>tableau.Length - 2</code>, inclusivement. Si le tableau est <code>null</code> ou si l'index est invalide, elle retourne <code>-1</code>.</p>
+<pre><code class="language-csharp">/// &lt;summary&gt;
+/// Retourne l'entier situé à l'index suivant dans le tableau.
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;index&quot;&gt;L'index de départ dans le tableau&lt;/param&gt;
+/// &lt;param name=&quot;tableau&quot;&gt;Le tableau d'entiers positifs à consulter&lt;/param&gt;
+/// &lt;returns&gt;La valeur située à la position index + 1, ou -1 si l'entrée est invalide&lt;/returns&gt;
+int ObtenirElementSuivant(int index, int[] tableau)
+{
+    [...]
+}
+</code></pre>
+<h4 id="etape-1-analyser-le-contrat_1">Étape 1 : Analyser le contrat</h4>
+<p>Signature : <code>int ObtenirElementSuivant(int index, int[] tableau)</code>.</p>
+<p>Pour le tableau <code>[4, 9, 15, 22]</code> et l'index <code>1</code>, le résultat attendu est <code>15</code>, car cette valeur se trouve à la position <code>1 + 1</code>, donc à l'index <code>2</code>.</p>
+<h4 id="etape-2-tester-le-chemin-heureux">Étape 2 : Tester le chemin heureux</h4>
+<pre><code class="language-csharp">int ObtenirElementSuivant(int index, int[] tableau)
+{
+    [...]
+
+    return tableau[index + 1];
+}
+</code></pre>
+<pre><code class="language-csharp">bool ObtenirElementSuivant_IndexValide_RetourneValeurSuivante()
+{
+    int[] tableau = [4, 9, 15, 22];
+
+    if (ObtenirElementSuivant(1, tableau) != 15) { return false; }
+
+    return true;
+}
+</code></pre>
+<p>Le test retourne <code>true</code> si la méthode retourne bien <code>15</code>.</p>
+<h4 id="etape-3-tester-les-cas-limites">Étape 3 : Tester les cas limites</h4>
+<table>
+<thead>
+<tr>
+<th>Tableau</th>
+<th style="text-align: right;"><code>index</code></th>
+<th style="text-align: right;">Résultat attendu</th>
+<th>Cas testé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[4, 9, 15, 22]</code></td>
+<td style="text-align: right;"><code>0</code></td>
+<td style="text-align: right;"><code>9</code></td>
+<td>Premier index valide</td>
+</tr>
+<tr>
+<td><code>[4, 9, 15, 22]</code></td>
+<td style="text-align: right;"><code>2</code></td>
+<td style="text-align: right;"><code>22</code></td>
+<td>Dernier index valide</td>
+</tr>
+<tr>
+<td><code>[7, 8]</code></td>
+<td style="text-align: right;"><code>0</code></td>
+<td style="text-align: right;"><code>8</code></td>
+<td>Plus petit tableau valide</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-csharp">bool ObtenirElementSuivant_CasLimites_RetourneValeursAttendues()
+{
+    int[] tableau = [4, 9, 15, 22];
+    int[] tableauMinimum = [7, 8];
+
+    if (ObtenirElementSuivant(0, tableau) != 9) { return false; }
+    if (ObtenirElementSuivant(2, tableau) != 22) { return false; }
+    if (ObtenirElementSuivant(0, tableauMinimum) != 8) { return false; }
+
+    return true;
+}
+</code></pre>
+<h4 id="etape-4-tester-les-cas-derreur">Étape 4 : Tester les cas d'erreur</h4>
+<p>Un tableau <code>null</code>, un index négatif ou un index plus grand ou égal au dernier index du tableau ne permet pas de trouver l'élément suivant. Dans tous ces cas, la méthode retourne <code>-1</code>.</p>
+<pre><code class="language-csharp">    int ObtenirElementSuivant(int index, int[] tableau)
+    {    
+        if (tableau == null || index &lt; 0 || index &gt;= tableau.Length - 1)
+        {
+            return -1;
+        }
+
+        return tableau[index + 1];
+    }
+</code></pre>
+<pre><code class="language-csharp">bool ObtenirElementSuivant_CasErreur_RetourneMoinsUn()
+{
+    int[] tableauVide = [];
+    int[] tableauUnElement = [7];
+    int[] tableauNull = null;
+    int[] tableau = [4, 9, 15, 22];
+
+    if (ObtenirElementSuivant(0, tableauVide) != -1) { return false; }
+    if (ObtenirElementSuivant(0, tableauUnElement) != -1) { return false; }
+    if (ObtenirElementSuivant(0, tableauNull) != -1) { return false; }
+    if (ObtenirElementSuivant(-1, tableau) != -1) { return false; }
+    if (ObtenirElementSuivant(3, tableau) != -1) { return false; }
+
+    return true;
+}
+</code></pre>
 <hr />
 <h2 id="partie-2-tester-une-classe-niveau-macro">Partie 2 : Tester une Classe (Niveau Macro)</h2>
 <p><em>Gestion de l'État</em></p>
