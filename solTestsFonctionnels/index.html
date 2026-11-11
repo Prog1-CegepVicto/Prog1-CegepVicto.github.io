@@ -2170,12 +2170,9 @@
 <p>Ce test s'arrête dès qu'un résultat obtenu ne correspond pas au résultat attendu.</p>
 <pre><code class="language-csharp">bool CalculerTarif_TousLesCas_RetourneTarifsAttendus()
 {
-    if (CalculerTarif(8) != 5) { return false; }
-    if (CalculerTarif(11) != 5) { return false; }
-    if (CalculerTarif(12) != 10) { return false; }
-    if (CalculerTarif(64) != 10) { return false; }
-    if (CalculerTarif(65) != 7) { return false; }
-    if (CalculerTarif(-1) != -1) { return false; }
+    if (!CalculerTarif_Enfant_RetourneCinq()) { return false; }
+    if (!CalculerTarif_Frontieres_RetourneTarifsAttendus()) { return false; }
+    if (!CalculerTarif_AgeNegatif_RetourneMoinsUn()) { return false; }
 
     return true;
 }
@@ -2189,10 +2186,10 @@
     Compteur compteur = new Compteur();
 
     // Act
-    int valeurObtenue = compteur.LireValeur();
+    // (aucune action nécessaire)
 
     // Assert
-    if (valeurObtenue != 0) { return false; }
+    if (compteur.LireValeur() != 0) { return false; }
 
     return true;
 }
